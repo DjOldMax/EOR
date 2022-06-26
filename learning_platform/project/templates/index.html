@@ -1,10 +1,11 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
     <meta charset="utf-8">
-    <title>Jonna - Personal Website Template</title>
+    <title>EOR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,7 +26,7 @@
 	<link rel="stylesheet" href="{% static 'project/css/coloring.css' %}" type="text/css">
 
     <!-- color scheme -->
-    <link rel="stylesheet" href="{% static 'css/colors/red.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'project/css/colors/red.css' %}" type="text/css">
 </head>
 
 <body id="homepage" class="homepage">
@@ -85,7 +86,7 @@
                 </div>
 
                 <!-- section begin -->
-                <section id="section-home" aria-label="section" class="full-height no-top no-bottom text-light" data-bgimage="url(images/background/2.jpg)">
+                <section id="section-home" aria-label="section" class="full-height no-top no-bottom text-light" data-bgimage="{% static 'project/images/background/background.png' %}">
 					<div id="particles-js"></div>
                     <div class="overlay-bg t50">
                         <div class="middle">
@@ -124,7 +125,7 @@
                         <div class="row-fluid table">
                             <div class="col-md-6 va-top">
                                 <div class="img-fx">
-                                    <img src="images/misc/1.jpg" alt="">
+                                    <img src="{% static 'project/images/misc/1.jpg' %}" alt="">
                                     <div class="img-url"></div>
                                 </div>
                             </div>
@@ -183,7 +184,7 @@
                         <div class="row-fluid table">
                             <div class="col-md-6 va-top">
                                 <div class="img-fx">
-                                    <img src="images/misc/2.jpg" alt="">
+                                    <img src="{% static 'project/images/misc/2.jpg' %}" alt="">
                                     <div class="img-url"></div>
                                 </div>
                             </div>
@@ -260,7 +261,7 @@
                 <section id="section-portfolio" aria-label="section-portfolio" class="fluid overwidth">
                     <div class="container-fluid">
                         <div id="album-carousel-2" class="owl-carousel owl-theme">
-                            <div class="carousel-item click" data-bgimage="url(images/portfolio/1.jpg)" data-url="portfolio-single-1.html">
+                            <div class="carousel-item click" data-bgimage="{% static 'project/images/portfolio/1.jpg' %}" data-url="portfolio-single-1.html">
                                 <div class="mask s2 full-height">
                                     <div class="cover">
                                         <div class="text">
@@ -274,7 +275,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item click" data-bgimage="url(images/portfolio/2.jpg)" data-url="portfolio-single-2.html">
+                            <div class="carousel-item click" data-bgimage="{% static 'project/images/portfolio/2.jpg' %}" data-url="portfolio-single-2.html">
                                 <div class="mask s2 full-height">
                                     <div class="cover">
                                         <div class="text">
@@ -288,7 +289,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item click" data-bgimage="url(images/portfolio/3.jpg)" data-url="portfolio-single-3.html">
+                            <div class="carousel-item click" data-bgimage="{% static 'project/images/portfolio/3.jpg' %}" data-url="portfolio-single-3.html">
                                 <div class="mask s2 full-height">
                                     <div class="cover">
                                         <div class="text">
@@ -302,7 +303,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item click" data-bgimage="url(images/portfolio/4.jpg)" data-url="portfolio-single-4.html">
+                            <div class="carousel-item click" data-bgimage="{% static 'project/images/portfolio/4.jpg' %}" data-url="portfolio-single-4.html">
                                 <div class="mask s2 full-height">
                                     <div class="cover">
                                         <div class="text">
@@ -316,7 +317,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item click" data-bgimage="url(images/portfolio/5.jpg)" data-url="portfolio-single-5.html">
+                            <div class="carousel-item click" data-bgimage="{% static 'project/images/portfolio/5.jpg' %}" data-url="portfolio-single-5.html">
                                 <div class="mask s2 full-height">
                                     <div class="cover">
                                         <div class="text">
@@ -343,7 +344,7 @@
                         <div class="row-fluid table">
                             <div class="col-md-6 va-top">
                                 <div class="img-fx">
-                                    <img src="images/misc/3.jpg" alt="">
+                                    <img src="{% static 'project/images/misc/3.jpg' %}" alt="">
                                     <div class="img-url"></div>
                                 </div>
                             </div>
@@ -433,7 +434,7 @@
                         <div class="row-fluid table">
                             <div class="col-md-6 va-top">
                                 <div class="img-fx">
-                                    <img src="images/misc/4.jpg" alt="">
+                                    <img src="{% static 'project/images/misc/4.jpg' %}" alt="">
                                     <div class="img-url"></div>
                                 </div>
                             </div>
@@ -518,24 +519,24 @@
 
     <!-- Javascript Files
     ================================================== -->
-    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.isotope.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.countTo.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/validation.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/enquire.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.stellar.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.plugin.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/typed.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/typed-custom.js' %}"></script>
-	<script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/designesia.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.isotope.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.countTo.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/validation.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/wow.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/enquire.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.stellar.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.plugin.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/jquery.scrollTo.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/typed.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/typed-custom.js' %}"></script>
+	<script type="text/javascript" src="{% static 'project/js/particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'project/js/designesia.js' %}"></script>
 
 </body>
 
