@@ -605,9 +605,7 @@
 			return 'url("images/misc/pic-1.jpg")';
 		});*/
 		
-		$("div,section").css('background-size', function() {
-			return 'cover';
-		});
+
 		
 		$(".img-url").css('background-position', function() {
 			return 'top center';
