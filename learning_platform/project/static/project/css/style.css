@@ -11,6 +11,7 @@
 * section
 * footer
 * sidebar
+* test
 * blog
 * products
 * contact
@@ -56,6 +57,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url("https://use.typekit.net/ynf8xat.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 
 /* ================================================== */
@@ -927,7 +929,7 @@ header.header-mobile.header-light #menu-btn {
 
 section {
 	position:relative;
-    padding: 100px 0 100px 0;
+    padding: 50px 0 50px 0;
     overflow: hidden;
 }
 
@@ -1130,6 +1132,22 @@ header.header-light .logo-2 {
 #de-sidebar {
     padding: 0px;
 }
+/* ================================================== */
+
+
+/* test */
+
+.tab_single_content{
+    width: 750px;
+    height: 600px;
+    margin: 20px auto;
+}
+
+
+
+/* ================================================== */
+
+
 
 
 /* ================================================== */
@@ -3116,7 +3134,9 @@ span.teaser {
     margin-top: 0px;
     overflow: hidden;
 }
-
+.feature-box{
+    height: 230px;
+}
 .feature-box .inner {
     position: relative;
     padding: 30px;

@@ -11,6 +11,7 @@
 * section
 * footer
 * sidebar
+* test
 * blog
 * products
 * contact
@@ -1130,6 +1131,66 @@ header.header-light .logo-2 {
 #de-sidebar {
     padding: 0px;
 }
+/* ================================================== */
+
+
+/* test */
+
+.tab_single_content{
+    width: 750px;
+    height: 600px;
+    margin: 20px auto;
+}
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #D31E2B;
+    cursor: pointer;
+}
+
+/* ================================================== */
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: #007bff;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
 
 
 /* ================================================== */
@@ -3116,7 +3177,9 @@ span.teaser {
     margin-top: 0px;
     overflow: hidden;
 }
-
+.feature-box{
+    height: 230px;
+}
 .feature-box .inner {
     position: relative;
     padding: 30px;
