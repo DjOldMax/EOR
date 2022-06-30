@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.core.validators import FileExtensionValidator
 # Create your models here.
 class BOOKS(models.Model):
 
@@ -32,3 +33,17 @@ class TEST(models.Model):
     class Meta:
         verbose_name = 'Вопросы теста'
         verbose_name_plural = 'Вопросы теста'
+
+class VIDEOS(models.Model):
+
+    title = models.CharField(max_length=100, verbose_name='Заголовок')
+    description = models.TextField(verbose_name='Описание')
+    image = models.ImageField(upload_to='image/',verbose_name='Заставка')
+    file = models.FileField(
+        upload_to='video/',
+        validators=[FileExtensionValidator(allowed_extensions=['mp4'])],
+        verbose_name='Вопрос'
+    )
+
+    def __str__(self):
+        return self.title

@@ -35,7 +35,10 @@ def show_book(request, book_id):
     return render(request, 'project/book.html', context=context)
 
 def show_media(request):
-    return render(request, 'project/media.html')
+    context={
+        "video_list": VIDEOS.objects.all()
+    }
+    return render(request, 'project/video_list.html',context=context)
 
 
 

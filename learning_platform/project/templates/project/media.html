@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
@@ -34,33 +35,27 @@
 
             <!-- TOP BAR BEGIN -->
             <div id="top-bar" class="transparent dark">
-
                 <div id="logo">
                     62 кафедра
                 </div>
-
                 <nav>
                     <ul id="mainmenu">
                             <li><a href="{% url 'Home' %}" class="active"><span>Вернуться</span> на домашнюю страницу</a></li>
                         </ul>
                     </nav>
-
                     <span id="menu-btn">
 					    <span class="lt"></span>
 					    <span class="lm"></span>
 					    <span class="lb"></span>
 				    </span>
-
-
                     <div class="clearfix"></div>
-
-                </div>
+            </div>
             <!-- TOP BAR CLOSE -->
 
             <!-- CONTENT BEGIN -->
-                <div id="content">
-
-
+            <div id="content">
+                {% block content %}
+                {% endblock %}
             </div>
         <!-- CONTENT CLOSE -->
 
