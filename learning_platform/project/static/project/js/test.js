@@ -3,7 +3,93 @@
 
 // creating an array and passing the number, questions, options, and answers
 let lst = JSON.parse(document.getElementById('questions').textContent);
-let questions = lst
+let mod1_questions=[];
+for (var i=0; i<=lst.length-1; i++) {
+    if (lst[i].modul == '1') {
+        mod1_questions.push(lst[i])
+         console.log(lst[i])
+    }
+};
+let questions = mod1_questions;
+
+
+
+const mod1 = document.querySelector("#m1");
+const mod2 = document.querySelector("#m2");
+const mod3 = document.querySelector("#m3");
+const mod4 = document.querySelector("#m4");
+const mod5 = document.querySelector("#m5");
+const mod6 = document.querySelector("#m6");
+mod1.onclick = ()=>{
+    let mod1_questions=[]
+    for (var i=0; i<=lst.length-1; i++) {
+        if (lst[i].modul == '1') {
+           mod1_questions.push(lst[i])
+           console.log(lst[i])
+        }
+    }
+    questions = mod1_questions
+    console.log(questions) //show info box
+}
+
+mod2.onclick = ()=>{
+    let mod2_questions=[]
+    for (var i=0; i<=lst.length-1; i++) {
+        if (lst[i].modul == '2') {
+           mod2_questions.push(lst[i])
+           console.log(lst[i])
+        }
+    }
+    questions = mod2_questions
+    console.log(questions) //show info box
+}
+mod3.onclick = ()=>{
+    let mod3_questions=[]
+    for (var i=0; i<=lst.length-1; i++) {
+        if (lst[i].modul == '3') {
+           mod3_questions.push(lst[i])
+           console.log(lst[i])
+        }
+    }
+    questions = mod3_questions
+    console.log(questions) //show info box
+}
+mod4.onclick = ()=>{
+    let mod4_questions=[]
+    for (var i=0; i<=lst.length-1; i++) {
+        if (lst[i].modul == '4') {
+           mod4_questions.push(lst[i])
+           console.log(lst[i])
+        }
+    }
+    questions = mod4_questions
+    console.log(questions) //show info box
+}
+mod5.onclick = ()=>{
+    let mod5_questions=[]
+    for (var i=0; i<=lst.length-1; i++) {
+        if (lst[i].modul == '5') {
+           mod5_questions.push(lst[i])
+           console.log(lst[i])
+        }
+    }
+    questions = mod5_questions
+    console.log(questions) //show info box
+}
+mod6.onclick = ()=>{
+    let mod6_questions=[]
+    for (var i=0; i<=lst.length-1; i++) {
+        if (lst[i].modul == '6') {
+           mod6_questions.push(lst[i])
+           console.log(lst[i])
+        }
+    }
+    questions = mod6_questions
+    console.log(questions) //show info box
+}
+
+
+
 
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
