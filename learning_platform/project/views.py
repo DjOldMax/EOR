@@ -6,74 +6,17 @@ import random
 def home(request):
     books=[i for i in BOOKS.objects.all()]
     test_list=[i for i in TEST.objects.all()]
-#     context={
-#         'books':books,
-#         'value':[
-#     {
-#     'numb': 1,
-#     'question': "What does HTML stand for?",
-#     'answer': "Hyper Text Markup Language",
-#     'options': [
-#       "Hyper Text Preprocessor",
-#       "Hyper Text Markup Language",
-#       "Hyper Text Multiple Language",
-#       "Hyper Tool Multi Language"
-#     ]
-#    },
-#     {
-#     'numb': 2,
-#     'question': "What does CSS stand for?",
-#     'answer': "Cascading Style Sheet",
-#     'options': [
-#       "Common Style Sheet",
-#       "Colorful Style Sheet",
-#       "Computer Style Sheet",
-#       "Cascading Style Sheet"
-#     ]
-#    },
-#     {
-#     'numb': 3,
-#     'question': "What does PHP stand for?",
-#     'answer': "Hypertext Preprocessor",
-#     'options': [
-#       "Hypertext Preprocessor",
-#       "Hypertext Programming",
-#       "Hypertext Preprogramming",
-#       "Hometext Preprocessor"
-#     ]
-#    },
-#     {
-#     'numb': 4,
-#     'question': "What does SQL stand for?",
-#     'answer': "Structured Query Language",
-#     'options': [
-#       "Stylish Question Language",
-#       "Stylesheet Query Language",
-#       "Statement Question Language",
-#       "Structured Query Language"
-#     ]
-#    },
-#     {
-#     'numb': 5,
-#     'question': "What does XML stand for?",
-#     'answer': "eXtensible Markup Language",
-#     'options': [
-#       "eXtensible Markup Language",
-#       "eXecutable Multiple Language",
-#       "eXTra Multi-Program Language",
-#       "eXamine Multiple Language"
-#     ]
-#    }]
-
-    # }
+    moduls=sorted(set([i.modul for i in TEST.objects.all()]))
     context={
         'books':books,
-        'value':[]
+        'value':[],
+        'moduls':moduls
     }
     for i in test_list:
 
         other = {}
         other['numb'] = i.pk
+        other['modul'] = i.modul
         other['question'] = i.question
         other['answer'] = i.answer0
         answer=[i.answer0,i.answer1,i.answer2,i.answer3]
@@ -81,6 +24,7 @@ def home(request):
         other['options'] = answer
         context['value'].append(other)
     print(context['value'])
+    print(moduls)
     return render(request, 'project/index.html', context = context)
 
 
@@ -89,6 +33,12 @@ def show_book(request, book_id):
         'book_id':str(book_id)
     }
     return render(request, 'project/book.html', context=context)
+
+def show_media(request):
+    return render(request, 'project/media.html')
+
+
+
 
 
 

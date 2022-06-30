@@ -52,7 +52,7 @@
                         <li><a href="#section-services"><span>02</span>Обучение</a></li>
                         <li><a href="#section-experiences"><span>03</span>Тесты</a></li>
                         <li><a href="#section-portfolio"><span>04</span>Литература</a></li>
-<!--                        <li><a href="#section-blog"><span>06</span>Blog</a></li>
+<!--                    <li><a href="#section-blog"><span>06</span>Blog</a></li>
                         <li><a href="#section-contact"><span>07</span>Contact</a></li> --> 
                     </ul>
                 </nav>
@@ -121,7 +121,7 @@
                                 <div class="content-wrap">
 
                                     <!-- service box begin -->
-                                    <div class="feature-box mb30">
+                                    <div class="feature-box mb30" >
                                         <div class="inner">
                                             <div class="text">
                                                 <i class="icon_lightbulb id-color"></i>
@@ -133,6 +133,7 @@
                                     <!-- service box close -->
 
                                     <!-- service box begin -->
+                                    <a href="{% url 'media' %}" id="id2" style="text-decoration: none; color: #6d6d6d">
                                     <div class="feature-box mb30">
                                         <div class="inner">
                                             <div class="text">
@@ -142,6 +143,7 @@
                                             <i class="big icon_flowchart_alt id-color"></i>
                                         </div>
                                     </div>
+                                    </a>
                                     <!-- service box close -->
 
                                     <!-- service box begin -->
@@ -186,28 +188,19 @@
 
                                     <div class="de_tab tab_style_2">
                                         <ul class="de_nav">
-                                            <li class="active">
+                                            <li class="active" id="m1">
                                                 <span>Раздел 1</span>
                                             </li>
-                                            <li>
-                                                <span>Раздел 2</span>
+                                            {% for i in moduls %}
+                                            {% if i != '1' %}
+                                            <li id="m{{i}}">
+                                                <span>Раздел {{i}}</span>
                                             </li>
-                                            <li>
-                                                <span>Раздел 3</span>
-                                            </li>
-                                            <li>
-                                                <span>Раздел 4</span>
-                                            </li>
-                                            <li>
-                                                <span>Раздел 5</span>
-                                            </li>
-                                            <li>
-                                                <span>Раздел 6</span>
-                                            </li>
+                                            {% endif %}
+                                            {% endfor %}
                                         </ul>
 
                                         <div class="de_tab_content text-left">
-
                                             <div class="tab_single_content">
                                                 <div class="start_btn"><button>Начать тест</button></div>
 
@@ -237,30 +230,30 @@
                                                     </header>
                                                     <section>
                                                         <div class="que_text">
-                                                                <!-- Here I've inserted question from JavaScript -->
+                                                                
                                                         </div>
                                                         <div class="option_list">
-                                                                <!-- Here I've inserted options from JavaScript -->
+                                                                
                                                         </div>
                                                     </section>
 
-                                                        <!-- footer of Quiz Box -->
+                                                        
                                                     <footer>
                                                         <div class="total_que">
-                                                                <!-- Here I've inserted Question Count Number from JavaScript -->
+                                                                
                                                         </div>
                                                         <button class="next_btn">Дальше</button>
                                                     </footer>
                                                 </div>
 
-                                                    <!-- Result Box -->
+                                                    
                                                 <div class="result_box">
                                                     <div class="icon">
                                                         <i class="fas fa-crown"></i>
                                                     </div>
                                                     <div class="complete_text">Вы завершили тест!</div>
                                                     <div class="score_text">
-                                                            <!-- Here I've inserted Score Result from JavaScript -->
+                                                            
                                                     </div>
                                                     <div class="buttons">
                                                         <button class="restart">Повторить</button>
@@ -269,97 +262,6 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="tab_single_content">
-                                                <div class="exp-box">
-                                                    <h5>2014</h5>
-                                                    <h4>Product Design, Harvard University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2010</h5>
-                                                    <h4>Master of Design, University of California</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2006</h5>
-                                                    <h4>Bachelor of Arts, Standford University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab_single_content">
-                                                <div class="exp-box">
-                                                    <h5>2014</h5>
-                                                    <h4>Product Design, Harvard University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2010</h5>
-                                                    <h4>Master of Design, University of California</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2006</h5>
-                                                    <h4>Bachelor of Arts, Standford University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab_single_content">
-                                                <div class="exp-box">
-                                                    <h5>2014</h5>
-                                                    <h4>Product Design, Harvard University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2010</h5>
-                                                    <h4>Master of Design, University of California</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2006</h5>
-                                                    <h4>Bachelor of Arts, Standford University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab_single_content">
-                                                <div class="exp-box">
-                                                    <h5>2014</h5>
-                                                    <h4>Product Design, Harvard University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2010</h5>
-                                                    <h4>Master of Design, University of California</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2006</h5>
-                                                    <h4>Bachelor of Arts, Standford University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab_single_content">
-                                                <div class="exp-box">
-                                                    <h5>2014</h5>
-                                                    <h4>Product Design, Harvard University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2010</h5>
-                                                    <h4>Master of Design, University of California</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                                <div class="exp-box">
-                                                    <h5>2006</h5>
-                                                    <h4>Bachelor of Arts, Standford University</h4>
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                </div>
-                                            </div>
-
-
                                         </div>
                                     </div>
 
@@ -400,95 +302,6 @@
 					<div class="pf-nav right"><i class="arrow_right"></i></div>
                 </section>
                 <!-- section close -->
-
-                <!-- section begin -->
-                <section id="section-blog" class="fluid">
-                    <div class="container-fluid">
-                        <div class="row-fluid table">
-                            <div class="col-md-6 va-top">
-                                <div class="img-fx">
-                                    <img src="{% static 'project/images/misc/3.jpg' %}" alt="">
-                                    <div class="img-url"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="content-wrap">
-
-                                    <div class="bloglist s1 item">
-                                        <div class="post-content">
-                                            <div class="date-box">
-                                                <div class="d">28</div>
-                                                <div class="m">MAR</div>
-                                            </div>
-                                            <div class="post-text">
-                                                <h3><a href="blog-single.html">The Best Website Design of 2022</a></h3>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="bloglist s1 item">
-                                        <div class="post-content">
-                                            <div class="date-box">
-                                                <div class="d">26</div>
-                                                <div class="m">MAR</div>
-                                            </div>
-                                            <div class="post-text">
-                                                <h3><a href="blog-single.html">Make Better User Interface</a></h3>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="bloglist s1 item">
-                                        <div class="post-content">
-                                            <div class="date-box">
-                                                <div class="d">24</div>
-                                                <div class="m">MAR</div>
-                                            </div>
-                                            <div class="post-text">
-                                                <h3><a href="blog-single.html">The Importance Of Web Design</a></h3>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="bloglist s1 item">
-                                        <div class="post-content">
-                                            <div class="date-box">
-                                                <div class="d">22</div>
-                                                <div class="m">MAR</div>
-                                            </div>
-                                            <div class="post-text">
-                                                <h3><a href="blog-single.html">10 Web Design Tips From Experts</a></h3>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="bloglist s1 item">
-                                        <div class="post-content">
-                                            <div class="date-box">
-                                                <div class="d">18</div>
-                                                <div class="m">MAR</div>
-                                            </div>
-                                            <div class="post-text">
-                                                <h3><a href="blog-single.html">Make Responsive Website Layouts</a></h3>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </section>
-                <!-- section close -->
-
             </div>
             <!-- CONTENT CLOSE -->
 
@@ -510,7 +323,6 @@
     <script type="text/javascript" src="{% static 'project/js/easing.js' %}"></script>
     <script type="text/javascript" src="{% static 'project/js/owl.carousel.js' %}"></script>
     <script type="text/javascript" src="{% static 'project/js/jquery.countTo.js' %}"></script>
-    <script type="text/javascript" src="{% static 'project/js/validation.js' %}"></script>
     <script type="text/javascript" src="{% static 'project/js/wow.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'project/js/jquery.magnific-popup.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'project/js/enquire.min.js' %}"></script>

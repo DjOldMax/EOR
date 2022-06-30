@@ -1,5 +1,9 @@
+
+
+
 // creating an array and passing the number, questions, options, and answers
-let questions = JSON.parse(document.getElementById('questions').textContent);
+let lst = JSON.parse(document.getElementById('questions').textContent);
+let questions = lst
 
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
@@ -140,7 +144,7 @@ function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     //creating a new span and div tag for question and option and passing the value using array index
-    let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
+    let que_tag = '<span>'+ questions[index].question +'</span>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
@@ -197,12 +201,12 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 4){ // if user scored more than 3
+    if (userScore >= questions.length*0.75){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>Вы молодец! 🎉, Вы получили <p>'+ userScore +'</p> из <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if(userScore > 4){ // if user scored more than 1
+    else if(userScore >= questions.length*0.5){ // if user scored more than 1
         let scoreTag = '<span>Хороший результат 😎, Вы получили <p>'+ userScore +'</p> из <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
