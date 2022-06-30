@@ -199,6 +199,7 @@ restart_quiz.onclick = ()=>{
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
+    // result_box.classList.remove("activeResult");
     window.location.reload(); //reload the current window
 }
 
