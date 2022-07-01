@@ -1009,7 +1009,12 @@ header.header-mobile.header-light #menu-btn {
 
 .post-masonry {
     margin-bottom: 30px;
+    animation: show 5s;
 }
+@keyframes show {
+
+    from {opacity: 0;} to {opacity: 1;}
+    }
 
 .post-masonry .post-thumb {
     border-radius: 10px;
