@@ -12,6 +12,9 @@
 
     <!-- CSS Files
     ================================================== -->
+    <link rel="stylesheet" href="{% static 'project/css/normalize.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'project/css/font-awesome.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'project/css/templatemo-style.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/bootstrap.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/animate.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/owl.carousel.css' %}" type="text/css">
@@ -20,6 +23,9 @@
     <link rel="stylesheet" href="{% static 'project/css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/style.css' %}" type="text/css">
 	<link rel="stylesheet" href="{% static 'project/css/coloring.css' %}" type="text/css">
+
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
 
 </head>
 
@@ -79,6 +85,21 @@
     <script src="{% static 'project/js/typed.js' %}"></script>
     <script src="{% static 'project/js/typed-custom.js' %}"></script>
     <script src="{% static 'project/js/designesia.js' %}" %}></script>
+
+    <script src="{% static 'project/js/plugins.js' %}"></script>
+    <script src="{% static 'project/js/main.js' %}"></script>
+
+    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+<!-- Preloader -->
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function () { // makes sure the whole site is loaded
+            $('#loader').fadeOut(); // will first fade out the loading animation
+            $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({'overflow-y': 'visible'});
+        })
+        //]]>
+    </script>
 
 </body>
 

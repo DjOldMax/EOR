@@ -17,6 +17,7 @@ class BOOKS(models.Model):
     class Meta:
         verbose_name = 'Литература'
         verbose_name_plural = 'Литература'
+        ordering = ['name']
 
 class TEST(models.Model):
 
@@ -25,7 +26,7 @@ class TEST(models.Model):
     answer0 =  models.CharField(max_length=20,verbose_name='Верный ответ')
     answer1 =  models.CharField(max_length=20,verbose_name='Прочий ответ')
     answer2 =  models.CharField(max_length=20,verbose_name='Прочий ответ')
-    answer3 =  models.CharField(max_length=20,verbose_name='Просий ответ')
+    answer3 =  models.CharField(max_length=20,verbose_name='Прочий ответ')
 
     def __str__(self):
         return self.question
@@ -33,6 +34,7 @@ class TEST(models.Model):
     class Meta:
         verbose_name = 'Вопросы теста'
         verbose_name_plural = 'Вопросы теста'
+        ordering=['modul','question']
 
 class VIDEOS(models.Model):
 
@@ -47,3 +49,11 @@ class VIDEOS(models.Model):
 
     def __str__(self):
         return self.title
+
+    # def get_absolute_url(self):
+    #     return reverse(video',kwargs={'video_id': self.pk})
+
+    class Meta:
+        verbose_name = 'Видеоматериалы'
+        verbose_name_plural = 'Видеоматериалы'
+        ordering=['title']
