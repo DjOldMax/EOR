@@ -42,7 +42,7 @@ def show_media(request):
     return render(request, 'project/video_list.html',context=context)
 
 def show_video(request,pk: int):
-    _video = get_object_or_404(Video, id=pk)
+    _video = get_object_or_404(VIDEOS, id=pk)
     return render(request, "project/video_stream.html", {"video": _video})
 
 def stream_video(request,pk:int):

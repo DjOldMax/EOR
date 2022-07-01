@@ -907,9 +907,7 @@ header.header-mobile.header-light #menu-btn {
     padding: 0;
 }
 
-.de_dark #content {
-    background: #ffffff;
-}
+
 
 #content {
     background: #18191b;
@@ -9461,4 +9459,4 @@ img {
     }
 }
 
-@media only screen and (max-width: 480px) {
+

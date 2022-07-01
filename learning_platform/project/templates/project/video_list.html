@@ -1,13 +1,14 @@
 {% extends 'project/media.html' %}
+{% load static %}
 {% block content %}
 <div class="main-posts">
     <div class="container">
       <div class="row">
-        <div class="blog-masonry masonry-true">
+        <div class="blog-masonry masonry-true" style="height: 100%;">
           {% for video in video_list %}
             <div class="post-masonry col-md-4 col-sm-6">
               <div class="post-thumb">
-                <img src="{{ video.image.url }}" alt="">
+                <img src={{ video.image.url }} alt="">
                 <div class="title-over">
                   <h4>{{ video.title }}</h4>
                 </div>
