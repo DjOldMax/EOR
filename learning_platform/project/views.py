@@ -23,8 +23,7 @@ def home(request):
         random.shuffle(answer)
         other['options'] = answer
         context['value'].append(other)
-    print(context['value'])
-    print(moduls)
+
     return render(request, 'project/index.html', context = context)
 
 
