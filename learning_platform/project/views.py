@@ -55,7 +55,8 @@ def stream_video(request,pk:int):
     response['Content-Range'] = content_range
     return response
 
-
+def show_kurs(request):
+    return render(request,"project/learn.html")
 
 
 
