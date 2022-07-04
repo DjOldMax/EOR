@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;6.2.2. Основные алгоритмы реализации стеганографических вложений</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="6.2.2. Основные алгоритмы реализации стеганографических вложений">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='310.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6.1. Криптографические генераторы псевдослучайных последовательностей</a></li><li ><a href='320.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6.2. Основы стегананографии</a></li><li ><a href='1020.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;6.2.1. Общие сведения</a></li><li class='sidebar-active'><a href='1030.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;6.2.2. Основные алгоритмы реализации стеганографических вложений</a></li><li ><a href='1040.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;6.2.3. Атаки на стегосистемы</a></li><li ><a href='1050.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;6.2.4. Методы обнаружения стеганографических вложений</a></li><li ><a href='1860.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='330.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6.3. Квантовая криптография</a></li><li ><a href='1300.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 6</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 6.2.2. Основные алгоритмы реализации стеганографических вложений</h1>
+						<hr>
+                        <h3 class=rvps1600><span class=rvts0><span class=rvts4302>6.2.2. Основные алгоритмы реализации стеганографических вложений</span></span></h3>
+<p class=rvps767><span class=rvts4>Алгоритмы встраивания скрытой информации разделяются на несколько классов:</span></p>
+<p class=rvps1004><span class=rvts1640>•</span><span class=rvts31> работающие с цифровым сигналом (наиболее популярный метод LSB – least signiаicant bit);</span></p>
+<p class=rvps1004><span class=rvts1640>•</span><span class=rvts31> наложение поверх оригинала, разделяются на линейные и нелинейные;</span></p>
+<p class=rvps1004><span class=rvts1640>•</span><span class=rvts31> использование особенностей форматов файлов.</span></p>
+<p class=rvps767><span class=rvts39>Рассмотрим</span><span class=rvts4> некоторые алгоритмы реализации стеганографических вложений [</span><a class=rvts228 href="Модель%20выявления%20киберугроз%20на%20информационные%20ресурсы%20сети%20Интернет.pdf">29</a><span class=rvts4>].</span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Текстовая стеганография</span></span></h3>
+<p class=rvps767><span class=rvts39>Текстова стеганография объединяет</span><span class=rvts4> методы скрытия информации в текстовых данных без искажения их смысловой нагрузки. </span></p>
+<p class=rvps767><span class=rvts4>Такими методами являются:</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts6293> форматирование</span><span class=rvts31> текста вставкой пробелов (четное/нечетное количество), четное обозначает 0, нечетное 1;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts6293> </span><span class=rvts31>метод измерения порядка следования хвостовых маркеров (CR/LF carriage return/line feed или откат/проворот), которые имеют шестнадцатеричный код 0Dh, 0Ah и соответствуют нулю и единице;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts6293> </span><span class=rvts31>метод хвостовых пробелов, например, дописывание в конец строки 0</span><span class=rvts1640>−</span><span class=rvts31>16 пробелов позволяет закодировать 4 бита информации;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts6293> </span><span class=rvts31>метод знаков одинакового начертания (замена знака на аналогичный из другого алфавита).</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts6293> </span><span class=rvts31>методы использования имитирующих функций </span><span class=rvts1640>−</span><span class=rvts31> подход основан на генерации текстов; для тайного сообщения генерируется осмысленный текст, скрывающий само сообщение.</span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Метод</span></span><span class=rvts0><span class=rvts11049> </span></span><span class=rvts0><span class=rvts11045>младших значащих(LSB)</span></span></h3>
+<p class=rvps767><span class=rvts39>Наиболее</span><span class=rvts4> </span><span class=rvts39>популярным</span><span class=rvts4> и понятным методом является метод использования младших значащих бит изображения или звукового файла неразличимых органами чувств. При этом в звуковых файлах чаще всего это биты собственных шумов АЦП, в изображениях </span><span class=rvts1638>−</span><span class=rvts4> биты погрешности сканера или биты для сгенерированных на ПК картинок. Метод младших значащих бит состоит в том, что младшие бита заменяются данными для вложения (рис. 6.8).</span></p>
+<div class=rvps969><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps969><img alt="" style="padding : 1px;" src="img/img_00785.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1339><span class=rvts51>Рис. 6.8.</span><span class=rvts95> </span><span class=rvts51>Вложение данных в пиксели изображения в формате BMP</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>Верхняя часть рисунка это пиксели без вложения. Каждый пиксель состоит из трех байт </span><span class=rvts1638>−</span><span class=rvts4> компонентов красного, зеленого и синего. В нижней части рисунка показано, как младшие два бита каждой компоненты заменяются данными для вложения. Этот метод возможно реализовать с использованием программы OpenPuff v3.4.0, которая кроме изображений умеет работать с большим количеством файлов других форматов (Bmp, Jpeg, Png, Tga, Pcx, Aiff, Mp3, Next, Wav, 3gp, Mp4, Mpeg I, MPEG II, Vob, Flv, Pdf, Swf ). Н</span><span class=rvts39>есмотря на популярность метода LSB, он наименее устойчив к искажениям и легко обнаруживается с использованием методов математической статистики. </span></p>
+<p class=rvps767><span class=rvts39>Применительно</span><span class=rvts4> к звуковым файлам, одна секунда оцифрованного звука с частотой дискретизации 44100 Гц и уровнем отсчета 8 бит в стереорежиме позволяет скрыть, за счет замены наименее значимых младших разрядов на скрываемое сообщение, около 10 Кбайт информации. При этом, изменение значений отсчетов составляет менее 1 %. Такое изменение практически не обнаруживается при прослушивании файла большинством людей. </span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Эхо-методы</span></span></h3>
+<p class=rvps767><span class=rvts4>Эхо-методы применяются в </span><span class=rvts39>цифровой</span><span class=rvts4> аудиостеганографии и используют неравномерные промежутки между эхо-сигналами для кодирования последовательности значений. Данный метод основан на встраивании секретной информации в аудиоданные путем добавления эха к записи. Для этого исходный сигнал разбивается на блоки и для каждого блока вычисляется эхосигнал и добавляется к основным данным методом наложения. Для обозначения логического нуля и единицы используется инвертирование эхо-сигнала, определение границы бит выполняется с помощью временного кодирования, т.&nbsp;е. каждый бит занимает промежуток равной длины в сигнале. Существует возможность ввести несколько эхо-сигналов с разным смещением в аудиоданные (рис. 6.9), в этом случае можно передать больше данных, но и уровень дополнительных шумов также увеличивается.</span></p>
+<div class=rvps1339><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps969><img alt="" style="padding : 1px;" src="img/img_00786.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1339><span class=rvts51>Рис. 6.9.</span><span class=rvts95> </span><span class=rvts51>Пример добавления к аудиоданным двух эхо-сигналов</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts39>При</span><span class=rvts4> </span><span class=rvts39>наложении</span><span class=rvts4> эха на сигнал необходимо соблюдать условие незаметности для человеческого восприятия. Чаще всего используется задержка около 1/1000, что вполне приемлемо для большинства записей и слушателей. Эхо-методы устойчивы к амплитудным и частотным атакам, но неустойчивы к атакам по времени. С помощью эхо-методов может быть передан большой объем информации.</span></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Метод скрытия в пространственной области</span></span></h3>
+<p class=rvps767><span class=rvts39>Преимуществом алгоритмов встраивания данных в пространственной области является то, что стегоданные внедряются в области исходного изображения и нет необходимости выполнять вычислительно громоздкие линейные преобразования изображений. ЦВЗ внедряется за счет манипуляций яркостью или цветовыми составляющими. </span><span class=rvts4>Большинство алгоритмов встраивания ЦВЗ в пространственную область изображений основаны на использовании широкополосных сигналов (ШПС). Основной идеей применения ШПС в стеганографии является то, что данные внедряются в шумовой сигнал малой мощности. Так как сигнал малой мощности, то для защиты ЦВЗ применяют помехоустойчивые коды. </span></p>
+<p class=rvps767><span class=rvts39>Методы</span><span class=rvts4> скрытия сообщений в пространственной области:</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> алгоритм Куттера;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> алгоритм Брундокса;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> алгоритм Ленгелаара;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> алгоритм Питаса;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> алгоритм Роджена;</span></p>
+<p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> алгоритм </span><span class=rvts93>Бендера и др.</span></p>
+<p class=rvps767><span class=rvts649>Методы скрытия сообщений в пространственной области характеризуются </span><span class=rvts7502>высокой устойчивостью метода ко многим известным видам атак (НЧ-фильтрации, компрессии в соответствии с алгоритмом JPEG, обрезанию краев) и средними показателями визуального искажения.</span></p>
+<p class=rvps767><span class=rvts4>Метод Куттера </span><span class=rvts1638>−</span><span class=rvts4> Джордана </span><span class=rvts1638>−</span><span class=rvts4> Боссена </span><span class=rvts1638>−</span><span class=rvts4> стеганографический метод, осуществляющий внедрение цифрового водяного знака в изображение. Он был представлен </span><a class=rvts4314 href="2060.html"  OnClick="javascript:NewWindow=window.open('2060.html','NewWindow','width=900,height=800,menubar=no,scrollbars');return false;">Мартином Куттером</a><span class=rvts38>, </span><a class=rvts4314 href="2070.html"  OnClick="javascript:NewWindow=window.open('2070.html','NewWindow','width=900,height=800,menubar=no,scrollbars');return false;">Фредериком Джорданом</a><span class=rvts38> и Фрэнком Боссеном</span><span class=rvts4> в журнале Journal of Electronic Imaging в апреле 1998 года.</span></p>
+<p class=rvps767><span class=rvts4>Метод Куттера </span><span class=rvts1638>−</span><span class=rvts4> Джордана </span><span class=rvts1638>−</span><span class=rvts4> Боссена относится к классу алгоритмов, осуществляющих скрытие данных в пространственной области. В алгоритмах этого класса внедрение ЦВЗ выполняется за счет изменения яркостной, либо цветовых компонент пикселя. В этом методе отдельные биты водяного знака многократно внедряются в изображение путем изменения значения синего канала в пикселе. Это изменение пропорционально яркостной компоненте пикселя и может принимать как положительные, так и отрицательные значения в зависимости от значения встраиваемого бита водяного знака [</span><a class=rvts65 href="А.Ф.%20Бауэр%20Методы%20и%20принципы%20криптологии.pdf">4</a><span class=rvts4>]. </span></p>
+<p class=rvps767><span class=rvts4>Основными свойствами, которыми должен обладать ЦВЗ – это неразличимость для человеческого глаза и устойчивость к различным искажениям и изменениям изображения. Метод Куттера </span><span class=rvts1638>−</span><span class=rvts4> Джордана </span><span class=rvts1638>−</span><span class=rvts4> Боссена удовлетворяет первому требованию за счет встраивания битов водяного знака именно в синий канал пикселя, так как человеческий глаз наименее чувствителен именно к этому цвету [</span><a class=rvts65 href="Грибунин%20Вадим.%20Цифровая%20стеганография%20-%20royallib.ru.doc">8</a><span class=rvts4>]. Устойчивость к искажениям изображения обеспечивается путем многократного встраивания битов ЦВЗ в различных частях исходного изображения. </span></p>
+<p class=rvps767><span class=rvts4>Научные работы в области применения этого метода показали высокую эффективность при его использовании для защиты авторских прав изображений и видеоматериалов [</span><a class=rvts65 href="Шнайер%20-прикладная%20криптография.pdf">20</a><span class=rvts4>], а также для проверки целостности изображений и QR-кодов.</span></p>
+<p class=rvps767><span class=rvts30>Встраивание одного бита информации:</span></p>
+<p class=rvps767><span class=rvts51>s</span><span class=rvts4> – бит;</span></p>
+<p class=rvps767><span class=rvts51>I</span><span class=rvts4>={</span><span class=rvts51>R</span><span class=rvts4>,</span><span class=rvts51>G</span><span class=rvts4>,</span><span class=rvts51>B</span><span class=rvts4>} – пиксель;</span></p>
+<p class=rvps767><span class=rvts4>Позиция первого пикселя определяется ключом.</span></p>
+<p class=rvps767><img width=236 height=23 alt="" style="padding : 1px;" src="img/img_00787.png"><span class=rvts4330> </span><span class=rvts7515>−</span><span class=rvts4330> яркость пикселя, следующие пиксели определяются как значения яркости синего цвета </span><img width=180 height=30 alt="" style="padding : 1px;" src="img/img_00788.png"><span class=rvts4330>.</span></p>
+<p class=rvps767><span class=rvts4>При этом </span><span class=rvts51>q</span><span class=rvts4> является условной энергией встраиваемого сигнала. Чем больше </span><span class=rvts51>q</span><span class=rvts4> , тем лучше работает метод и тем выше его заметность.</span></p>
+<p class=rvps767><span class=rvts30>Декодирование одного бита информации:</span></p>
+<p class=rvps4><img width=288 height=55 alt="" style="padding : 1px;" src="img/img_00789.png"><span class=rvts4773>,</span></p>
+<p class=rvps4><img width=105 height=30 alt="" style="padding : 1px;" src="img/img_00790.png"></p>
+<p class=rvps1243><span class=rvts4>где </span><span class=rvts51>с</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> размеры крестообразной области, изображенной на рис. 6.10.</span></p>
+<div class=rvps969><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps969><img alt="" style="padding : 1px;" src="img/img_00791.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1339><span class=rvts51>Рис. 6.10.</span><span class=rvts95> </span><span class=rvts51>Пример изображения крестообразной области</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>Хотя правильное извлечение наиболее вероятно, оно не является гарантированным. Функции встраивания и извлечения информации из контейнера не являются симметричными, т. е. функция извлечения не является обратной к функции встраивания, поэтому значение предсказанного бита имеет вероятностный характер и, вообще говоря, может не совпадать с исходным значением бита цифрового водяного знака. Для того, чтобы увеличить вероятность правильного извлечения бита информации используется многократное встраивание одного и того же бита в контейнер. Тогда бит сообщения может быть вычислен как </span></p>
+<p class=rvps22><img width=144 height=51 alt="" style="padding : 1px;" src="img/img_00792.png"></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>При этом рекомендуется использовать порядок обхода, представленный на рис. 6.11.</span></p>
+<div class=rvps969><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps969><img alt="" style="padding : 1px;" src="img/img_00793.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1339><span class=rvts51>Рис. 6.11.</span><span class=rvts95> Рекомендуемая </span><span class=rvts51>схема обхода контейнера</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps767><span class=rvts4><br></span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Метод кодирования в частотной области</span></span></h3>
+<p class=rvps767><span class=rvts4>В современной стеганографии наиболее популярны</span><span class=rvts39> </span><span class=rvts1050>Вейвлет-преобразование</span><span class=rvts4> и </span><span class=rvts1050>ДКП</span><span class=rvts4> ввиду их широкого применения в алгоритмах сжатия изображений. Для скрытия данных в области преобразования предпочтительно применять то же преобразование, которому изображение может быть подвергнуто при дальнейшем сжатии, например, при сжатии по стандарту JPEG </span><span class=rvts1638>−</span><span class=rvts4> использовать ДКП, а при использовании JPEG-2000 </span><span class=rvts1638>−</span><span class=rvts4> вейвлет-преобразование. Это делает стегоалгоритм более </span><span class=rvts1050>устойчивым</span><span class=rvts4> к дальнейшему сжатию изображения этими алгоритмами. Нужно отметить, что стегоалгоритм, использующий ДКП не обязан быть устойчивым к компрессии с использованием вейвлет-преобразования (JPEG-2000) и наоборот. Обычно заранее не известен применяемый алгоритм сжатия. Поэтому главная задача при попытке скрыть информацию в области преобразования </span><span class=rvts1638>−</span><span class=rvts4> нахождение максимально робастного ко всем алгоритмам преобразования, т. е. не </span><span class=rvts39>зависящего от применяемого в дальнейшем алгоритма сжатия. Обычно предпочтения относительно конкретного стегоалгоритма определяются экспериментально. Методы скрытия в частотной области</span><span class=rvts62> </span><span class=rvts39>характеризуются:</span></p>
+<p class=rvps767><span class=rvts1638>−</span><span class=rvts139> высокой устойчивостью ко многим известным видам атак (НЧ-фильтрации, компрессии в соответствии с алгоритмом JPEG, обрезанию краев); </span></p>
+<p class=rvps767><span class=rvts1638>−</span><span class=rvts139> низкими показателями визуального искажения.</span></p>
+<p class=rvps767><span class=rvts139><br></span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Фазовое кодирование</span></span></h3>
+<p class=rvps767><span class=rvts39>Также применяется в цифровой аудиостеганографии. В данном методе используется тот факт, что человеческое ухо воспринимает не значения фазы, а только их разность. </span><span class=rvts4>Сигнал разбивается на участки, значения фазы на первом участке используются для кодирования скрываемого сообщения, значения фаз остальных участков таким образом, чтобы разность фаз между участками осталась неизменной. </span></p>
+<p class=rvps767><span class=rvts4>Для </span><span class=rvts39>кодирования</span><span class=rvts4> значений фаз, на множестве фаз выделяется набор равномерно распределенных значений, соответствующих битам 0 и 1. Значение фазы заменяется ближайшим значением, соответствующим требуемому биту. Разность значений в наборе зависит от частоты полосы</span><span class=rvts38> и варьируется от </span><img width=24 height=47 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00794.png"><span class=rvts38> на чувствительных полосах до </span><img width=17 height=47 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00795.png"><span class=rvts38> на высокочастотных полосах. </span><span class=rvts4>Получатель должен знать длину участка, чтобы иметь возможность восстановить данные, добавленные с помощью частотного метода в контейнер. </span></p>
+<p class=rvps767><span class=rvts4>Фазовое кодирование является одним из самых эффективных методов скрытия информации, хотя обычно позволяет добавлять информацию не более 1% от данных контейнера. </span></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+<h3 class=rvps1600><span class=rvts0><span class=rvts11045>Метод расширенного спектра</span></span></h3>
+<p class=rvps767><span class=rvts39>В аудиостеганографии метод расширенного спектра пытается передать секретные сведения по спектру частот звукового сигнала. Этот метод чем-то схож с методом LSB, который передает биты сообщения случайным образом по всему звуковому файлу. Тем не менее, в отличие от способа LSB, метод расширенного спектра распространяет секретную информацию по спектру частот звукового файла, используя код, который не зависит от фактического сигнала. В результате конечный сигнал занимает полосу пропускания, которая размером больше, чем требуемый размер для передачи. </span></p>
+<p class=rvps767><span class=rvts39>Метод</span><span class=rvts4> расширенного спектра может внести вклад в повышение производительности по сравнению с методами LSB, фазового и четного кодирований путем умеренной скорости передачи данных и высоким уровнем устойчивости. Однако метод расширенного спектра имеет один существенный недостаток – он может вносить шум в аудиофайл.</span><span class=rvts39> </span></p>
+<p class=rvps767 style="page-break-before: always;"><span class=rvts39><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="1020.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1040.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

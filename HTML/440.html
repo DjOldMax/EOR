@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;2.1.3 Понятие абсолютно стойкого шифра</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="2.1.3 Понятие абсолютно стойкого шифра">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='150.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2.1. Криптографическая стойкость алгоритмов шифрования</a></li><li ><a href='420.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;2.1.1. Теоретическая и практическая стойкость шифров</a></li><li ><a href='430.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;2.1.2. Оценивание криптостойкости алгоритмов шифрования</a></li><li class='sidebar-active'><a href='440.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;2.1.3 Понятие абсолютно стойкого шифра</a></li><li ><a href='1680.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='160.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2.2. Криптоанализ, модель и параметры криптоаналитика</a></li><li ><a href='1260.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 2</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 2.1.3 Понятие абсолютно стойкого шифра</h1>
+						<hr>
+                        <h3 class=rvps870><span class=rvts0><span class=rvts29>2.1.3. Понятие абсолютно стойкого шифра</span></span></h3>
+<p class=rvps317><span class=rvts4>Традиционно в криптографии большой интерес представляла задача доказательства криптостойкости того или иного алгоритма, выражения ее в некоторых количественных единицах и определения ее верхней и нижней границы. Особый интерес </span><span class=rvts38>представлял вопрос существования</span><span class=rvts4> гарантированно стойкого шифра, который будет рассмотрен далее.</span></p>
+<p class=rvps317><span class=rvts4>Рассматривая шифрование, как зависящее от ключа отображение </span><span class=rvts51>F</span><span class=rvts4> открытого текста в шифртекст </span><img width=86 height=29 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00105.png"><span class=rvts4>, можно определить задачу криптоаналитика, как вычисление исходного сообщения (открытого текста) по шифртексту. Одним из параметров, определяющих возможность решения данной задачи, является необходимый объем исходных данных. Существуют криптосистемы, в которых </span><span class=rvts30>любой</span><span class=rvts4> объем исходных данных недостаточен для того, чтобы взломать шифр, причем, независимо от используемых вычислительных ресурсов. Такие шифры называются безусловно или абсолютно стойкими. Фактически для таких шифров знание шифртекста не дает никакой дополнительной информации для криптоаналитика.</span></p>
+<p class=rvps317><span class=rvts4>Если апостериорная вероятность того, что некоторое сообщение было зашифровано при известном шифртексте равна априорной вероятности без знания шифртекста, то такой шифр называется абсолютно (безусловно) стойким: </span></p>
+<p class=rvps885><img width=230 height=29 alt="" style="padding : 1px;" src="img/img_00106.png"><span class=rvts2815>.</span></p>
+<p class=rvps317><span class=rvts4>Это имеет место, когда вероятность того, что открытый текст принимает конкретное значение, не зависит от вида криптограммы. </span></p>
+<p class=rvps317><span class=rvts4>«В шифре простой замены со случайным ключом имеется 26! отображений, соответствующих 26! способам, которыми мы можем заменить 26 различных букв. Все эти способы равновозможны, и поэтому каждый имеет априорную вероятность </span><img width=29 height=48 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00107.png"><span class=rvts4>. Если такой шифр применяется к "нормативному английскому языку" и предполагается, что шифровальщик противника не знает ничего об источнике сообщений, кроме того, что он создает английский текст, то априорными вероятностями различных сообщений из </span><span class=rvts51>N</span><span class=rvts4> букв являются просто их относительные частоты в нормативном английском тексте. </span></p>
+<p class=rvps317><span class=rvts4>Если противник перехватил такую криптограмму из </span><span class=rvts51>N</span><span class=rvts4> букв, его апостериорные вероятности изменятся. Если </span><span class=rvts51>N</span><span class=rvts4> достаточно велико (скажем, 50 букв), имеется обычно единственное сообщение с апостериорной вероятностью, близкой к единице, в то время как все другие сообщения имею суммарную вероятность, близкую к нулю. Таким образом, имеется, по существу, единственное "решение" такой криптограммы. Для меньших </span><span class=rvts51>N</span><span class=rvts4> (скажем, </span><span class=rvts51>N</span><span class=rvts4>&nbsp;=&nbsp;15) обычно найдется много сообщений и ключей, вероятности которых сравнимы, и не найдется ни одного сообщения и ключа с вероятностью, близкой к единице. В этом случае "решение" криптограммы неоднозначно» [</span><a class=rvts65 href="Алфёров%20А.П.,%20Зубов%20А.Ю.,%20Кузьмин%20А.С.,%20Черемушкин%20А.В.%20Основы%20криптографии.pdf">2</a><span class=rvts4>].</span></p>
+<p class=rvps317><span class=rvts4>Для абсолютно стойкого шифра вероятности всех возможных решений равны и не зависят от количества имеющегося шифртекста. Поэтому невозможно отличить верный результат от неверного.</span></p>
+<p class=rvps317><span class=rvts30>Шифр Вернама (одноразовый блокнот)</span><span class=rvts4>. Назван в честь телеграфиста Гильберта Вернама, являющегося его изобретателем, придуман в 1917 году. Для получения шифртекста открытый текст складывается по модулю 2 (исключающее или) с ключом шифрования. При этом ключ должен обладать следующими свойствами:</span></p>
+<p class=rvps595><span class=rvts31>1) быть истинно случайным (например, генерироваться с помощью аппаратных датчиков);</span></p>
+<p class=rvps595><span class=rvts31>2) иметь размер, равный размеру открытого текста;</span></p>
+<p class=rvps595><span class=rvts31>3) применяться только один раз и храниться в секрете. Если это требование будет нарушено, то криптограмму можно взломать с использованием разновидности частотного анализа.</span></p>
+<p class=rvps317><span class=rvts4>При использовании на практике очень длинная ключевая последовательность записывается на некотором носителе (одноразовом блокноте), который имеется на приемной и передающей стороне, после использования строки и страницы данного блокнота уничтожаются. Изначально предназначенный для преобразования текстовых сообщений шифр легко расширяется для кодирования произвольных бинарных данных.</span></p>
+<p class=rvps317><span class=rvts4>В работе Клода Шеннона доказывается абсолютная стойкость шифра Вернама, что обусловило его применение до настоящего времени при передаче особо важных сообщений государственными и военными структурами. Широкого распространения этот шифр не получил, так как его использование связано с трудоемкой задачей распределения ключей очень большого объема и обеспечения хранения их в секрете.</span></p>
+<p class=rvps317><span class=rvts4>Важность шифра Вернама состоит в том, что при правильном применении это единственный шифр с абсолютной стойкостью, доказанной теоретически. Это связано с тем, что, не зная ключа, невозможно по имеющемуся шифртексту угадать/вычислить открытый текст. Любой открытый текст соответствующей длины будет равновероятным и у криптоаналитика нет возможности отличить один текст от другого. Расстояние единственности для шифра Вернама равно бесконечности.</span></p>
+<p class=rvps317><span class=rvts30>Теорема об абсолютной стойкости. </span><span class=rvts4>Алгоритм шифрования является абсолютно стойким если размерность пространства ключей </span><span class=rvts51>K</span><span class=rvts4> больше или равна размерности пространства сообщений [</span><a class=rvts65 href="Кац%20-%20введение%20в%20современную%20криптографию%20eng.pdf">22</a><span class=rvts4>].</span></p>
+<p class=rvps317><span class=rvts4>Для других алгоритмов шифрования, при наличии определенного объема шифртекста, имеется возможность выполнить криптоанализ и найти соответствующий ему открытый текст. Минимальный объем шифртекста, для которого это возможно, называют расстоянием единственности, а шифры такого типа называют «условно стойкими». Так, например, для алгоритма DES и текстового английского сообщения расстояние единственности равно 66 бит или 8.2 символа ASCII. Расстояние единственности зависит от вида зашифрованных данных, его можно увеличить, например, с помощью предварительного сжатия сообщений перед шифрованием. Если избыточность стремится к нулю, даже тривиальный шифр будет недоступен для взлома с использованием только шифртекста. Важно понимать, что расстояние единственности это необходимое, но недостаточное условие взлома криптосистемы. Так, для множества криптоатак высокая вычислительная сложность не дает возможности их использования на практике даже при достаточном объеме исходных данных. Сложность взлома условно-стойких шифров основана на сложности решения криптоаналитической задачи. Для условно-стойкого шифра такие задачи должны быть вычислительно сложными или вычислительно неосуществимыми.</span></p>
+<p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="430.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1680.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

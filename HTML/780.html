@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;4.3.3. Примеры хэш функций</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="4.3.3. Примеры хэш функций">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='220.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.1. Вероятностное шифрование</a></li><li ><a href='230.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.2. Блочные шифры на основе управляемых операций</a></li><li ><a href='240.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.3. Криптографические хэш функции</a></li><li ><a href='760.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.3.1. Структура и свойства хэш-функций</a></li><li ><a href='770.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.3.2. Построение хэш-функций на основе блочных шифров</a></li><li class='sidebar-active'><a href='780.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.3.3. Примеры хэш функций</a></li><li ><a href='790.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.3.4. Использование хэш функций при решении практических задач</a></li><li ><a href='1780.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='250.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.4. Поточные алгоритмы шифрования</a></li><li ><a href='1280.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 4</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 4.3.3. Примеры хэш функций</h1>
+						<hr>
+                        <h3 class=rvps1022><span class=rvts0><span class=rvts29>4.3.3. Примеры хэш-функций</span></span></h3>
+<p class=rvps22><span class=rvts4><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts50>Алгоритм RIPEMD-160</span></span></h4>
+<p class=rvps741><span class=rvts4>Алгоритм RIPEMD-160 обрабатывает данные блоками по 512 бит или по 16 слов размером 32 бита. Сначала сообщение дополняется нулями так, чтобы оно было кратно 448 битам по модулю 512. После этого, в конец сообщения добавляется его длина в формате 64-битного целого и таким образом сообщение становится кратным 512 битам.</span></p>
+<p class=rvps741><span class=rvts4>Общая структура обработки одного блока данных с помощью хэш-функции RIPEMD-160 приведена на рис. 4.20. </span></p>
+<div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps742><img alt="" style="padding : 1px;" src="img/img_00396.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1186><span class=rvts51>Рис. 4.20. Схема хэш-функции RIPEMD-160</span></p>
+<p class=rvps742><span class=rvts4><br></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps741><span class=rvts4>Рассмотрим последовательность обработки одного блока данных, каждый раунд которой подчинен схеме, представленной на рис. 4.21.</span></p>
+<div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps742><img alt="" style="padding : 1px;" src="img/img_00397.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1186><span class=rvts51>Рис. 4.21. </span><span class=rvts95>Структура одного раунда хэш-функции RIPEMD-160</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps741><span class=rvts4><br></span></p>
+<p class=rvps741><span class=rvts4>Алгоритм начинается с начальной инициализации значений хэша словами: </span></p>
+<p class=rvps742><img alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00398.png"></p>
+<p class=rvps741><span class=rvts4>Каждое 512-битное значение блока разделяется на 2 блока по 8 32-битных значений и выполняется 80 модификаций этих данных с помощью следующих функций, каждая из которых модифицирует значения хэша:</span></p>
+<div class=rvps765><table width="100%" border=1 cellpadding=4 cellspacing=0 style="border-color: #cccccc; border-style: solid; border-spacing: 0px;">
+<tr valign=top>
+<td width="100%" valign=top style="border-color: #cccccc; border-style: solid; padding: 4px; background-color: #e6e6ff;"><p class=rvps741><span class=rvts39>Для левого блока</span></p>
+<p class=rvps741><span class=rvts39>FL(AL, BL, CL, DL, X[ 0], 11);</span></p>
+<p class=rvps741><span class=rvts39>GL(AL, BL, CL, DL, X[ 7], 7);</span></p>
+<p class=rvps741><span class=rvts39>HL(AL, BL, CL, DL, X[ 3], 11);</span></p>
+<p class=rvps741><span class=rvts39>IL(AL, BL, CL, DL, X[ 1], 11);</span></p>
+<p class=rvps741><span class=rvts39>KL(AL, BL, CL, DL, X[ 1], 11);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps741><span class=rvts4>Аналогичные функции, но с другим порядком слов, данных и параметров, используются для правого блока. Каждая из этих функций повторяется по 16 раз с разными данными и разными промежуточными переменными. </span></p>
+<p class=rvps741><span class=rvts4>Все эти функции имеют следующую структуру: </span></p>
+<div class=rvps765><table width="100%" border=1 cellpadding=4 cellspacing=0 style="border-color: #cccccc; border-style: solid; border-spacing: 0px;">
+<tr valign=top>
+<td width="100%" valign=top style="border-color: #cccccc; border-style: solid; padding: 4px; background-color: #e6e6ff;"><p class=rvps741><span class=rvts7094>void</span><span class=rvts39> GL(DWORD&amp; a,DWORD&amp; b,DWORD&amp; c,DWORD&amp; d,DWORD x,DWORD s)</span></p>
+<p class=rvps741><span class=rvts39>{</span></p>
+<p class=rvps741><span class=rvts39>a += G(b, c, d) + x + 0x5a827999UL; // нелинейная функция и добавление константы</span></p>
+<p class=rvps741><span class=rvts39>a = ROTATE_LEFT(a, s); // циклическое вращение влево на заданное число бит</span></p>
+<p class=rvps741><span class=rvts39>}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps1151><span class=rvts4>и используют различные константы:</span></p>
+<p class=rvps741><span class=rvts139>00000000h;</span></p>
+<p class=rvps741><span class=rvts139>5A827999h;</span></p>
+<p class=rvps741><span class=rvts139>6ED9EBA1h;</span></p>
+<p class=rvps741><span class=rvts139>8F1BBCDCh; </span></p>
+<p class=rvps741><span class=rvts139>A953FD4Eh;</span></p>
+<p class=rvps741><span class=rvts139>50A28BE6h; </span></p>
+<p class=rvps741><span class=rvts139>5C4DD124h; </span></p>
+<p class=rvps741><span class=rvts139>6D703EF3h;</span></p>
+<p class=rvps741><span class=rvts139>7A6D76E9h; </span></p>
+<p class=rvps741><span class=rvts139>00000000,</span></p>
+<p class=rvps1151><span class=rvts139>а также различные вращения и различные логические функции. </span></p>
+<p class=rvps741><span class=rvts4>Набор вращений по 16 для каждой из функций FL,GL и т.&nbsp;д., для вращения влево, приведен в табл. 4.1.</span></p>
+<p class=rvps741><span class=rvts4>В каждой из функций FL,GL … KL, FR, GR … KR используются поочередно пять логических функций :</span></p>
+<p class=rvps742><img width=162 height=28 alt="" style="padding : 1px;" src="img/img_00399.png"><span class=rvts4330>;</span></p>
+<p class=rvps742><img width=240 height=31 alt="" style="padding : 1px;" src="img/img_00400.png"><span class=rvts4330>;</span></p>
+<p class=rvps742><img width=199 height=31 alt="" style="padding : 1px;" src="img/img_00401.png"><span class=rvts4330>;</span></p>
+<p class=rvps742><img width=231 height=31 alt="" style="padding : 1px;" src="img/img_00402.png"><span class=rvts4330>;</span></p>
+<p class=rvps742><img width=199 height=31 alt="" style="padding : 1px;" src="img/img_00403.png"><span class=rvts4330>.</span></p>
+<p class=rvps1203><span class=rvts51>Таблица 4.1</span></p>
+<p class=rvps742><span class=rvts30>Набор значений для вращения влево</span></p>
+<div class=rvps765><table width="100%" border=1 cellpadding=1 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>FL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>GL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>HL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>IL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>KL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 2px;"><p class=rvps918><span class=rvts41>6</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps741><span class=rvts4><br></span></p>
+<p class=rvps741><span class=rvts4>Выбор 32-битных слов 512-битного блока, обрабатываемого в каждом цикле для функций левого блока, приведен в табл. 4.2.</span></p>
+<p class=rvps1203><span class=rvts51>Таблица 4.2</span></p>
+<p class=rvps742><span class=rvts30>Слова данных, используемые для модификации хэша в каждой из функций</span></p>
+<div class=rvps765><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>FL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>2</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>10</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>15</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>GL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>10</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>2</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>8</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>HL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>10</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>2</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>12</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>IL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>10</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>13</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>2</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>KL</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>12</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>2</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>10</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>14</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>11</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>15</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1332><span class=rvts41>13</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps1333><span class=rvts4>После обработки одного блока данных из четырех 32-битных слов, составляющих хэш, они циклически сдвигаются на одно слово влево и самое правое значение дополнительно модифицируется с помощью 32-битного значения от левого и такого же от правой половин блока преобразованной копии хэша. Это выполняется с помощью операции сложения по модулю </span><img width=28 height=27 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00404.png"><span class=rvts4>.</span></p>
+<p class=rvps741><span class=rvts4><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts50>ГОСТ Р 34.11-94 «Информационная технология. Криптографическая защита информации. Функция хэширования» </span></span></h4>
+<p class=rvps741><span class=rvts4>Устаревший российский криптографический стандарт вычисления хеш-функции, основанный на MD-4.</span></p>
+<p class=rvps741><span class=rvts4>Стандарт определяет алгоритм и процедуру вычисления хеш-функции для последовательности символов. Этот стандарт является обязательным для применения в качестве алгоритма хеширования в государственных организациях&nbsp;РФ&nbsp;и ряде коммерческих организаций.</span></p>
+<p class=rvps741><span class=rvts4330>Основой описываемой хеш-функции является шаговая функция хеширования&nbsp;</span><img width=123 height=25 alt="" style="padding : 1px;" src="img/img_00405.png"><span class=rvts4330>, где </span><img width=84 height=25 alt="" style="padding : 1px;" src="img/img_00406.png"><span class=rvts4330> – блоки длины 256 бит.</span></p>
+<p class=rvps741><span class=rvts4>Каждый блок сообщения, начиная с первого, подается на шаговую функцию для вычисления промежуточного значения хеш-функции:</span></p>
+<p class=rvps742><span class=rvts4>&nbsp;</span><img width=127 height=25 alt="" style="padding : 1px;" src="img/img_00407.png"></p>
+<p class=rvps741><span class=rvts4330>Значение </span><img width=24 height=25 alt="" style="padding : 1px;" src="img/img_00408.png"><span class=rvts4330> можно выбрать произвольным.</span></p>
+<p class=rvps741><span class=rvts4330>После вычисления </span><img width=35 height=25 alt="" style="padding : 1px;" src="img/img_00409.png"><span class=rvts4330> конечное значение хеш-функции получают следующим образом (рис. 4.22):</span></p>
+<p class=rvps875><span class=rvts7100>•</span><span class=rvts7097> </span><img width=131 height=25 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00410.png"><span class=rvts7097>, где </span><span class=rvts7098>L</span><span class=rvts7097> – длина сообщения </span><span class=rvts7098>М</span><span class=rvts7097> в битах по модулю </span><img width=29 height=21 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00411.png"><span class=rvts7097>;</span></p>
+<p class=rvps875><span class=rvts7100>•</span><span class=rvts7097> </span><img width=113 height=25 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00412.png"><span class=rvts7097>, где </span><span class=rvts7098>K</span><span class=rvts7097> – контрольная сумма сообщения </span><span class=rvts7098>М</span><span class=rvts7097>: </span><img width=167 height=25 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00413.png"><span class=rvts7097>, </span><span class=rvts7098>h</span><span class=rvts7097> – значение хеш-функции сообщения </span><span class=rvts7098>М</span><span class=rvts7097>.</span></p>
+<p class=rvps875><span class=rvts7097><br></span></p>
+<p class=rvps875><span class=rvts31><br></span></p>
+<p class=rvps742><img alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00414.png"></p>
+<p class=rvps1186><span class=rvts51>Рис. 4.22. Структура &nbsp;алгоритма</span></p>
+<p class=rvps741><span class=rvts4><br></span></p>
+<p class=rvps4><span class=rvts4>Алгоритм:</span></p>
+<p class=rvps741><span class=rvts4>1. Инициализация:</span></p>
+<p class=rvps1334><span class=rvts7107>•</span><span class=rvts7106> </span><img width=57 height=25 alt="" style="padding : 1px;" src="img/img_00415.png"><span class=rvts7106>&nbsp;</span><span class=rvts7107>−</span><span class=rvts7106> начальное значение хеш-функции, т. е. 256-битовый IV вектор, определяется пользователем;</span></p>
+<p class=rvps1334><span class=rvts7103>•</span><span class=rvts7102> </span><img width=53 height=28 alt="" style="padding : 1px;" src="img/img_00416.png"><span class=rvts7103>−</span><span class=rvts7102> контрольная сумма;</span></p>
+<p class=rvps1334><span class=rvts7107>•</span><span class=rvts7106> </span><img width=51 height=20 alt="" style="padding : 1px;" src="img/img_00417.png"><span class=rvts7107>−</span><span class=rvts7106> длина сообщения.</span></p>
+<p class=rvps741><span class=rvts7108>2. Функция сжатия внутренних итераций: для </span><span class=rvts7110>i </span><span class=rvts7108>= 1 … </span><span class=rvts7110>n</span><span class=rvts7108> </span><span class=rvts7109>−</span><span class=rvts7108> 1 выполняем следующее (пока&nbsp;</span><img width=76 height=28 alt="" style="padding : 1px;" src="img/img_00418.png"><span class=rvts7108>):</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=95 height=25 alt="" style="padding : 1px;" src="img/img_00419.png"><span class=rvts7108> &nbsp;</span><span class=rvts7109>−</span><span class=rvts7108> итерация метода последовательного хеширования;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=97 height=20 alt="" style="padding : 1px;" src="img/img_00420.png"><span class=rvts7108> &nbsp;</span><span class=rvts7109>−</span><span class=rvts7108> итерация вычисления длины сообщения;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=95 height=28 alt="" style="padding : 1px;" src="img/img_00421.png"><span class=rvts7108>&nbsp;</span><span class=rvts7109>−</span><span class=rvts7108> итерация вычисления контрольной суммы.</span></p>
+<p class=rvps741><span class=rvts4>3. Функция сжатия финальной итерации:</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=107 height=25 alt="" style="padding : 1px;" src="img/img_00422.png"><span class=rvts7108> </span><span class=rvts7109>−</span><span class=rvts7108> вычисление полной длины сообщения;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=145 height=27 alt="" style="padding : 1px;" src="img/img_00423.png"><span class=rvts7108>&nbsp;</span><span class=rvts7109>−</span><span class=rvts7108> набивка последнего блока;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=97 height=28 alt="" style="padding : 1px;" src="img/img_00424.png"><span class=rvts7108> </span><span class=rvts7109>−</span><span class=rvts7108> вычисление контрольной суммы сообщения;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=104 height=25 alt="" style="padding : 1px;" src="img/img_00425.png"><span class=rvts4>&nbsp;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=89 height=24 alt="" style="padding : 1px;" src="img/img_00426.png"><span class=rvts7108>&nbsp;&nbsp;</span><span class=rvts7109>−</span><span class=rvts7108> MD-усиление;</span></p>
+<p class=rvps1335><span class=rvts7109>•</span><span class=rvts7108> </span><img width=109 height=28 alt="" style="padding : 1px;" src="img/img_00427.png"></p>
+<p class=rvps741><span class=rvts4>4. Выход. Значением хеш-функции является </span><span class=rvts51>h</span><span class=rvts4>. </span></p>
+<p class=rvps741><span class=rvts4>Алгоритм вычисления шаговой функции хеширования &nbsp;</span><span class=rvts51>f</span><span class=rvts4>.</span></p>
+<p class=rvps741><span class=rvts3921>Шаговая функция хеширования </span><span class=rvts7111>f</span><span class=rvts3921> отображает два блока длиной 256 бит в один блок длиной 256 бит </span><img width=123 height=25 alt="" style="padding : 1px;" src="img/img_00428.png"><span class=rvts3921> и состоит из трех частей:</span></p>
+<p class=rvps1335><span class=rvts7112>•</span><span class=rvts4364> генерирование ключей </span><img width=101 height=25 alt="" style="padding : 1px;" src="img/img_00429.png"><span class=rvts4364>;</span></p>
+<p class=rvps1335><span class=rvts7112>•</span><span class=rvts4364> шифрующее преобразование – шифрование </span><img width=28 height=25 alt="" style="padding : 1px;" src="img/img_00430.png"><span class=rvts4364> с использованием ключей </span><img width=105 height=25 alt="" style="padding : 1px;" src="img/img_00431.png"><span class=rvts4364>;</span></p>
+<p class=rvps1335><span class=rvts7112>•</span><span class=rvts4364> перемешивающее преобразование результата шифрования.</span></p>
+<p class=rvps875><span class=rvts31><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts50>ГОСТ Р 34.11-2012 «Информационная технология. Криптографическая защита информации. Функция хэширования». Хэш-функция «Стрибог»</span></span></h4>
+<p class=rvps1326><span class=rvts69>Стандарт ГОСТ Р 34.11</span><span class=rvts7113>−</span><span class=rvts69>2012 пришел на смену ГОСТ 34.11</span><span class=rvts7114>−</span><span class=rvts69>94. Данный стандарт был разработан Центром защиты информации и специальной связи ФСБ России с участием открытого акционерного общества «Информационные технологии и коммуникационные системы» (ИнфоТеКС). В основу стандарта 2012 года была положена функция хеширования под названием «Стрибог».</span></p>
+<p class=rvps1326><span class=rvts69>Хеш-функция «Стрибог» может иметь две реализации с результирующим значением длиной 256 или 512 бит. На вход функции подается сообщение, для которого необходимо вычислить хеш-сумму. Если длина сообщения больше 512 бит (или 64 байт), то оно делится на блоки по 512 бит, а оставшийся кусочек дополняется нулями с одной единичкой до 512 бит (или до 64 байт). Если длина сообщения меньше 512 бит, то оно сразу дополняется нулями с единичкой до полных 512 бит.</span></p>
+<p class=rvps1326><span class=rvts69>Основу хеш-функции «Стрибог» составляет функция сжатия (</span><span class=rvts70>g</span><span class=rvts69>-функция), реализованная на </span><span class=rvts1270>блочном шифре, построенном с помощью конструкции Миягучи </span><span class=rvts7123>−</span><span class=rvts1270> Пренеля, которая признана одной из наиболее стойких (рис. 4.23).</span></p>
+<p class=rvps1326><span class=rvts69><br></span></p>
+<p class=rvps1327><img width=277 height=298 alt="" style="padding : 1px;" src="img/img_00432.jpg"></p>
+<p class=rvps1327><span class=rvts70>Рис. 4.23. Функция сжатия (g-функция)</span></p>
+<p class=rvps1326><span class=rvts69>Хеширование производится в три этапа:</span></p>
+<p class=rvps1326><span class=rvts69>1) инициализация всех нужных параметров;</span></p>
+<p class=rvps1326><span class=rvts69>2) итерационная конструкция Меркла </span><span class=rvts7114>−</span><span class=rvts69> Дамгорда с процедурой MD-усиления. &nbsp;Под MD-усилением понимается дополнение неполного блока при вычислении хеш-функции до полного путем добавления вектора (0 … 01) такой длины, чтобы получился полный блок. </span></p>
+<p class=rvps1326><span class=rvts69>Из дополнительных элементов нужно отметить следующие:</span></p>
+<p class=rvps1326><span class=rvts7114>−</span><span class=rvts69> завершающее преобразование, которое заключается в том, что функция сжатия применяется к контрольной сумме всех блоков сообщения по модулю 2</span><span class=rvts75>512</span><span class=rvts69>;</span></p>
+<p class=rvps1326><span class=rvts7114>−</span><span class=rvts69> при вычислении хеш-кода на каждой итерации применяются разные функции сжатия. Можно сказать, что функция сжатия зависит от номера итерации; </span></p>
+<p class=rvps1326><span class=rvts7114>−</span><span class=rvts69> завершающее преобразование: функция сжатия применяется к сумме всех блоков сообщения и дополнительно хешируется длина сообщения и его контрольная сумма.</span></p>
+<p class=rvps171><span class=rvts4>Ниже описана процедура формирования хеш-значения.</span></p>
+<p class=rvps741><span class=rvts4>Для любого входного сообщения M:</span></p>
+<p class=rvps741><span class=rvts4>1. Присвоить начальные значения внутренних переменных:</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> для хеш-функции с длиной выхода 512 бит: h=iv=0x00</span><span class=rvts363>64</span><span class=rvts4>. Для хеш-функции с длиной выхода 256 бит: h=iv=0x01</span><span class=rvts363>64 </span><span class=rvts4>;</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> N = 0</span><span class=rvts363>512 </span><span class=rvts4>;</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts393> Σ = 0</span><span class=rvts363>512 </span><span class=rvts4>.</span></p>
+<p class=rvps741><span class=rvts4>2. Проверить следующее условие: длина сообщения M&lt;512. Если условие выполняется перейти к пункту 3. В противном случае выполнить последовательность вычислений:</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> </span><span class=rvts51>m</span><span class=rvts4> — последние 512 бит сообщения M;</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> </span><span class=rvts51>h</span><span class=rvts4> = </span><span class=rvts51>g</span><span class=rvts4>(</span><span class=rvts51>N</span><span class=rvts4>, </span><span class=rvts51>m</span><span class=rvts4>, </span><span class=rvts51>h</span><span class=rvts4>);</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> </span><span class=rvts51>N</span><span class=rvts4> = (</span><span class=rvts51>N</span><span class=rvts4> + 512) mod 2</span><span class=rvts363>512 </span><span class=rvts4>;</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> </span><span class=rvts393>Σ = (Σ + </span><span class=rvts7115>m</span><span class=rvts393>) mod 2</span><span class=rvts363>512 </span><span class=rvts4>;</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> обрезать </span><span class=rvts51>M</span><span class=rvts4>, убрав последние 512 бит;</span></p>
+<p class=rvps1335><span class=rvts1638>•</span><span class=rvts4> перейти к шагу 2.</span></p>
+<p class=rvps741><span class=rvts4>3. Произвести дополнение сообщения </span><span class=rvts51>M</span><span class=rvts4> до длины в 512 бит по следующему правилу: </span></p>
+<p class=rvps742><span class=rvts51>m</span><span class=rvts4> = 0</span><span class=rvts363>511-|M|</span><span class=rvts4>||1||</span><span class=rvts51>M</span><span class=rvts4>, &nbsp; </span></p>
+<p class=rvps1151><span class=rvts4>где |</span><span class=rvts51>M</span><span class=rvts4>| </span><span class=rvts1638>−</span><span class=rvts4> длина сообщения </span><span class=rvts51>M</span><span class=rvts4> в битах.</span></p>
+<p class=rvps741><span class=rvts4>4. Вычислить </span><span class=rvts51>h</span><span class=rvts4> = </span><span class=rvts51>g</span><span class=rvts4>(</span><span class=rvts51>N</span><span class=rvts4>, </span><span class=rvts51>m</span><span class=rvts4>, </span><span class=rvts51>h</span><span class=rvts4>).</span></p>
+<p class=rvps741><span class=rvts4>5. Вычислить </span><span class=rvts51>N</span><span class=rvts4> = (</span><span class=rvts51>N</span><span class=rvts4> + |</span><span class=rvts51>M</span><span class=rvts4>|) mod 2</span><span class=rvts363>512 </span><span class=rvts4>.</span></p>
+<p class=rvps741><span class=rvts4>6. Вычислить </span><span class=rvts393>Σ = (Σ + </span><span class=rvts7115>m</span><span class=rvts393>) mod 2</span><span class=rvts363>512 </span><span class=rvts4>.</span></p>
+<p class=rvps741><span class=rvts4>7. Вычислить </span><span class=rvts51>h</span><span class=rvts4> =</span><span class=rvts51> g</span><span class=rvts4>(0, </span><span class=rvts51>h</span><span class=rvts4>, </span><span class=rvts51>N</span><span class=rvts4>).</span></p>
+<p class=rvps741><span class=rvts4>8. Вычислить </span><span class=rvts51>h</span><span class=rvts4> = </span><span class=rvts51>g</span><span class=rvts4>(0, </span><span class=rvts51>h</span><span class=rvts4>, </span><span class=rvts393>Σ).</span></p>
+<p class=rvps1326><span class=rvts69>Для хеш-функции с длиной выхода в 512 бит возвращаем </span><span class=rvts70>h</span><span class=rvts69> в качестве результата. Для функции с длиной выхода 256 бит возвращаем MSB</span><span class=rvts81>256</span><span class=rvts69>(</span><span class=rvts70>h</span><span class=rvts69>). </span></p>
+<p class=rvps1326><span class=rvts69>Графическая интерпретация перечисленных шагов алгоритма представлена на рис. 4.24.</span></p>
+<p class=rvps742><img width=647 height=413 alt="" style="padding : 1px;" src="img/img_00433.png"></p>
+<p class=rvps1186><span class=rvts51>Рис. 4.24. Схема алгоритма хэширования ГОСТ Р 34.11</span><span class=rvts1639>−</span><span class=rvts51>2012</span></p>
+<p class=rvps741><span class=rvts30><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts5149>Сравнение ГОСТ Р 34.11</span></span><span class=rvts0><span class=rvts7117>−</span></span><span class=rvts0><span class=rvts5149>2012 и ГОСТ Р 34.11</span></span><span class=rvts0><span class=rvts7117>−</span></span><span class=rvts0><span class=rvts5149>94</span></span></h4>
+<p class=rvps741><span class=rvts1638>•</span><span class=rvts4> В ГОСТ Р 34.11</span><span class=rvts1638>−</span><span class=rvts4>2012 размер блоков сообщения и внутреннего состояния хеш-функции составляет 512 бит против 256 бит в ГОСТ Р 34.11</span><span class=rvts1638>−</span><span class=rvts4>94.</span></p>
+<p class=rvps741><span class=rvts1638>•</span><span class=rvts4> Новый стандарт определяет две функции хеширования с длинами хеш-кода 256 и 512 бит, в то время как в старом стандарте длина хеш-кода может быть только 256 бит. Возможность вариации выходного хеша может быть полезна в случае встроенных реализаций с ограниченными ресурсами или наличия каких-то дополнительных требований в области криптографии.</span></p>
+<p class=rvps741><span class=rvts1638>•</span><span class=rvts4> Основное отличие современной хеш-функции от старой&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> функция сжатия. В ГОСТ Р 34.11</span><span class=rvts1638>−</span><span class=rvts4>2012 используется функции сжатия, в основе которой лежат три преобразования: нелинейное биективное преобразование (обозначается S), перестановка байт (обозначается P), линейное преобразование (обозначается L). В ГОСТ Р 34.11</span><span class=rvts1638>−</span><span class=rvts4>94 используется функция сжатия, основанная на симметричном блочном шифре ГОСТ Р 28147</span><span class=rvts1638>−</span><span class=rvts4>89, также эта функция использует операции перемешивания.</span></p>
+<p class=rvps741><span class=rvts1638>•</span><span class=rvts4> При вычислении новой хеш-функции, если размер сообщения не кратен размеру обрабатываемого блока (для современного стандарта&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> 512 бит, для старого стандарта&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> 256 бит), то такой блок дополняется вектором (00 … 01). При вычислении старой хеш-функции неполный блок дополняется значением (00 … 0). Считается, что дополнение (00 … 01) лучше, чем (00 … 0), с криптографической точки зрения, так как дополнения значением (00 … 0) приводит к атакам Оракула дополнения. В случае ненулевого дополнения была доказана стойкость к подобным атакам.</span></p>
+<p class=rvps741><span class=rvts1638>•</span><span class=rvts4> Еще одно отличие состоит в том, что стандарт ГОСТ Р 34.11</span><span class=rvts1638>−</span><span class=rvts4>94 не определял значение инициализационного вектора, в то время как в стандарте ГОСТ Р 34.11</span><span class=rvts1638>−</span><span class=rvts4>2012 значение инициализационного вектора фиксировано и определено в стандарте: для хеш-функции с размером выходного хеша 512 бит это вектор (00 … 0), для хеш-функции с размером выходного хеш-кода 256 бит&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> (000000010 … 100000001) (все байты равны 1).</span></p>
+<p class=rvps741><span class=rvts4><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts50>Алгоритм хэширования SHA-1</span></span></h4>
+<p class=rvps741><span class=rvts4>SHA-1 (Secure Hash Algorithm 1)&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> алгоритм&nbsp;криптографического хеширования. Описан в&nbsp;RFC 3174. Для входного значения длины (максимум </span><img width=49 height=21 alt="" style="padding : 1px;" src="img/img_00434.png"><span class=rvts4> бит, что примерно равно 2&nbsp;эксабайта) алгоритм генерирует 160-битное (20 байт) хеш-значение, называемое также&nbsp;дайджестом&nbsp;сообщения, которое обычно отображается как шестнадцатиричное число, длиной в 40 цифр. Используется во многих криптографических приложениях и протоколах. Также рекомендован в качестве основного для государственных учреждений в&nbsp;США. Принципы, положенные в основу SHA-1, аналогичны тем, которые использовались&nbsp;Рональдом Ривестом&nbsp;при проектировании&nbsp;MD4. Структурная схема алгоритма хеширования представлена на рис. 4.25.</span></p>
+<p class=rvps741><span class=rvts4>SHA-1 реализует&nbsp;хеш-функцию, построенную на идее функции сжатия. Входами функции сжатия являются блок сообщения длиной 512 бит и выход предыдущего блока сообщения. </span></p>
+<p class=rvps741><span class=rvts4364>Выход представляет собой значение всех хеш-блоков до этого момента. Иными словами хеш-блок </span><img width=25 height=25 alt="" style="padding : 1px;" src="img/img_00435.png"><span class=rvts4364> равен </span><img width=112 height=25 alt="" style="padding : 1px;" src="img/img_00436.png"><span class=rvts4364>. Хеш-значением всего сообщения является выход последнего блока.</span></p>
+<p class=rvps741><span class=rvts4><br></span></p>
+<p class=rvps742><img alt="" style="padding : 1px;" src="img/img_00437.png"></p>
+<p class=rvps1186><span class=rvts95>Рис. 4.25. Одна итерация алгоритма </span></p>
+<p class=rvps741><span class=rvts166><br></span></p>
+<p class=rvps171><span class=rvts30>Инициализация алгоритма. </span><span class=rvts4>Исходное сообщение разбивается на блоки по 512 бит в каждом. Последний блок дополняется до длины, кратной 512 бит. Сначала добавляется 1 (бит), а потом нули, чтобы длина блока стала равной (512&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> 64 = 448) бит. В оставшиеся 64 бита записывается длина исходного сообщения в битах. Если последний блок имеет длину более 447, но менее 512 бит, то дополнение выполняется следующим образом: сначала добавляется 1 (бит), затем нули вплоть до конца 512-битного блока; после этого создается еще один 512-битный блок, который заполняется вплоть до 448 бит нулями, после чего в оставшиеся 64 бита записывается длина исходного сообщения в битах. Дополнение последнего блока осуществляется всегда, даже если сообщение уже имеет нужную длину.</span></p>
+<p class=rvps741><span class=rvts4>Инициализируются пять 32-битовых переменных:</span></p>
+<p class=rvps741><span class=rvts4>A = 0x67452301</span></p>
+<p class=rvps741><span class=rvts4>B = 0xEFCDAB89</span></p>
+<p class=rvps741><span class=rvts4>C = 0x98BADCFE</span></p>
+<p class=rvps741><span class=rvts4>D = 0x10325476</span></p>
+<p class=rvps741><span class=rvts4>E = 0xC3D2E1F0</span></p>
+<p class=rvps741><span class=rvts4>Определяются четыре нелинейные операции и четыре константы:</span></p>
+<p class=rvps765><img width=506 height=120 alt="" style="padding : 1px;" src="img/img_00438.png"></p>
+<p class=rvps741><span class=rvts4><br></span></p>
+<p class=rvps171><span class=rvts30>Главный цикл алгоритма SHA-1 </span><span class=rvts4>итеративно обрабатывает каждый 512-битный блок (рис. 4.26). В начале каждого цикла вводятся переменные a, b, c, d, e, которые инициализируются значениями A, B, C, D, E, соответственно.</span></p>
+<p class=rvps741><span class=rvts4>Блок сообщения преобразуется из 16 32-битовых слов в 80 32-битовых слов&nbsp;по следующему правилу:</span></p>
+<p class=rvps742><img alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00439.png"><span class=rvts7118>,</span></p>
+<p class=rvps1304><span class=rvts4> где "&lt;&lt;"&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> это циклический сдвиг влево.</span></p>
+<p class=rvps742><img alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00440.png"><span class=rvts7119>,</span></p>
+<p class=rvps1151><span class=rvts4>где "+" есть сложение беззнаковых 32-битных целых чисел с отбрасыванием избытка (33-го бита).</span></p>
+<p class=rvps741><span class=rvts4>После этого к A, B, C, D, E прибавляются значения a, b, c, d, e, соответственно. </span></p>
+<p class=rvps741><span class=rvts4>Начинается следующая итерация.</span></p>
+<p class=rvps741><span class=rvts4>Итоговым значением будет объединение пяти 32-битовых слов (A, B, C, D, E) в одно 160-битное хеш-значение.</span></p>
+<p class=rvps742><img width=597 height=524 alt="" style="padding : 1px;" src="img/img_00441.png"></p>
+<p class=rvps742><span class=rvts95>Рис. 4.26. Структура алгоритма SHA-1 </span></p>
+<p class=rvps742><span class=rvts51><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts5149>Основные особенности алгоритма</span></span></h4>
+<p class=rvps741><span class=rvts4>Хэш-функция SHA очень похожа на MD4, но на выходе имеет 160-битное значение. Главным изменением является введение расширяющего преобразования и добавление выхода предыдущего шага в следующий с целью получения более быстрого лавинного эффекта. </span></p>
+<p class=rvps741><span class=rvts4>Основные особенности:</span></p>
+<p class=rvps741><span class=rvts4>1. Как и в MD5, алгоритм SHA &nbsp;имеет добавленный четвертый этап. Однако на четвертом этапе используется та же функция </span><span class=rvts51>f</span><span class=rvts4>, что и на втором этапе.</span></p>
+<p class=rvps741><span class=rvts4>2. В алгоритме SHA на втором этапе используется версия функции из MD4: (</span><span class=rvts51>X </span><span class=rvts4>˄ </span><span class=rvts51>Y</span><span class=rvts4>) ˅ (</span><span class=rvts51>X </span><span class=rvts4>˄ </span><span class=rvts51>Z</span><span class=rvts4>) ˅ (</span><span class=rvts51>Y</span><span class=rvts4> ˄</span><span class=rvts51> Z</span><span class=rvts4>).</span></p>
+<p class=rvps741><span class=rvts4>3. В SHA на каждом этапе использует постоянное значение сдвига. Это значение </span><span class=rvts1638>−</span><span class=rvts4> взаимно простое число с размером слова, как и в MD4. </span></p>
+<p class=rvps741 style="page-break-before: always;"><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="770.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="790.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

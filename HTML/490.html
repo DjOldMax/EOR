@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;3.1.1. Модель итерационного блочного шифра</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="3.1.1. Модель итерационного блочного шифра">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='170.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.1. Классические блочные алгоритмы шифрования. Альтернативные варианты построения блочных шифров</a></li><li class='sidebar-active'><a href='490.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.1.1. Модель итерационного блочного шифра</a></li><li ><a href='500.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.1.2. Структурные элементы блочного шифра блочного шифра</a></li><li ><a href='510.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.1.3. Основные схемы построения блочных шифров</a></li><li ><a href='520.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.1.4. Шифры структуры подстановочно-перестановочной сети</a></li><li ><a href='530.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.1.5. Альтернативные схемы построения блочных шифров</a></li><li ><a href='540.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.1.6. Режимы применения блочных шифров</a></li><li ><a href='1710.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='180.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.2. Примеры блочных шифров</a></li><li ><a href='580.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.3. Классификация методов криптоанализа блочных шифров</a></li><li ><a href='190.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.4. Основы дифференциального криптоанализа блочных шифров</a></li><li ><a href='200.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.5. Линейный криптоанализ блочных шифров</a></li><li ><a href='210.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.6. Интегральный и алгебраический криптоанализ блочных шифров</a></li><li ><a href='1270.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 3</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 3.1.1. Модель итерационного блочного шифра</h1>
+						<hr>
+                        <h3 class=rvps600><span class=rvts0><span class=rvts29>3.1.1. Модель итерационного блочного шифра</span></span></h3>
+<p class=rvps952><span class=rvts4>Блочные шифры представляют собой подкласс симметричных криптографических алгоритмов – алгоритмов, использующих один и тот же ключ для шифрования и расшифрования информации. Математически блочный шифр является обратимой функцией:</span></p>
+<p class=rvps953><img width=195 height=32 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00131.png"><span class=rvts4>.</span></p>
+<p class=rvps952><span class=rvts4>Подлежащий шифрованию текст разбивается на блоки равной длины, и каждый блок шифруется с помощью одного и того же криптопреобразования, зависящего от секретного ключа. Для повышения стойкости шифра это преобразование циклически повторяется несколько раз (итерируется). </span></p>
+<p class=rvps952><span class=rvts4>При построении БШ используется начальное преобразование данных, однократно применяемое к входному блоку, и обратное ему конечное преобразование, преобразующее блок данных после завершения цикла шифрования. При выполнении шифрования, обычно, </span><span class=rvts38>требуется количество ключевого материала, значительно превышающее размер ключа алгоритма, поэтому в БШ применяется алгоритм расширения ключа пользователя до требуемой длины. Структурная модель</span><span class=rvts4> типового блочного шифра представлена на рис. 3.1.</span></p>
+<p class=rvps952><span class=rvts4>Каждый из элементов в составе модели является обязательным и отсутствие любого из них говорит о слабости алгоритма шифрования.</span></p>
+<p class=rvps952><span class=rvts39>Б</span><span class=rvts4>лочный шифр также является некоторой функцией битов шифртекста от битов открытого текста и ключа. Задачей блочного шифра является обеспечение максимальной нелинейности этой функции и зависимости каждого выходного бита от максимального числа (в современных шифрах от всех) входных бит. Для обеспечения этого раундовая функция шифра должна удовлетворять принципам рассеивания и перемешивания. Конечной целью применения данных принципов является максимальное затруднение описания шифра системой однородных уравнений (над одним полем, например, по модулю 2). </span></p>
+<p class=rvps4><span class=rvts4><br></span></p>
+<div class=rvps43><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=610 valign=top style="padding: 0px 7px;"><p class=rvps43><span class=rvts4><br></span></p>
+<p class=rvps662><img alt="" style="padding : 1px;" src="img/img_00132.png"></p>
+<p class=rvps43><span class=rvts4><br></span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=610 valign=top style="padding: 0px 7px;"><p class=rvps43><span class=rvts51>Рис. 3.1. Структура и основные элементы современного блочного шифра</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps730><span class=rvts40><br></span></p>
+<p class=rvps730><span class=rvts40><br></span></p>
+<p class=rvps730><span class=rvts3918>Рассеивание</span><span class=rvts40> </span><span class=rvts3919>−</span><span class=rvts40> </span><span class=rvts39>это свойство шифра, при котором один символ (бит) открытого текста влияет на несколько символов (битов) шифртекста, оптимально </span><span class=rvts3920>−</span><span class=rvts39> на все символы в пределах одного блока. Достигается применением нелинейного преобразования.</span></p>
+<p class=rvps730><span class=rvts3918>Перемешивание</span><span class=rvts39> </span><span class=rvts3919>−</span><span class=rvts39> это свойство блочного шифра скрывать зависимости между символами открытого текста и шифртекста.</span></p>
+<p class=rvps730><span class=rvts4>Блочный шифр, как и любой другой криптографический примитив, должен быть нелинейным, так как в противном случае он автоматически становится неустойчивым к атаке вида «открытый текст/соответствующий ему шифртекст». Это происходит потому, что, если шифр является линейным, значит можно его описать системой линейных уравнений (далее СЛАУ) относительно переменных открытого текста, шифртекста и ключа. Подставив в эту систему значения переменных открытого текста и соответствующего ему шифртекста, мы получим СЛАУ, при решении которой будет найден ключ шифрования. Решение систем линейных уравнений большого размера (128*128 при использовании одного блока и 128 битного ключа) сегодня не представляет особой трудности. Так, например, метод Гаусса имеет сложность </span><img width=54 height=39 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00133.png"><span class=rvts4> арифметических операций, существуют методы с меньшей сложностью порядка </span><img width=71 height=39 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00134.png"><span class=rvts4>. </span></p>
+<p class=rvps730><span class=rvts4>Таким образом, для решения СЛАУ 128*</span><span class=rvts38>128 необходимо всего </span><img width=122 height=23 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00135.png"><span class=rvts38> операций, что потребует не более</span><span class=rvts4> 10 секунд для решения и последующего взлома шифра. Совсем иначе обстоят дела с системами нелинейными уравнений. Сегодня не существует эффективных методов решения систем нелинейных уравнений такого размера. Это возможно лишь в некоторых частных случаях, например, когда уравнений гораздо больше, чем переменных, тогда можно вместо каждого нелинейного члена добавить переменную (т. е. выполнить его линеаризацию) и решить уравнение как СЛАУ. Поэтому в криптографических примитивах стараются сделать систему максимально нелинейной. Понятие нелинейности при этом несколько отличается от математического. </span></p>
+<p class=rvps730><span class=rvts166>Нелинейность</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это степень отличия от линейного уравнения, а не максимальная степень члена уравнения. Так, например, уравнение </span><img width=263 height=26 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00136.png"><span class=rvts4> ведет себя как нелинейное только в одном случае </span><span class=rvts38>из</span><span class=rvts1268> </span><span class=rvts649>16 возможных,</span><span class=rvts38> когда </span><span class=rvts4>все переменные равны 1. Напротив, уравнение с большим количеством нелинейных членов разных степеней </span><img width=352 height=26 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00137.png"><span class=rvts4> имеет гораздо большую нелинейность. В идеале, в составе каждого нелинейного уравнения в системе, описывающей шифр с вероятностью, должны появляться все возможные члены общей нелинейной формы булевой функции:</span></p>
+<p class=rvps731><img width=536 height=49 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00138.png"></p>
+<p class=rvps961><span class=rvts4>и это обеспечивается в составе качественных современных блочных шифрах. </span></p>
+<p class=rvps952><span class=rvts4>В этом случае каждое уравнение будет содержать столько членов, что его будет невозможно записать или хранить в памяти современных вычислительных устройств.</span></p>
+<p class=rvps730><span class=rvts4>Аналогично нелинейности в составе криптографических примитивов в целом, и в блочных шифрах в частности, важное значение имеет принцип использования операций над разными конечными полями. Это также связано с нелинейностью. Все дело в том, что линейные операции в различных полях становятся нелинейными при их совместном рассмотрении. То есть, при переходе от одного поля к другому уравнение из линейного становится нелинейным. Рассмотрим простейший пример: пусть имеется две переменных </span><img width=41 height=24 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00139.png"><span class=rvts4> &nbsp;размерностью 4 бита. Для них выполняется операция сложения по модулю 4, результат записывается в переменную </span><span class=rvts51>y</span><span class=rvts4>. Эта же операция при представлении ее в поле по модулю 2 имеет следующий вид:</span></p>
+<p class=rvps731><img width=528 height=140 alt="" style="padding : 1px;" src="img/img_00140.png"><span class=rvts3921>,</span></p>
+<p class=rvps962><span class=rvts4>т. е. из линейной становится нелинейной. Легко представить какой размерности будет уравнение для последнего бита по переводе операции сложения по модулю </span><img width=24 height=21 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00141.png"><span class=rvts4> в поле по модулю 2. Аналогичные трудности возникают и при обратном переходе при записи сложения по модулю 2 в системе по модулю </span><img width=20 height=21 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00142.png"><span class=rvts4>. </span></p>
+<p class=rvps730><span class=rvts4>Основными характеристиками блочного шифра являются:</span></p>
+<p class=rvps959><span class=rvts1640>−</span><span class=rvts31> размер блока; типовыми размерами являются 64 бита, 128, 192, 256, размер блока в 64 бита в настоящее время считается недостаточным, наиболее часто используется размер 128 бит;</span></p>
+<p class=rvps959><span class=rvts3923>−</span><span class=rvts93> размер ключа; типовыми размерами являются размеры, аналогичные размеру блока, при этом размер ключа менее 128 бит считается недостаточно защищенным;</span></p>
+<p class=rvps959><span class=rvts1640>−</span><span class=rvts31> количество раундов; в зависимости от сложности раундовой функции может быть от 4 до 64;</span></p>
+<p class=rvps959><span class=rvts1640>−</span><span class=rvts31> тип использованного нелинейного преобразования, линейного преобразования, ключевого расписания.</span></p>
+<p class=rvps730><span class=rvts4>Существуют два подхода к проектированию блочных шифров. Один из них предполагает использование максимально простых и быстрых элементов в составе раундовой функции, но при этом использовании большого количества раундов. Это алгоритмы Tea, DES, ГОСТ 28147-89, Serpent, CAST-256. Второй подход предполагает использование максимально сложных элементов с хорошими характеристиками в раундовой функции, но использование небольшого числа раундов. С его применение созданы шифры AES, Anubis, Crypton.</span></p>
+<p class=rvps730><span class=rvts4>Если размер блока должен быть безопасным для полного перебора современной техники, то необходимость большого размера блока не столь очевидна. Это связано с тем, что при уменьшении размера блока до 8</span><span class=rvts1638>−</span><span class=rvts4>16 бит блочный шифр вырождается в шифр простой замены, чем он, по сути, и является только для символов большого размера, например, 128 бит. Если размер блока блочного шифра будет равен от 8 или 16 бит, то несмотря на свою сложную внутреннюю структуру такой шифр можно взломать обычным частотным анализом, а с использованием атаки «открытый текст/шифртекст» и того быстрее. Если размер блока будет равен 24 или 32 бита, то у криптоаналитика появится возможность, накапливая статистику блоков, получать дополнительную информацию об открытом тексте.</span></p>
+<p class=rvps730 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps730><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="170.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="500.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

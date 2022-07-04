@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;1.2.2.  Шифры замены</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="1.2.2.  Шифры замены">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='130.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1.1. Основные понятия, используемые в криптографии</a></li><li ><a href='140.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1.2. История возникновения алгоритмов шифрования</a></li><li ><a href='370.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;1.2.1. Основные этапы становления криптографической науки</a></li><li class='sidebar-active'><a href='380.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;1.2.2.  Шифры замены</a></li><li ><a href='390.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;1.2.3. Шифры перестановки</a></li><li ><a href='400.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;1.2.4. Улучшенные исторические шифры</a></li><li ><a href='410.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;1.2.5. Первые механические и электромеханические шифрмашины и методы из криптоанализа</a></li><li ><a href='1700.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='1250.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 1</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 1.2.2.  Шифры замены</h1>
+						<hr>
+                        <h3 class=rvps600><span class=rvts0><span class=rvts29>1.2.2. Шифры замены</span></span></h3>
+<p class=rvps730><span class=rvts4>Одними из первых исторических шифров были шифры простой замены. Они устроены таким образом, что каждый символ в сообщении при шифровании замещается другим символом или группой символов, в соответствии с шифрующей таблицей.</span></p>
+<p class=rvps730><span class=rvts4>Примером шифра простой замены, описание которого дошло до наших времен, является шифр «атбаш». Шифрование с помощью этого алгоритма представляет собой замену в тексте первой буквы алфавита на последнюю, второй на предпоследнюю и т. д. Секретом в данном шифре было само его устройство, поэтому тот, кто знал о принципе его работы мог легко прочитать зашифрованные им данные. </span></p>
+<p class=rvps730><span class=rvts4>Почти аналогичным этому являлся шифр </span><a class=rvts65 href="1330.html"  OnClick="javascript:NewWindow=window.open('1330.html','NewWindow','width=700,height=700,menubar=no,scrollbars,resizable');return false;">Цезаря</a><span class=rvts4>. Он преобразовывал текст таким образом, что каждый символ алфавита заменялся на символ, находящийся на фиксированном расстоянии справа от него. Для удобства кодирования использовался диск Цезаря, который упрощал преобразование данных (рис. 1.4). Этот диск является одним из первых шифровальных устройств упрощающих работу шифровальщиков. В данном шифре ключом является величина сдвига, которая может изменяться в пределах размера алфавита. Если поочередно попробовать все варианты сдвига, то шифр будет взломан [</span><a class=rvts65 href="Молдовян%20Теоретический%20минимум%20и%20алгоритмы%20цифровой%20подписи.pdf">19</a><span class=rvts4>].</span></p>
+<p class=rvps731><img width=310 height=310 alt="" style="padding : 1px;" src="img/img_00046.jpg"></p>
+<p class=rvps732><span class=rvts2015>Рис. 1.4. Диск Цезаря</span></p>
+<p class=rvps730><a href="/Video/Диск%20Цезаря.mp4"><img width=41 height=20 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00047.jpg"></a><a class=rvts65 href="/Video/Диск%20Цезаря.mp4">Диск Цезаря</a></p>
+<p class=rvps730><span class=rvts4>Еще одним интересным историческим шифром подстановки является квадрат </span><a class=rvts65 href="1340.html"  OnClick="javascript:NewWindow=window.open('1340.html','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;">Полибия</a><span class=rvts4>. В этом алгоритме ключом является содержание квадрата (табл. 1.1).</span></p>
+<p class=rvps730><span class=rvts4><br></span></p>
+<p class=rvps735><span class=rvts51>Таблица 1.1</span></p>
+<p class=rvps736><span class=rvts30>Квадрат Полибия</span></p>
+<div class=rvps731><table width="94%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4><br></span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>A</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>B</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>C</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>D</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>E</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>F</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>G</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>H</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>I</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>J</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>K</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>L</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>M</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>N</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>O</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>P</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>Q</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>R</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>S</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>T</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>U</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>V</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>W</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>X</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>Y</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>6</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>Z</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>7</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>6</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>7</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>8</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>9</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>8</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>.</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>,</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>!</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>?</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps730><span class=rvts4><br></span></p>
+<p class=rvps730><span class=rvts4>При шифровании символ из таблицы заменялся двумя цифрами – номером строки и номером столбца. Таким образом, сообщение превращалось в набор цифровых пар символов. В варианте, приведенном в табл. 1.1, ключ отсутствует и стойкость кода основана на секретности алгоритма шифрования. Тем не менее, к такому шифру легко добавить ключ, сделав таблицу изменяющейся или генерируемой на основе ключевого слова. Принцип генерации таблицы на основе ключевого слова состоит в том, что сначала в квадрат вписывается ключевое слово, а потом оставшиеся символы по порядку, с пропуском уже использованных символов. С использованием этого метода и слова «water» квадрат Полибия будет выглядеть как показано на примере табл. 1.2. Ограничением на выбор ключевого слова является необходимость использования слов с неповторяющимися буквами. Аналогично, с помощью ключевого слова, можно усилить таблицу замены в шифре Цезаря. Даже в литературе шифр простой замены был описан в рассказе Артура Конан Дойла «Пляшущие человечки».</span></p>
+<p class=rvps730><span class=rvts4><br></span></p>
+<p class=rvps735><span class=rvts51>Таблица 1.2</span></p>
+<p class=rvps736><span class=rvts30>Квадрат Полибия на основе ключевого слова</span></p>
+<div class=rvps731><table width="94%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4><br></span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>W</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>A</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>T</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>E</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>R</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>B</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>C</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>D</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>F</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>G</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>H</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>I</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>J</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>K</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>L</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>M</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>N</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>O</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>P</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>S</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>U</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>V</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>W</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>X</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>Y</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>6</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>Z</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>7</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>6</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>7</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>8</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>9</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>8</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>.</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>,</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>!</span></p>
+</td>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>?</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps730><span class=rvts4><br></span></p>
+<p class=rvps730><span class=rvts4>Шифры простой замены имеют невысокую сложность взлома. Несмотря на то, что взломать их полным перебором всех возможных подстановок практически невозможно из-за их большого количества, которое описывается функцией факториала от размерности подстановки (26! = </span><img width=39 height=26 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00048.png"><span class=rvts4> для английского языка), они могут быть легко взломаны частотным криптоанализом. Частотный криптоанализ (частотный анализ) — метод криптоанализа, основывающийся на предположении о существовании неравномерного статистического распределения отдельных символов и их комбинаций в открытом тексте, которое при использовании шифрования методом простой замены будет сохраняться в шифртексте. Упрощённо, частотный анализ предполагает, что частота появления заданной буквы алфавита является статистически устойчивой разных текстов одного языка. При этом, в случае шифрования шифром простой замены, если в шифртексте будет символ с аналогичной вероятностью появления, то можно предположить, что он и является указанной зашифрованной буквой. Распределение вероятностей появления символов для русского языка представлена в табл. 1.3. </span></p>
+<p class=rvps730><span class=rvts4><br></span></p>
+<p class=rvps734><span class=rvts51>Таблица 1.3</span></p>
+<p class=rvps736><span class=rvts30>Вероятности появления символов для литературного текста русского алфавита</span></p>
+<div class=rvps733><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="16%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts30>Буква алфавита</span></p>
+</td>
+<td width="33%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts30>Вероятность (частота) ее появления в тексте</span></p>
+</td>
+<td width="15%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts30>Буква алфавита</span></p>
+</td>
+<td width="34%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts30>Вероятность (частота) ее появления в тексте</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>о</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>9.28%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>а</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>8.66%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>е</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>8.10%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>и</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>7.45%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>н</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>6.35%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>т</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>6.30%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>р</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5.53%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>с</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>5.45%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>л</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4.32%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>в</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>4.19%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>к</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3.47%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>п</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3.35%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>м</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>3.29%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>у</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2.90%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>д</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2.56%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>я</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2.22%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ы</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>2.11%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ь</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.90%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>з</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.81%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>б</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.51%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>г</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.41%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>й</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.31%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ч</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.27%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ю</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>1.03%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>х</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0.92%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ж</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0.78%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ш</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0.77%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ц</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0.52%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>щ</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0.49%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ф</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts38>0.20%</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="16%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>э</span></p>
+</td>
+<td width="33%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>0.17%</span></p>
+</td>
+<td width="15%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts4>ъ</span></p>
+</td>
+<td width="34%" height=23 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps731><span class=rvts38>0.04%</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps730><span class=rvts4><br></span></p>
+<p class=rvps730><span class=rvts4>Устойчивыми являются также частотные характеристики биграмм, триграмм и четырехграмм осмысленных текстов. Принцип взлома основан на вычислении частотных характеристик зашифрованного </span><span class=rvts38>текста с их сопоставлением с частотами</span><span class=rvts4> незашифрованного текста. Данный принцип, дополненный использованием некоторых закономерностей, встречающихся в любом языке, позволяет найти правильное значение некоторых символов. Таким </span><span class=rvts38>образом на следующем этапе можно определить короткие, а затем средние и длинные слова, и расшифровать всю таблицу замены, а за ней и текст. Частотный анализ работает потому, что любой язык является избыточным, обычно на 70</span><span class=rvts2016>−</span><span class=rvts38>80%. Присутствие избыточности в тексте обусловлено необходимостью передачи речевой информации в условиях присутствия шумов различной природы.</span></p>
+<p class=rvps730><span class=rvts4>Избыточность </span><span class=rvts1638>−</span><span class=rvts4> термин из теории информации, означающий превышение количества информации, используемой для передачи или хранения сообщения, над его информационной энтропией. Избыточность вычисляется как </span><img width=74 height=17 alt="" style="padding : 1px;" src="img/img_00049.png"><span class=rvts4>, где </span><span class=rvts51>R</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> абсолютная энтропия на букву (равна 4,7 бита), а </span><span class=rvts51>r</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> фактическая энтропия языка. В процентном выражении она вычисляется как </span><img width=22 height=47 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00050.png"><span class=rvts4>.</span></p>
+<p class=rvps730><span class=rvts4>Так, например, по оценкам экспертов, избыточность русского языка составляет 73%, французского 71%, немецкого 66%, английского 68% [</span><a class=rvts65 href="Алфёров%20А.П.,%20Зубов%20А.Ю.,%20Кузьмин%20А.С.,%20Черемушкин%20А.В.%20Основы%20криптографии.pdf">2</a><span class=rvts4>]. Еще большей избыточностью обладают узкоспециализированные тексты. Например, для русского языка, литературный текст имеет избыточность в 76%, юридический текст 83%. Лингвисты говорят, что при исключении из текста всех гласных букв, он останется полностью читаемым. </span></p>
+<p class=rvps730><span class=rvts4>Количество данных, которые необходимы для взлома шифров простой замены частотным способом, определяется расстоянием уникальности. </span></p>
+<p class=rvps730><span class=rvts4>Расстояние уникальности вычисляется как </span><span class=rvts51>U</span><span class=rvts4>=</span><span class=rvts51>H</span><span class=rvts4>(</span><span class=rvts51>K</span><span class=rvts4>)/</span><span class=rvts51>D</span><span class=rvts4>, где </span><span class=rvts51>D</span><span class=rvts4> – избыточность языка для шифруемого сообщения, а </span><span class=rvts51>H</span><span class=rvts4>(</span><span class=rvts51>K</span><span class=rvts4>) – это энтропия ключа. </span></p>
+<p class=rvps730><span class=rvts4>Для шифра простой замены в случае использования английского языка энтропия вычисляется как </span><img width=312 height=34 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00051.png"><span class=rvts4>, так как &nbsp;количество ключей для таблицы простой замены равно </span><span class=rvts51>n</span><span class=rvts4>!, где </span><span class=rvts51>n </span><span class=rvts1639>−</span><span class=rvts4> размер алфавита. С учетом того, что избыточность английского языка равна 3,2 получаем, что всего </span><span class=rvts38>28 </span><span class=rvts4>букв от зашифрованного текста должно быть достаточно, чтобы взломать шифр простой замены. На практике для взлома обычно достаточно около 50 символов, хотя некоторые шифртексты могут быть взломаны и с меньшим количеством символов.</span></p>
+<p class=rvps730><span class=rvts4>Слабость шифров простой замены привело к тому, что стали появляться усиленные варианты шифра простой замены – многоалфавитные подстановки, двухбуквенные замены и шифры с примерно одинаковой частотой появления всех символов в зашифрованном тексте.</span></p>
+<p class=rvps730><a href="Шифр%20замены1.mp4"><img width=41 height=20 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00052.jpg"></a><a class=rvts65 href="Шифр%20замены.mp4">Шифр замены</a></p>
+<p class=rvps730 style="page-break-before: always;"><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="370.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="390.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

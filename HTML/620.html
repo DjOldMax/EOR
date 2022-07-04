@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;3.5.1. Основные понятия линейного криптоанализа</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="3.5.1. Основные понятия линейного криптоанализа">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='170.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.1. Классические блочные алгоритмы шифрования. Альтернативные варианты построения блочных шифров</a></li><li ><a href='180.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.2. Примеры блочных шифров</a></li><li ><a href='580.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.3. Классификация методов криптоанализа блочных шифров</a></li><li ><a href='190.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.4. Основы дифференциального криптоанализа блочных шифров</a></li><li ><a href='200.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.5. Линейный криптоанализ блочных шифров</a></li><li class='sidebar-active'><a href='620.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.5.1. Основные понятия линейного криптоанализа</a></li><li ><a href='630.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.5.2. Восстановление части подключа с помощью линейной модели   </a></li><li ><a href='640.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.5.3. Оценивание сложности линейной криптоатаки, защита от линейного криптоанализа</a></li><li ><a href='1740.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='210.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.6. Интегральный и алгебраический криптоанализ блочных шифров</a></li><li ><a href='1270.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 3</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 3.5.1. Основные понятия линейного криптоанализа</h1>
+						<hr>
+                        <h3 class=rvps1137><span class=rvts0><span class=rvts29>3.5.1. Основные понятия линейного криптоанализа</span></span></h3>
+<p class=rvps317><span class=rvts4>Линейный криптоанализ был впервые представлен на Eurocrypt'93 криптографом Mitsuro Matsui в работе «</span><a class=rvts1050 href="http://link.springer.com/content/pdf/10.1007/3-540-48285-7_33.pdf">Linear Cryptanalysis Method for DES Cipher</a><span class=rvts4>». Данный метод криптоанализа относится к атакам с известными открытыми текстами (known plaintext attack) и в этом отношении является менее требовательным, чем метод дифференциального криптоанализа, использующий специально сформированные (выбранные) открытые тексты. </span></p>
+<p class=rvps317><span class=rvts166>Линейный криптоанализ</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это метод криптоанализа блочных шифров, основанный на использовании линейных зависимостей между входными и выходными битами подстановок, и, соответственно, всего блочного шифра с участием бит ключа. В общем виде такие линейные выражения имеют вид </span><img width=317 height=31 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00257.png"><span class=rvts4>. Выражения такого вида, содержащие случайно выбранные коэффициенты из всего возможного набора, должны иметь вероятность выполнения равную 0.5, т. е. выполняться и не выполняться в одинаковом количестве случаев для разных данных. На практике получается, что вероятности выполнения некоторых линейных выражений сильно отклоняются от 0.5. В предельных случаях, если вероятность выражения равна 1 (а отклонение 0.5), то оно становится полностью линейным, если вероятность равна 0 (отклонение -0.5), то выражение превращается в аффинное, т. е. содержащее 1, отклонение вероятности вычисляется как&nbsp;</span><span class=rvts41> </span><img width=74 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00258.png"><span class=rvts4>. Чем больше отклонение линейного выражения от 0.5, тем лучше оно подходит для использования в линейном криптоанализе. Из линейных выражений отдельных раундов строится линейная модель всего шифра, позволяющая подобрать часть подключа последнего раунда отдельно от всех остальных частей.</span></p>
+<p class=rvps317><span class=rvts4>В линейном криптоанализе, как и в дифференциальном криптоанализе, определяющую роль играют подстановки, так как для них строятся линейные выражения, которые потом связываются и распространяются на весь блочный шифр. Для выбора оптимальных линейных выражений используется таблица линейной аппроксимации подстановок, используемых в блочном шифре. Перед тем как переходить непосредственно к анализу таблицы линейной аппроксимации и выбору линейных выражений, необходимо рассмотреть каким образом из вероятностей отдельных линейных выражений можно получить вероятность линейной модели. Для этого рассмотрим предложенную Матсуи лемму «О набегании».</span></p>
+<p class=rvps317><span class=rvts4>Пусть имеются две случайные двоичные переменные </span><img width=52 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00259.png"><span class=rvts4>, тогда уравнение </span><img width=159 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00260.png"><span class=rvts4> будет линейным отношением, а уравнение </span><img width=155 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00261.png"><span class=rvts4> будет аффинным выражением. Предположим, что распределение вероятностей равно:</span></p>
+<p class=rvps597><img alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00262.png"><span class=rvts4772>.</span></p>
+<p class=rvps317><span class=rvts4>Если две случайные переменные являются независимыми, тогда </span></p>
+<p class=rvps885><img width=13 height=19 alt="" style="padding : 1px;" src="img/img_00263.png"><img width=351 height=124 alt="" style="padding : 1px;" src="img/img_00264.png"><span class=rvts2815>.</span><br><span class=rvts2813><br></span></p>
+<p class=rvps317><span class=rvts649>Следовательно</span><span class=rvts4> вероятность того, что </span><img width=93 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00265.png"><span class=rvts4> &nbsp;составит (сумма случаев 1 и 4): </span></p>
+<p class=rvps597><img width=298 height=28 alt="" style="padding : 1px;" src="img/img_00266.png"><span class=rvts4330>.</span></p>
+<p class=rvps317><span class=rvts4>Обозначим как </span><img width=20 height=23 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00267.png"><span class=rvts4> отклонение вероятности соответствующего линейного выражения от 0.5, тогда:</span></p>
+<p class=rvps22><img width=87 height=97 alt="" style="padding : 1px;" src="img/img_00268.png"></p>
+<p class=rvps1151><span class=rvts4>и получим в результате подстановки</span></p>
+<p class=rvps597><img width=250 height=60 alt="" style="padding : 1px;" src="img/img_00269.png"><span class=rvts4771>.</span></p>
+<p class=rvps317><span class=rvts4>Эти рассуждения могут быть расширены более чем на две двоичные переменные. Матсуи предложил следующую лемму, которая предполагает, что все </span><span class=rvts51>n</span><span class=rvts4> случайных двоичных переменных являются независимыми:</span></p>
+<p class=rvps597><img width=302 height=60 alt="" style="padding : 1px;" src="img/img_00270.png"></p>
+<p class=rvps1151><span class=rvts4>или, что эквивалентно </span><img width=142 height=60 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00271.png"><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это суммарное отклонение вероятности линейного выражения.</span></p>
+<h4 class=rvps1163><span class=rvts0><span class=rvts50>Таблица линейной аппроксимации и метод ее построения</span></span></h4>
+<p class=rvps317><span class=rvts166>Таблица линейной </span><span class=rvts3918>аппроксимации</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это статистическая характеристика подстановки, в которой содержатся все линейные выражения для этой подстановки, и отклонение их вероятностей от 0.5. </span><span class=rvts39>Для случайной подстановки, использованной ранее в дифференциальном криптоанализе и приведенной в табл. 3.9, таблица линейной аппроксимации приведена на рис. 3.37.</span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps914><span class=rvts51>Таблица 3.9</span></p>
+<p class=rvps597><span class=rvts30>Пример случайной подстановки размерностью 4 бита</span></p>
+<div class=rvps919><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>2</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>A</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>B</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>C</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>D</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>E</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>F</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>0</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>6</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>7</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>9</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>B</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>5</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>E</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>4</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>A</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>1</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>8</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>2</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>F</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>C</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>3</span></p>
+</td>
+<td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>D</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>Чем темнее ячейка в таблице, тем больше ее отклонение вероятности. Они вычисляется как значение в таблице, деленное на </span><img width=22 height=27 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00272.png"><span class=rvts4>, где </span><span class=rvts51>n</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> размерность подстановки. Если значение ячейки в таблице равно нулю (т. е. отклонение линейного выражения равно нулю), это значит, что ее использование в составе линейной модели невозможно.</span></p>
+<p class=rvps317><span class=rvts4>Строки этой таблицы являются масками, которые определяют, какие из входных бит участвуют в линейном выражении. Столбцы это маски, определяющие, какие выходные переменные участвуют в линейном выражении. Рассмотрим пример: возьмем строку 0Eh=1110 и столбец 0001h. Это будет соответствовать выражению (0eh, 01h) или </span><img width=167 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00273.png"><span class=rvts4>, так как в строке используются переменные 1,2 и 3, а в столбце только переменную с индексом 0. Отклонение вероятности для этого выражения будет составлять</span><img width=85 height=49 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00274.png"><span class=rvts4> .</span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps597><img alt="" style="padding : 1px;" src="img/img_00275.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1039><span class=rvts95>Рис. 3.37. Таблица </span><span class=rvts51>линейной аппроксимации</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>Для построения таблицы линейной аппроксимации в качестве исходных данных используется только подстановка. Для построения одной ячейки таблицы линейной аппроксимации сначала необходимо выбрать входную и выходную маску. После этого для каждого числа из набора всех возможных входов подстановки, т. е. чисел от 0 до </span><img width=22 height=27 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00276.png"><span class=rvts4> выполняется извлечение бит, соответствующих входной маске. Эти биты будут значениями переменных </span><span class=rvts51>X</span><span class=rvts4> в соответствующих каждому значению линейных выражениях. После этого все возможные значения (от 0 до </span><img width=22 height=27 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00277.png"><span class=rvts4> ) пропускаются через подстановку и из каждого числа результата извлекаются </span><span class=rvts38>значения переменных </span><span class=rvts95>Y</span><span class=rvts38>. Далее</span><span class=rvts4>, каждое выражение приравнивается к нулю и подсчитывается сколько из них выполняется, а сколько нет. Далее, из числа тех выражений, которые выполнились, вычитается число тех, которые не выполнились. Это и есть искомое значение в таблице. Иллюстрация этого метода приведена на рис. 3.38 для подстановки из табл. 3.10.</span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=983 valign=top style="padding: 0px 7px;"><p class=rvps597><img alt="" style="padding : 1px;" src="img/img_00278.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=983 valign=top style="padding: 0px 7px;"><p class=rvps1039><span class=rvts51>Рис. 3.38. Схематичное изображение процесса заполнения ячеек </span><span class=rvts95>таблицы </span><span class=rvts51>линейной аппроксимации</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps597><span class=rvts30><br></span></p>
+<div class=rvps597><table width="82%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td colspan=8 width="96%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1166><span class=rvts51>Таблица 3.10</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td colspan=8 width="96%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps597><span class=rvts30>Пример подстановки размерности 3 бита</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>0</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>1</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>2</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>3</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>4</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>5</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>6</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>7</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>1</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>0</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>6</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>4</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>5</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>3</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>7</span></p>
+</td>
+<td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>2</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts39><br></span></p>
+<p class=rvps317><span class=rvts39>В качестве входной маски было выбрано 05, выходной 03. Получившееся линейное выражение приведено в верхней правой части, таблица линейной аппроксимации приведена в нижней правой части рис. 3.38. Синим цветом в таблице, под линейным выражением, выделены выражения, которые оказались верными, красным те, которые оказались неверными.</span></p>
+<p class=rvps317><span class=rvts4>Для построения линейной модели всего шифра используют подстановки, выбираемые с помощью двух критериев, таких же, как и в дифференциальном криптоанализе. Первый из них предписывает отдавать предпочтение при выборе </span><span class=rvts38>линейным выражениям с максимальным</span><span class=rvts4> отклонением вероятности от 0.5. Подходят отклонения как в сторону 1, так и в сторону нуля. Второй критерий состоит в том, что для использования рекомендуется выбирать линейные выражения</span><span class=rvts38> с минимальным весом Хэмминга</span><span class=rvts4> выходных переменных. После выбора первого линейного выражения последующие выбираются так, чтобы они были связаны от одного раунда к другому, и выходы предыдущего раунда, после линейного преобразования, попадали на входы последующего. В результате получается линейная модель всего блочного шифра, состоящая из множества связанных линейных выражений. Рассмотрим пример составления линейной модели алгоритма шифрования, приведенный на рис. 3.39.</span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=937 valign=top style="padding: 0px 7px;"><p class=rvps597><img alt="" style="padding : 1px;" src="img/img_00279.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=937 valign=top style="padding: 0px 7px;"><p class=rvps1039><span class=rvts51>Рис. 3.39. Пример составления линейной модели алгоритма шифрования</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>В этом примере используется учебный алгоритм шифрования и подстановка из подраздела 2.4.2. Тестовый шифр состоит из 4 раундов, в нем используются одинаковые подстановки размером 4 бита в качестве нелинейного преобразования, перестановка бит в качестве линейного преобразования и добавление подключа с помощью операции сложения по модулю 2. В первом раунде выбираем линейное выражение (0Eh,01), на втором (04, 04), на третьем (01, 02). Это соответствует линейному выражению</span><img width=383 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00280.png"><span class=rvts4> . Исходя из этого, линейной моделью всего шифра будет (0Eh, 02) или </span><img width=162 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00281.png"><span class=rvts4>, где переменные </span><span class=rvts1638>−</span><span class=rvts4> это входы и выходы алгоритма шифрования. Эта модель должна иметь отклонение вероятности равное</span></p>
+<p class=rvps597><span class=rvts4> </span><img width=140 height=61 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00282.png"><span class=rvts39> =&nbsp;</span><span class=rvts41> </span><img width=167 height=93 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00283.png"><span class=rvts5144>.</span></p>
+<p class=rvps317><span class=rvts39>Использование этой модели и данных вида «известный открытый текст ‹‹шифртекст›› позволяет найти часть подключа, </span><span class=rvts649>обозначенную на рис. </span><span class=rvts38>3.39</span><span class=rvts649> красным </span><span class=rvts39>овалом.</span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="200.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="630.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

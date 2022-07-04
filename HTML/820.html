@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;4.4.3. Примеры поточных алгоритмов шифрования</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="4.4.3. Примеры поточных алгоритмов шифрования">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='220.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.1. Вероятностное шифрование</a></li><li ><a href='230.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.2. Блочные шифры на основе управляемых операций</a></li><li ><a href='240.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.3. Криптографические хэш функции</a></li><li ><a href='250.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.4. Поточные алгоритмы шифрования</a></li><li ><a href='800.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.4.1. Определение и структурные элементы поточных шифров</a></li><li ><a href='810.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.4.2. Классификация поточных алгоритмов шифрования</a></li><li class='sidebar-active'><a href='820.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.4.3. Примеры поточных алгоритмов шифрования</a></li><li ><a href='1790.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='1280.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 4</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 4.4.3. Примеры поточных алгоритмов шифрования</h1>
+						<hr>
+                        <h3 class=rvps1022><span class=rvts0><span class=rvts29>4.4.3. Примеры поточных алгоритмов шифрования</span></span></h3>
+<p class=rvps1360><span class=rvts63><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts50>Алгоритм RC4</span></span></h4>
+<p class=rvps767><span class=rvts4>Это </span><span class=rvts39>поточный</span><span class=rvts4> алгоритм с переменной длиной ключа разработан в 1987 </span><span class=rvts38>году </span><a class=rvts4314 href="1440.html"  OnClick="javascript:NewWindow=window.open('1440.html','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;">Рональдом Ривестом</a><span class=rvts4>, сотрудником RSA-Security, для его легального использования требуется лицензия. Алгоритм RC4 в течении 7 лет был секретным, с 1994 года был анонимно опубликован в интернете и стал доступен для изучения. Работает примерно в 10 раз быстрее DES. Он состоит из следующих операций.</span></p>
+<p class=rvps767><span class=rvts7513>Инициализация блока замены размерности </span><img width=34 height=19 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00467.png"><span class=rvts7513> байт </span><img width=76 height=26 alt="" style="padding : 1px;" src="img/img_00468.png"><span class=rvts7513>. Сначала заполняется линейно </span><img width=173 height=26 alt="" style="padding : 1px;" src="img/img_00469.png"><span class=rvts7513>. Затем заполняется еще один такой же массив </span><span class=rvts7535>Κ</span><span class=rvts7513> ключом, причем ключ циклически повторяется требуемое количество раз для заполнения всего массива. Это означает, что ключ может иметь размер от 16 до 256 байт. </span></p>
+<p class=rvps767><span class=rvts7513>После этого выполняются следующие действия:</span></p>
+<p class=rvps22><img width=191 height=111 alt="" style="padding : 1px;" src="img/img_00470.png"></p>
+<p class=rvps1340><span class=rvts6287>где операция </span><img width=63 height=27 alt="" style="padding : 1px;" src="img/img_00471.png"><span class=rvts6287> означает перестановку местами байтов </span><img width=40 height=27 alt="" style="padding : 1px;" src="img/img_00472.png"><span class=rvts6287>.</span></p>
+<p class=rvps767><span class=rvts39>Шифрование выполняется побайтно, согласно следующему алгоритму:</span></p>
+<p class=rvps767><span class=rvts39><br></span></p>
+<p class=rvps22><img width=166 height=158 alt="" style="padding : 1px;" src="img/img_00473.png"></p>
+<p class=rvps767><span class=rvts39>Первоначально </span><span class=rvts40>i</span><span class=rvts39>, </span><span class=rvts40>j</span><span class=rvts39>=0.</span></p>
+<p class=rvps767><span class=rvts4>Затем байт </span><span class=rvts51>k</span><span class=rvts4> складывается по модулю 2 с байтом открытого текста. </span></p>
+<p class=rvps767><span class=rvts7108>Этот алгоритм очень удобен как для программной, так и для аппаратной реализации. Возможна реализация этого алгоритма для блока замены размера </span><img width=51 height=19 alt="" style="padding : 1px;" src="img/img_00474.png"><span class=rvts7108> и длиной слова 16 бит. При этом существенно возрастет время инициализации, потребуется 128 кбайт памяти, но вдвое уменьшится время шифрования.</span></p>
+<p class=rvps767><span class=rvts4>Данный алгоритм может быть легко взломан, если используются неслучайные или зависимые ключи, или один ключевой поток используется дважды.</span></p>
+<p class=rvps767><span class=rvts4>В 2001 году </span><span class=rvts38>Флурер, Мантин и Шамир</span><span class=rvts4> опубликовали работу об уязвимости ключевого расписания RC4. Они показали, что среди всех возможных ключей, первые несколько байт ключевого потока являются совсем неслучайными. Из этих байт можно с высокой вероятностью получить информацию о используемом шифром ключе. И если входной ключ просто конкатенируются (соединяются) для создания ключа шифра RC4, то этот долговременный ключ может быть получен с помощью анализа достаточно большого количества сообщений, зашифрованных с использованием данного ключа. Эта уязвимость, и некоторые связанные с ней эффекты, были использованы при взломе шифрования </span><a class=rvts65 href="https://ru.wikipedia.org/wiki/WEP">WEP</a><span class=rvts4> в беспроводных сетях стандарта IEEE 802.11. Это показало необходимость скорейшей замены </span><a class=rvts65 href="https://ru.wikipedia.org/wiki/WEP">WEP</a><span class=rvts4>, что повлекло за собой разработку нового стандарта безопасности беспроводных сетей </span><a class=rvts65 href="https://ru.wikipedia.org/wiki/WPA">WPA</a><span class=rvts4>. </span></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+<h4 class=rvps1331><span class=rvts0><span class=rvts50>Поточный шифр Snow 3GPP</span></span></h4>
+<p class=rvps767><span class=rvts4>Поточный шифр Snow 3GPP является словоориентированным синхронным поточным шифром, в котором слово имеет размер 32 бита. Шифр основан на идее суммирующего генератора. Шифр имеет длину ключа 128 бит и начальный вектор IV длиной 128 бит. Схема поточного шифра представлена на рис. 4.36.</span></p>
+<div class=rvps969><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps969><img alt="" style="padding : 1px;" src="img/img_00475.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1339><span class=rvts51>Рис. 4.36. Схема работы шифра Snow 3GPP</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>Поточный шифр Snow 3GPP состоит из двух модулей, регистра сдвига с линейно обратной связью и конечного автомата (finite state mashine, FSM). Регистр сдвига состоит из 16 элементов по 32 бита. Обратная связь в нем определена через ненулевые коэффициенты неприводимого полинома над расширенным полем </span><img width=60 height=31 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00476.png"><span class=rvts4>. Конечный автомат состоит из трех регистров R1,R2,R3 по 32 бита, и использует две подстановки </span><img width=36 height=24 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00477.png"><span class=rvts4>. Также используются смешивающие операции </span><span class=rvts1638>−</span><span class=rvts4> сложение по модулю 2 и сложение по модулю </span><img width=25 height=21 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00478.png"><span class=rvts4>.</span></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>Данный алгоритм использует следующие операции</span><span class=rvts51>:</span></p>
+<p class=rvps1004><span class=rvts1070>1. </span><span class=rvts1637>MULx</span><span class=rvts31> отображает 16 бит в 8; пусть </span><span class=rvts1637>V</span><span class=rvts31> и </span><span class=rvts1637>c</span><span class=rvts31> 8-битные значения, тогда</span></p>
+<p class=rvps1362><span class=rvts7515>−</span><span class=rvts4330> если старший значащий бит </span><span class=rvts4376>V</span><span class=rvts4330> равен 1 : </span><img width=220 height=26 alt="" style="padding : 1px;" src="img/img_00479.png"></p>
+<p class=rvps1362><span class=rvts7515>−</span><span class=rvts4330> если старший значащий бит </span><span class=rvts4376>V</span><span class=rvts4330> равен 0 : </span><img width=172 height=28 alt="" style="padding : 1px;" src="img/img_00480.png"><span class=rvts4330> где &lt;&lt; побитовый сдвиг влево.</span></p>
+<p class=rvps1004><span class=rvts7517>2.</span><span class=rvts7097> Операция </span><span class=rvts7098>MULxPOW</span><span class=rvts7097> отображает 16 бит и положительное</span><span class=rvts7533> целое </span><span class=rvts7534>i</span><span class=rvts7533> </span><span class=rvts7097>в 8 бит. </span><img width=151 height=26 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00481.png"><span class=rvts7097> определена рекурсивно:</span></p>
+<p class=rvps22><img width=460 height=59 alt="" style="padding : 1px;" src="img/img_00482.png"><span class=rvts4330>.</span></p>
+<p class=rvps4><span class=rvts7530>3. </span><span class=rvts4376>M</span><span class=rvts7531>a</span><span class=rvts4330> отображает 8 бит в 32 бита: </span><img width=796 height=31 alt="" style="padding : 1px;" src="img/img_00483.png"><span class=rvts4330>, используется как </span><img width=80 height=26 alt="" style="padding : 1px;" src="img/img_00484.png"></p>
+<p class=rvps1004><span class=rvts7517>4. </span><span class=rvts7098>D</span><span class=rvts7520>a</span><span class=rvts7097> отображает 8 бит в 32 бита: </span><img width=778 height=30 alt="" style="padding : 1px;" src="img/img_00485.png"><span class=rvts7097>.</span></p>
+<p class=rvps1004><span class=rvts7517>5. </span><span class=rvts7097>Подстановки </span><img width=40 height=26 alt="" style="padding : 1px;" src="img/img_00486.png"><span class=rvts7097>:</span></p>
+<p class=rvps1363><span class=rvts7524>−</span><span class=rvts7523> </span><img width=310 height=28 alt="" style="padding : 1px;" src="img/img_00487.png"><span class=rvts7097> используется как</span><span class=rvts7523> </span><img width=76 height=28 alt="" style="padding : 1px;" src="img/img_00488.png"></p>
+<p class=rvps1364><img width=678 height=136 alt="" style="padding : 1px;" src="img/img_00489.png"></p>
+<p class=rvps1367><span class=rvts4>Здесь:</span><span class=rvts51> SR </span><span class=rvts4>– подстановка алгоритма</span><span class=rvts51> AES.</span></p>
+<p class=rvps1366><span class=rvts7527>−</span><span class=rvts6690> </span><img width=287 height=26 alt="" style="padding : 1px;" src="img/img_00490.png"><span class=rvts6690> </span><span class=rvts4364>определена как</span></p>
+<p class=rvps1370><img width=701 height=136 alt="" style="padding : 1px;" src="img/img_00491.png"></p>
+<p class=rvps1369><span class=rvts4>Здесь: </span><span class=rvts51>SQ</span><span class=rvts4> – подстановка алгоритма Snow.</span></p>
+<p class=rvps767 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="810.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1790.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

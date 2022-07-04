@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;5.2.5. Атака методом «человек в середине», инфраструктура открытых ключей</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="5.2.5. Атака методом «человек в середине», инфраструктура открытых ключей">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='260.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.1. Асимметричные криптосистемы. История появления.</a></li><li ><a href='270.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.2. Асимметричные алгоритмы шифрования</a></li><li ><a href='860.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.2.1. Основные определения</a></li><li ><a href='870.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.2.2. Криптосистема RSA</a></li><li ><a href='880.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.2.3. Криптосистема Рабина</a></li><li ><a href='890.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.2.4. Криптосистема Эль-Гамаля</a></li><li class='sidebar-active'><a href='990.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.2.5. Атака методом «человек в середине», инфраструктура открытых ключей</a></li><li ><a href='1810.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='280.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.3. Криптосистемы на основе эллиптических кривых</a></li><li ><a href='290.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.4. Методы криптоанализа асимметричных криптосистем</a></li><li ><a href='300.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.5. Электронно-цифровая подпись, алгоритмы ЭЦП</a></li><li ><a href='1290.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 5</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 5.2.5. Атака методом «человек в середине», инфраструктура открытых ключей</h1>
+						<hr>
+                        <h3 class=rvps1137><span class=rvts0><span class=rvts91>5.2.5. Атака методом «человек в середине», инфраструктура открытых ключей</span></span></h3>
+<p class=rvps317><span class=rvts38>Несмотря на то, что асимметричные криптосистемы позволяют безопасно передавать данные по открытым каналам связи, для них были разработаны новые атаки, позволяющие эффективно взламывать такие алгоритмы без решения сложной вычислительной проблемы, на которой они основаны. Таким методом является атака вида «человек в середине», которая делает невозможным использование асимметричных криптосистем без проверки авторства открытых ключей. Схема этого метода представлена на рис. 5.5. </span></p>
+<p class=rvps317><span class=rvts38><br></span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps597><img alt="" style="padding : 1px;" src="img/img_00545.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1454><span class=rvts51>Рис. 5.5. Схема атаки "Человек в середине"</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts38><br></span></p>
+<p class=rvps317><span class=rvts38>В безопасной схеме обмена, изображенной в левой части рис. 5.5, клиент непосредственно подключен к серверу, он использует открытый ключ сервера (О) для зашифрования информации и отсылке ее на сервер, который может ее расшифровать с помощью закрытого ключа (З). Но при пересылке открытого ключа сервера к клиенту с использованием по сети, он может быть перехвачен злоумышленником и подменен собственным открытым ключом. Клиент, зная открытый ключ злоумышленника, шифрует им информацию и посылает серверу. </span></p>
+<p class=rvps317><span class=rvts38>Злоумышленник перехватывает ее, расшифровывает своим ключом, зашифровывает открытым ключом сервера и отсылает на сервер. Клиент и сервер думают, что они общаются напрямую, но между ними есть посредник, который выполняет функцию перешифрования и читает все данные пересылаемые от клиента к серверу. Для защиты от этой атаки необходимо использование методов подтверждения подлинности открытого ключа, чтобы каждый участник обмена мог удостовериться, что использует ключ именно того, кому предназначены данные. Это можно сделать с использованием ЭЦП.</span></p>
+<p class=rvps317><span class=rvts38>Для</span><span class=rvts4> удобства ее использования открытый ключ вместе с ЭЦП представляется в форме сертификата открытого ключа, который дополнительно может содержать идентифицирующую информацию о сертификате и используемых в нем алгоритмах. Эта информациея должна содержать следующие сведения:</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> владелец</span><span class=rvts93> сертификата;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> </span><span class=rvts93>алгоритмы использования для генерации ЭЦП;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> </span><span class=rvts93>срок действия;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> </span><span class=rvts93>организация, страна, город;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> </span><span class=rvts93>название фирмы;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> </span><span class=rvts93>предназначение сертификата;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts8485> </span><span class=rvts93>зашифрованные закрытый ключ и др. </span></p>
+<p class=rvps317><span class=rvts38>Существует</span><span class=rvts4> несколько стандартов сертификатов открытых ключей и соответственно несколько стратегий их использования </span><span class=rvts1638>−</span><span class=rvts4> </span><span class=rvts7502>OpenPGP и OpenSSL. Средства хранения и проверки сертификатов в каждом стандарте называются инфраструктурой открытых ключей (PKI).</span></p>
+<p class=rvps317><span class=rvts4>Первым стандартом является стандарт OpenPGP. Он появился из формата сертификатов, использованных в популярной программе для шифрования электронной почты PGP, и используется в соответствующей программе и ее аналогах. </span></p>
+<p class=rvps317><span class=rvts4>Разработчиком этой программы является</span><span class=rvts38> </span><a class=rvts4314 href="1980.html"  OnClick="javascript:NewWindow=window.open('1980.html','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;">Фил Циммерман</a><span class=rvts4> и в период </span><span class=rvts38>создания</span><span class=rvts4> программы PGP он столкнулся с угрозой судебного преследования за экспорт стойких алгоритмов шифрования и программ их реализующих. Он вышел из положения написав книгу, в которой опубликовал исходный текст этой программы, таким образом программа была распространена во всем мире. Циммерман организовал компанию PGP которая разрабатывала программные средства защиты, в том числе и PGP, причем были доступны исходные коды этой программы. Программа PGP широко применялась до 2008 года, в котором компания PGP была куплена компанией «Symantek» и закрыла исходники этой программы. После этого безопасность данной программы оказалась под вопросом из-за невозможности экспертизы ее исходных кодов и она потеряла свою популярность. В качестве клона PGP существует программа GnuPG, для которой доступны исходные коды. Она портирована с Linux на Windows и является безопасным аналогом PGP.</span></p>
+<p class=rvps317><span class=rvts4>Сертификаты в стандарте OpenPGP генерируются пользователями самостоятельно, они являются самоподписанными, но могут быть подписаны ЭЦП других пользователей. Далее пользователи загружают свои открытые ключи на специальный сервер, и тот кто хочет написать письмо некоторому абоненту должен получить с сервера его сертификат. То есть в данном случае сервер выполняет функции хранения открытых ключей (рис. 5.6). Проверка подлинности сертификатов возлагается на пользователей, она может быть выполнена путем подписи сертификата ЭЦП доверенным пользователем, которому доверяют как отправитель, так и получатель.</span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps597><img alt="" style="padding : 1px;" src="img/img_00546.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1455><span class=rvts51>Рис. 5.6. Инфраструктура открытых ключей стандарта OpenPGP</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>Вторым стандартом сертификатов является OpenSSL. Сертификаты этого формата широко используются в сети «Интернет». Они обеспечивают шифрование сеансов и авторизацию в таких сервисах как почтовые сервера, сервера FTP, сервера WEB, в протоколе SSH и многих других. </span></p>
+<p class=rvps317><span class=rvts4>Инфраструктура открытых ключей для данного стандарта приведена на рис. 5.7. </span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1453><img alt="" style="padding : 1px;" src="img/img_00547.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1455><span class=rvts51>Рис. 5.7. Структура PKI стандарта OpenSSL</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>Сертификаты в данной схеме генерируются и подписываются сертификационными центрами, которым доверяют все участники информационного обмена. В свою очереди сертификаты сертификационного центра являются самоподписанными (желтого цвета на схеме). Основная цель данной структуры состоит в возможности проверить любой сертификат является ли он доверенным и каким центром был выдан. Это выполняется путем анализа иерархической цепи сертификатов, последним из которых должен являться сертификат сертификационного центра.</span></p>
+<p class=rvps317><span class=rvts4>Сертификаты, выдаваемые центрами это товар который можно купить, они также сохраняются в базе данных вместе с данными его владельца, человека или организации. С использованием корневых сертификатов, выданных сертификационными центрами, можно сгенерировать сертификаты для различного применения.</span></p>
+<p class=rvps317><span class=rvts4>Серверные сертификаты предназначены для шифрования трафика.</span></p>
+<p class=rvps317><span class=rvts4>Клиентские предназначены для авторизации в различных программах, например, на WEB сайте. При этом использование сертификатов для авторизации является одним из самых надежных методов.</span></p>
+<h4 class=rvps1329><span class=rvts0><span class=rvts5529>Корневые сертификаты для выдачи сертификатов</span></span></h4>
+<p class=rvps317><span class=rvts4>Корневой сертификат SSL содержит информацию о владельце и его издателе. Если посетитель перейдет на защищенный сайт, https соединение которого обеспечивается не доверенным поставщиком и его корневой сертификат отсутствует, является самоподписанным или не распознается браузером пользователя, то, как следствие, будет выдано подобное предупреждение (рис. 5.8). Данные о доверенных сайтах добавляются в базы данных современных браузеров и их можно посмотреть в настройках. Необходимо помнить, что ЭЦП сертификатов имеет юридическую силу.</span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+<div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=931 valign=top style="padding: 0px 7px;"><p class=rvps597><img alt="" style="padding : 1px;" src="img/img_00548.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=931 valign=top style="padding: 0px 7px;"><p class=rvps1039><span class=rvts51>Рис. 5.8. Предупреждение при посещении сайта, использующего не доверенный сертификат</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>Кроме генерации и хранения сертификатов пользователей и организаций центры сертификации отслеживают время действия различных сертификатов, после окончания которого сертификат становится недействительным. Сертификационный центр может отозвать сертификат (сделать его недействительным) в случае изменения данных его владельца или компрометации закрытого ключа сертификата. «PKI оказывается весьма полезна в таких приложениях, как аутентификация, обеспечение целостности и фиксация авторства, строгое выполнение обязательств, а также идентификация и поддержка конфиденциальности, </span><span class=rvts1638>−</span><span class=rvts4> утверждает Кален Кинг, менеджер по маркетингу продуктов PKI компании Baltimore Technologies. </span><span class=rvts1638>−</span><span class=rvts4> Шифрование, безусловно, необходимо, но оно имеет второстепенное значение». </span></p>
+<p class=rvps317><span class=rvts4>Таким образом можно утверждать, что с использованием инфраструктуры открытых ключей можно не только защититься от атаки «человек в середине», но использовать ее для решения других важных задач.</span></p>
+<p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="890.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1810.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

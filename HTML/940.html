@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;5.4.2. Методы дискретного логарифмирования</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="5.4.2. Методы дискретного логарифмирования">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='260.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.1. Асимметричные криптосистемы. История появления.</a></li><li ><a href='270.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.2. Асимметричные алгоритмы шифрования</a></li><li ><a href='280.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.3. Криптосистемы на основе эллиптических кривых</a></li><li ><a href='290.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.4. Методы криптоанализа асимметричных криптосистем</a></li><li ><a href='930.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.4.1. Методы факторизации</a></li><li class='sidebar-active'><a href='940.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;5.4.2. Методы дискретного логарифмирования</a></li><li ><a href='1830.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='300.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5.5. Электронно-цифровая подпись, алгоритмы ЭЦП</a></li><li ><a href='1290.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 5</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 5.4.2. Методы дискретного логарифмирования</h1>
+						<hr>
+                        <h3 class=rvps1479><span class=rvts0><span class=rvts29>5.4.2. Методы дискретного логарифмирования</span></span></h3>
+<p class=rvps798><span class=rvts4364>Задача дискретного логарифмирования это задача обращения функции вида </span><img width=98 height=29 alt="" style="padding : 1px;" src="img/img_00661.png"><span class=rvts4364>. Существует также задача дискретного логарифмирования в других конечных группах </span><span class=rvts7112>−</span><span class=rvts4364> например, в группе точек эллиптической кривой.</span></p>
+<p class=rvps798><span class=rvts7108>Пусть </span><span class=rvts7110>G</span><span class=rvts7108> мультипликативная циклическая группа, порожденная элементом </span><span class=rvts7110>a</span><span class=rvts7108> по модулю </span><span class=rvts7110>n</span><span class=rvts7108>, тогда задача дискретного логарифмирования заключается в нахождении числа </span><span class=rvts7110>x</span><span class=rvts7108> такого, что </span><img width=85 height=24 alt="" style="padding : 1px;" src="img/img_00662.png"><span class=rvts7110>,</span><span class=rvts7108> где </span><img width=42 height=23 alt="" style="padding : 1px;" src="img/img_00663.png"><span class=rvts7108> &nbsp;известные целочисленные величины величины. При этом должен являться первообразным корнем группы по модулю </span><span class=rvts7110>n</span><span class=rvts7108>, т. е. при возведении во все возможные степени получаются все возможные значения от 1 до </span><span class=rvts7110>n</span><span class=rvts9504>−</span><span class=rvts7108>1. В случае, когда </span><span class=rvts7110>x</span><span class=rvts7108> и </span><span class=rvts7110>n</span><span class=rvts7108> большие числа (порядка 1024 бит), задача дискретного логарифмирования не имеет эффективных способов решения. Решение этой задачи переборными методами имеет экспоненциальную сложность, тогда как лучшие методы имеют имеют субэкспоненциальную сложность решения. Лучший метод «решета числового поля» имеет сложность </span><img alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00664.png"><span class=rvts7108> арифметических операций, что сравнимо со сложностью лучших алгоритмов разложения чисел на множители.</span></p>
+<p class=rvps798><span class=rvts4>Если в общем случае решить задачу очень сложно, то для некоторых частных случаев это может быть сделано значительно проще. Классификация методов дискретного логарифмирования представлена на рис. 5.13.</span></p>
+<div class=rvps1150><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1150><img alt="" style="padding : 1px;" src="img/img_00665.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1535><span class=rvts51>Рис. 5.13. Классификация методов дискретного логарифмирования</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps798><span class=rvts4><br></span></p>
+<p class=rvps798><span class=rvts4>На задаче дискретного логарифмирования основаны криптосистема Эль-Гамаля, алгоритм Эль-Гамаля в группе точек эллиптической кривой, алгоритмы ЭЦП, поэтому решение этой задачи является актуальной проблемой.</span></p>
+<p class=rvps798><span class=rvts4>Рассмотрим классификацию методов решения задачи дискретного логарифмирования. </span></p>
+<p class=rvps798><span class=rvts4>Очевидно, что как и в задаче факторизации, полиномиальные алгоритмы решения задачи дискретного логарифмирования отсутствуют.</span></p>
+<p class=rvps798><span class=rvts41><br></span></p>
+<h3 class=rvps1234><span class=rvts0><span class=rvts9505>Алгоритм Шенкса (больших и малых шагов)</span></span></h3>
+<p class=rvps798><span class=rvts7108>Метод больших и малых шагов успешно работает только для </span><span class=rvts7110>n</span><span class=rvts7108> небольшого размера и требует </span><img width=59 height=28 alt="" style="padding : 1px;" src="img/img_00666.png"><span class=rvts7108> до </span><img width=55 height=27 alt="" style="padding : 1px;" src="img/img_00667.png"><span class=rvts7108>операций. Алгоритм Шенкса основан на оптимальном соотношении времени и памяти, по сравнению с полным перебором. Пусть задан генератор группы </span><span class=rvts7110>a</span><span class=rvts7108>, модуль </span><span class=rvts7110>n </span><span class=rvts7108>и элемент группы </span><span class=rvts7110>k</span><span class=rvts7108>. Требуется найти решение уравнения </span><img width=82 height=24 alt="" style="padding : 1px;" src="img/img_00668.png"><span class=rvts7108>. </span></p>
+<p class=rvps798><span class=rvts4>Представим </span><span class=rvts51>x </span><span class=rvts4>в виде</span></p>
+<p class=rvps22><img width=93 height=23 alt="" style="padding : 1px;" src="img/img_00669.png"></p>
+<p class=rvps798><span class=rvts4364>Здесь </span><img width=96 height=36 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00670.png"><span class=rvts4364>, &nbsp;</span><img width=64 height=20 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00671.png"><span class=rvts4364> и </span><img width=72 height=24 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00672.png"><span class=rvts4364>. </span></p>
+<p class=rvps798><span class=rvts7108>Это представление соответствует равенству. Алгоритм предварительно вычисляет все </span><img width=34 height=28 alt="" style="padding : 1px;" src="img/img_00673.png"><span class=rvts7108>, далее он перебирает все возможные значения </span><span class=rvts7110>j</span><span class=rvts7108> и проверяет, если </span><img width=42 height=24 alt="" style="padding : 1px;" src="img/img_00674.png"><span class=rvts7108> равно одному из сохраненных значений, то индексы </span><span class=rvts7110>i</span><span class=rvts7108>, &nbsp;</span><span class=rvts7110>j</span><span class=rvts7108> подставляются в формулу </span><img width=86 height=24 alt="" style="padding : 1px;" src="img/img_00675.png"><span class=rvts7108> и позволяют вычислить </span><img width=88 height=23 alt="" style="padding : 1px;" src="img/img_00676.png"><span class=rvts7108> .</span></p>
+<h3 class=rvps1234><span class=rvts0><span class=rvts101>Пример</span></span></h3>
+<p class=rvps4><span class=rvts7108>Пусть </span><img width=118 height=28 alt="" style="padding : 1px;" src="img/img_00677.png"><span class=rvts7108>.</span></p>
+<p class=rvps798><span class=rvts38>Тогда найдем </span><img alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00678.png"><span class=rvts4>.</span></p>
+<p class=rvps798><span class=rvts4>Далее составим табл. 5.6.</span></p>
+<p class=rvps798><span class=rvts4><br></span></p>
+<p class=rvps1536><span class=rvts51>Таблица 5.6</span></p>
+<p class=rvps1537><span class=rvts30>Результаты предвычислений</span></p>
+<div class=rvps1532><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="22%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts51>i</span></p>
+</td>
+<td width="10%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>1</span></p>
+</td>
+<td width="10%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>2</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>3</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>4</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>5</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>6</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>7</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="22%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps22><img width=88 height=25 alt="" style="padding : 1px;" src="img/img_00679.png"></p>
+</td>
+<td width="10%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>31</span></p>
+</td>
+<td width="10%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>21</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>40</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>18</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>41</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>2</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>15</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps798><span class=rvts4><br></span></p>
+<p class=rvps798><span class=rvts4>Подбираем </span><span class=rvts51>j</span><span class=rvts4> такое, что </span><img width=52 height=21 alt="" style="padding : 1px;" src="img/img_00680.png"><span class=rvts4> есть в табл. &nbsp;5.7.</span></p>
+<p class=rvps1536><span class=rvts51>Таблица 5.7</span></p>
+<p class=rvps798><span class=rvts4>Значения </span><img alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00681.png"></p>
+<div class=rvps1150><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td width="19%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts51>j</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>1</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>2</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>3</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>4</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>5</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>6</span></p>
+</td>
+<td width="11%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>7</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="19%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1150><img alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00682.png"></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>38</span></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>42</span></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>39</span></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>6</span></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>19</span></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>21</span></p>
+</td>
+<td width="11%" height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1534><span class=rvts4>43</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps798><span class=rvts4><br></span></p>
+<p class=rvps798><span class=rvts7108>Результат: </span><img width=113 height=20 alt="" style="padding : 1px;" src="img/img_00683.png"><span class=rvts7108>.</span></p>
+<p class=rvps798><span class=rvts4><br></span></p>
+<h3 class=rvps1234><span class=rvts0><span class=rvts29>Алгоритм Поллига </span></span><span class=rvts0><span class=rvts4322>−</span></span><span class=rvts0><span class=rvts29> Хеллмана</span></span></h3>
+<p class=rvps798><span class=rvts4364>Пусть известно разложение числа </span><span class=rvts6690>n</span><span class=rvts7527>−</span><span class=rvts4364>1 на простые множители </span><img width=103 height=51 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00684.png"><span class=rvts4364>, введем </span><img width=122 height=29 alt="" style="padding : 1px;" src="img/img_00685.png"><span class=rvts4364> и пусть </span><img width=20 height=26 alt="" style="padding : 1px;" src="img/img_00686.png"><span class=rvts4364> </span><span class=rvts7527>−</span><span class=rvts4364> множество образуемое элементом </span><img width=19 height=26 alt="" style="padding : 1px;" src="img/img_00687.png"><span class=rvts4364> по модулю </span><span class=rvts6690>n</span><span class=rvts4364> и </span><img width=20 height=25 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00688.png"><span class=rvts4364> </span><span class=rvts7527>−</span><span class=rvts4364> множество образуемое элементом </span><img width=21 height=26 alt="" style="padding : 1px;" src="img/img_00689.png"><span class=rvts4364> по модулю </span><span class=rvts6690>n</span><span class=rvts4364> , тогда мощность множества </span><img width=60 height=25 alt="" style="padding : 1px;" src="img/img_00690.png"><span class=rvts4364>. Будем искать решение уравнения </span><img width=98 height=29 alt="" style="padding : 1px;" src="img/img_00691.png"><span class=rvts4364> в виде </span><img width=267 height=25 alt="" style="padding : 1px;" src="img/img_00692.png"><span class=rvts4364>.</span></p>
+<p class=rvps798><span class=rvts4364>Если </span><img width=81 height=27 alt="" style="padding : 1px;" src="img/img_00693.png"><span class=rvts4364>, то </span><img width=293 height=28 alt="" style="padding : 1px;" src="img/img_00694.png"><span class=rvts4364>.</span></p>
+<p class=rvps798><span class=rvts4>Поэтому логарифмирование можно выполнить следующим образом: </span></p>
+<p class=rvps1030><span class=rvts8678>1. Найти </span><img width=150 height=29 alt="" style="padding : 1px;" src="img/img_00695.png"><span class=rvts8678>;</span></p>
+<p class=rvps1533><span class=rvts9491>2. Найти </span><img width=172 height=29 alt="" style="padding : 1px;" src="img/img_00696.png"><span class=rvts9491>;</span></p>
+<p class=rvps1533><span class=rvts9491>3. Определить </span><img width=103 height=25 alt="" style="padding : 1px;" src="img/img_00697.png"><span class=rvts9491>.</span></p>
+<p class=rvps798><span class=rvts4>Таким образом для дискретного логарифмирования в </span><span class=rvts51>G</span><span class=rvts4> требуется выполнить логарифмирование в группах </span><img width=18 height=25 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00698.png"><span class=rvts4> и </span><img width=20 height=25 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00699.png"><span class=rvts4> меньшего порядка.</span></p>
+<p class=rvps798><span class=rvts4>Далее если </span><img width=18 height=25 alt="" style="vertical-align: text-top; padding : 1px;" src="img/img_00700.png"><span class=rvts4> является не простым числом, то можно снова заменить логарифмирование в группе </span><img width=18 height=25 alt="" style="vertical-align: text-top; padding : 1px;" src="img/img_00701.png"><span class=rvts4> на логарифмирование в меньших группах и т. д.</span></p>
+<p class=rvps798 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps798><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="930.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1830.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

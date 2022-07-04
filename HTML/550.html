@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;3.2.1. Блочный шифр DES</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="3.2.1. Блочный шифр DES">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='170.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.1. Классические блочные алгоритмы шифрования. Альтернативные варианты построения блочных шифров</a></li><li ><a href='180.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.2. Примеры блочных шифров</a></li><li class='sidebar-active'><a href='550.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.1. Блочный шифр DES</a></li><li ><a href='560.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.2. Блочный шифр ГОСТ-28147-89</a></li><li ><a href='570.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.3. Блочный шифр Rijndael (AES)</a></li><li ><a href='1190.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.4. Блочный шифр ГОСТ Р 34.12-2015 «КУЗНЕЧИК»</a></li><li ><a href='1200.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.5. Блочный шифр RC6.</a></li><li ><a href='1210.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.6. Блочный шифр Serpent.</a></li><li ><a href='1220.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.7. Блочный шифр Twofish.</a></li><li ><a href='1230.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.8. Блочный шифр MARS.</a></li><li ><a href='1720.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='580.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.3. Классификация методов криптоанализа блочных шифров</a></li><li ><a href='190.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.4. Основы дифференциального криптоанализа блочных шифров</a></li><li ><a href='200.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.5. Линейный криптоанализ блочных шифров</a></li><li ><a href='210.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.6. Интегральный и алгебраический криптоанализ блочных шифров</a></li><li ><a href='1270.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 3</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 3.2.1. Блочный шифр DES</h1>
+						<hr>
+                        <h3 class=rvps999><span class=rvts0><span class=rvts4302>3.2.1. Блочный шифр DES</span></span></h3>
+<p class=rvps741><span class=rvts4>Исторически, DES был первым блочным шифром, опубликованным в открытой печати, он появился в 1978 году и являлся революционным для своего времени. Этот шифр имеет среднюю скорость программной и высокую скорость аппаратной реализации, которая доходит до нескольких мегабайт в секунду. Длительное время этот алгоритм являлся американским стандартом шифрования, пока не был заменен алгоритмом AES в 2000 году вследствие малой длины ключа. </span></p>
+<div class=rvps43><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps43><img alt="" style="padding : 1px;" src="img/img_00161.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1002><span class=rvts51>Рис. 3.13. Структура блочного шифра DES</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps314><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>Блочный шифр DES (рис. 3.13) имеет следующие характеристики:</span></p>
+<p class=rvps1004><span class=rvts31>1) структура: классическая сеть Фейстеля;</span></p>
+<p class=rvps1004><span class=rvts31>2) размер ключа: 56 бит;</span></p>
+<p class=rvps1004><span class=rvts31>3) размер блока: 64 бита;</span></p>
+<p class=rvps1004><span class=rvts31>4) количество раундов: 16.</span></p>
+<p class=rvps767><span class=rvts4>Особенностью блочного шифра DES является широкое применение битовой перестановки</span><span class=rvts38> или «проволочной коммутацией» в терминах</span><span class=rvts4> спецификации. Эта операция очень быстро выполняется аппаратно, но при этом очень неудобна для программной реализации. Это связано с тем, что в современных процессорах и контроллерах нет операций битовой перестановки, а все попытки их разработать не увенчались успехом. Это теоретически невозможно, потому что даже для значений небольшой разрядности количество перестановок очень велико, и определяется функцией факториала от размерности данных в битах. Это означает, что такую операцию невозможно реализовать одной командой, поэтому приходится выполнять перестановку по одному биту. </span></p>
+<p class=rvps767><span class=rvts4>Начальная перестановка алгоритма DES представлена в табл. 3.2, т. е. первый бит становится 58-м, 2-й 50-м и т. д. В качестве конечной перестановки используется перестановка обратная начальной.</span></p>
+<p class=rvps23><span class=rvts4><br></span></p>
+<p class=rvps1006><span class=rvts51><br></span></p>
+<p class=rvps22><span class=rvts30><br></span></p>
+<div class=rvps43><table width=650 border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td colspan=16 width=392 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1005><span class=rvts51>Таблица 3.2</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td colspan=16 width=392 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps22><span class=rvts30>Начальная битовая перестановка алгоритма DES</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>58</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>50</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>42</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>34</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>26</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>18</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>10</span></p>
+</td>
+<td width=10 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>2</span></p>
+</td>
+<td width=29 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>60</span></p>
+</td>
+<td width=24 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>52</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>44</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>36</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>28</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>20</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>12</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>4</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>62</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>54</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>46</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>38</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>30</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>22</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>14</span></p>
+</td>
+<td width=10 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>6</span></p>
+</td>
+<td width=29 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>64</span></p>
+</td>
+<td width=24 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>56</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>48</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>40</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>32</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>24</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>16</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>8</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>57</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>49</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>41</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>33</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>25</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>17</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>9</span></p>
+</td>
+<td width=10 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>1</span></p>
+</td>
+<td width=29 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>59</span></p>
+</td>
+<td width=24 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>51</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>43</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>35</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>27</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>19</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>11</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>3</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>61</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>53</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>45</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>37</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>29</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>21</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>13</span></p>
+</td>
+<td width=10 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>5</span></p>
+</td>
+<td width=29 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>63</span></p>
+</td>
+<td width=24 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>55</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>47</span></p>
+</td>
+<td width=27 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>39</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>31</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>23</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>15</span></p>
+</td>
+<td width=25 height=17 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps781><span class=rvts41>7</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps4><span class=rvts4><br></span></p>
+<p class=rvps767><span class=rvts4>Структура раундовой функции алгоритма DES полностью соответствует классической сети Фейстеля (рис. 3.14):</span></p>
+<p class=rvps595><span class=rvts1640>−</span><span class=rvts31> первой операцией в ней является расширение блока до 48 бит путем копирования крайних бит в каждом блоке из 4 бит, как показано в верхней части</span><span class=rvts93> рис. 3.14;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts93> далее, получившиеся 48 разрядов суммируются с раундовым ключом (размер 48 бит);</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts93> каждый блок из 6 символов заменяется на блок из 4 символов с использованием 8 различных блоков подстановок; подстановки имеют 46 входных и 4 выходных бита, т.е не являются обратимыми;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts93> выполняется перестановка битов получившегося блока в 32 бита в соответствии с табл. 3.2, по-видимому, эта перестановка является случайной, так как какие-либо закономерности в ней отсутствуют.</span></p>
+<p class=rvps595><span class=rvts93><br></span></p>
+<div class=rvps43><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps43><img alt="" style="padding : 1px;" src="img/img_00162.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1002><span class=rvts51>Рис. 3.14. Операции, составляющие раундовую функцию алгоритма DES</span></p>
+<p class=rvps1002><span class=rvts51><br></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps767><span class=rvts4><br></span></p>
+<p class=rvps317><span class=rvts4>В данном алгоритме нетрадиционным решением является использование небиективных операций подстановки, имеющих вход 6 бит, а выход 4 бита.</span></p>
+<p class=rvps317><span class=rvts4>Входной </span><span class=rvts38>56-битный</span><span class=rvts4> ключ используется для генерации 16 раундовых 48-битных ключей с помощью следующего алгоритма расширения ключа:</span></p>
+<p class=rvps595><span class=rvts1640>−</span><span class=rvts31> производится разделение 56-битного блока на две части и по 28 бит;</span></p>
+<p class=rvps595><span class=rvts1640>−</span><span class=rvts31> производится циклический сдвиг блоков влево на s[i] разрядов для получения блоков, значения s[i] приведены в табл. 3.3;</span></p>
+<p class=rvps595><span class=rvts1640>−</span><span class=rvts31> из 56 разрядов соединенных блоков, выбираются 48 разрядов ключа в порядке, приведенном в табл. 3.4;</span></p>
+<p class=rvps595><span class=rvts3923>−</span><span class=rvts93> указанные действия</span><span class=rvts31> повторяются 16 раз.</span></p>
+<p class=rvps1017><span class=rvts51>Таблица 3.3</span></p>
+<p class=rvps1008><span class=rvts30>Таблица сдвигов, используемых при формировании раундовых подключей</span></p>
+<div class=rvps30><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>i</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>0</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>1</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>3</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>4</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>5</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>6</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>7</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>8</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>9</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>10</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>11</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>12</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>13</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>14</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>15</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps795><span class=rvts41>s[i]</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>1</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>1</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>1</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>2</span></p>
+</td>
+<td width="5%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps794><span class=rvts41>1</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps792><span class=rvts4><br></span></p>
+<p class=rvps1010><span class=rvts51>Таблица 3.4</span></p>
+<p class=rvps1009><span class=rvts30>Таблица выбора бит при формировании раундовых подключей</span></p>
+<div class=rvps30><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+<tr valign=top>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>14</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>17</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>11</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>24</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>1</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>5</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>3</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>28</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>15</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>6</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>21</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>10</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>23</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>19</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>12</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>4</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>26</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>8</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>16</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>7</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>27</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>20</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>13</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>2</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>41</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>52</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>31</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>37</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>47</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>55</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>30</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>40</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>51</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>45</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>33</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>48</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>44</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>49</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>39</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>56</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>34</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>53</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>46</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>42</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>50</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>36</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>29</span></p>
+</td>
+<td width="8%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>32</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps4><span class=rvts4><br></span></p>
+<p class=rvps715><span class=rvts4>Достоинства алгоритма DES:</span></p>
+<p class=rvps1014><span class=rvts1640>−</span><span class=rvts31> революционность для своего времени;</span></p>
+<p class=rvps1014><span class=rvts1640>−</span><span class=rvts31> отсутствие практических методов вскрытия более эффективных, чем полный перебор, несмотря многие годы криптоанализа.</span></p>
+<p class=rvps715><span class=rvts4>Недостатки блочного шифра:</span></p>
+<p class=rvps1014><span class=rvts1640>−</span><span class=rvts31> основным недостатком данного блочного шифра, обусловившего его замену, является малая длина ключа, которая сегодня может быть вскрыта методом прямого перебора за время менее 3 суток и использованием аппаратуры стоимостью менее 10000$;</span></p>
+<p class=rvps1014><span class=rvts1640>−</span><span class=rvts31> алгоритм широко использует битовую перестановку, которая легко реализуется аппаратно, но не имеет эффективной программной реализации;</span></p>
+<p class=rvps1014><span class=rvts1640>−</span><span class=rvts31> малый размер блока недостаточен для эффективного скрытия структуры шифруемых данных, минимально допустимый размер блока сегодня это 128 бит.</span></p>
+<p class=rvps715><span class=rvts4>За время использования алгоритма DES была наработана огромная криптографическая инфраструктура. Это и большое количество поддерживающей этот алгоритм каналообразующей аппаратуры, и специализированные устройства шифрования, и множество программных реализаций в рамках различных продуктов. Быстро заменить ее было практически нереально, поэтому в качестве промежуточной меры были предприняты попытки усилить этот алгоритм с целью устранения его основного недостатка, до того времени, как будет разработан новый. </span></p>
+<p class=rvps715><span class=rvts4>Было предложено несколько методов усиления DES с целью устранения основного недостатка </span><span class=rvts1638>−</span><span class=rvts4> малой длины ключа, некоторые из этих методов используются до сих пор. </span></p>
+<p class=rvps715><span class=rvts30>Тройной DES </span><span class=rvts3926>−</span><span class=rvts30> </span><span class=rvts4>описывается формулой </span><img width=298 height=41 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00163.png"><span class=rvts4>, ключ имеет длину 56*3=168 бит, если выбрать все ключи одинаковыми, то алгоритм превращается в DES, т. е. сохраняет совместимость с уже используемым оборудованием. Основной недостаток </span><span class=rvts1638>−</span><span class=rvts4> трехкратное снижение скорости </span><span class=rvts38>шифрования </span><span class=rvts2016>−</span><span class=rvts38> стал причиной, по которой этот алгоритм стал лишь временной заменой алгоритма DES. Данный алгоритм входит в состав протокола SSL [</span><a class=rvts4313 href="Протокол%20SSL%20как%20основа%20технологии%20VPN.pdf">17</a><span class=rvts38>].</span></p>
+<p class=rvps715><span class=rvts30>DESX</span><span class=rvts4> – модификация DES,</span><span class=rvts38> разработанная </span><a class=rvts2026 href="1440.html"  OnClick="javascript:NewWindow=window.open('1440.html','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;">Рональдом Ривестом</a><span class=rvts38>, описывается</span><span class=rvts4> формулой </span><img width=298 height=31 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00164.png"><span class=rvts4>. Этот алгоритм лишь немногим медленнее DES и не имеет известных уязвимостей, но так и не нашел широкого применения, так как был принят новый стандарт блочного шифра США </span><span class=rvts4310>−</span><span class=rvts4> алгоритм AES.</span></p>
+<p class=rvps715><span class=rvts65><br></span></p>
+<p class=rvps715 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps715><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="180.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="560.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

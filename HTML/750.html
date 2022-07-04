@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;4.2.4. Пример блочного шифра на основе управляемых операций</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="4.2.4. Пример блочного шифра на основе управляемых операций">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='220.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.1. Вероятностное шифрование</a></li><li ><a href='230.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.2. Блочные шифры на основе управляемых операций</a></li><li ><a href='720.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.2.1. Управляемые криптографические примитивы</a></li><li ><a href='730.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.2.2. Недетерминированные шифры на основе управляемых операций</a></li><li ><a href='740.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.2.3. Итеративные шифры с раундовой функцией на основе управляемых операций </a></li><li class='sidebar-active'><a href='750.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;4.2.4. Пример блочного шифра на основе управляемых операций</a></li><li ><a href='1770.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='240.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.3. Криптографические хэш функции</a></li><li ><a href='250.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4.4. Поточные алгоритмы шифрования</a></li><li ><a href='1280.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 4</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 4.2.4. Пример блочного шифра на основе управляемых операций</h1>
+						<hr>
+                        <h3 class=rvps1137><span class=rvts0><span class=rvts29>4.2.4. Пример блочного шифра на основе управляемых операций</span></span></h3>
+<p class=rvps800><span class=rvts4>В качестве примера рассмотрим блочный шифр COBRA-H64, построенный на основе управляемых операций. Этот блочный шифр имеет размер блока равный 64 бита, размер ключа в 128 бит и состоит из 10 одинаковых раундов, а также начального и конечного преобразования (рис. 4.15).</span></p>
+<p class=rvps800><span class=rvts4><br></span></p>
+<div class=rvps1070><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1070><img alt="" style="padding : 1px;" src="img/img_00367.png"></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=628 valign=top style="padding: 0px 7px;"><p class=rvps1284><span class=rvts95>Рис. 4.15. </span><span class=rvts51>Общая схема шифра COBRA-H64</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps800><span class=rvts4><br></span></p>
+<p class=rvps800><span class=rvts4>Опустим при рассмотрении схему расширения ключа, она дает на выходе 10 подключей размера 128 бит и может быть найдена в соответствующей литературе. Исходя из схемы шифра очевидно, что по 2 ключа используют начальное и конечное преобразование и один ключ использует каждый раунд. После раундовой функции подблоки </span><span class=rvts51>L</span><span class=rvts4> и </span><span class=rvts51>R</span><span class=rvts4> меняются местами.</span></p>
+<p class=rvps800><span class=rvts4>Раундовая функция использует следующие операции:</span></p>
+<p class=rvps800><span class=rvts1638>•</span><span class=rvts4> </span><img width=28 height=31 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00368.png"><span class=rvts4>и </span><img width=33 height=40 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00369.png"><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это рассмотренные ранее прямая и обратная перестановки, первый из них используется в прямом направлении, второй в обратном;</span></p>
+<p class=rvps800><span class=rvts6702>•</span><span class=rvts6701> Операция </span><span class=rvts6713>E</span><span class=rvts6701> </span><span class=rvts6702>−</span><span class=rvts6701> это расширение подблока из 32 бит до 96 бит, выдает 6 переменных по 16 бит:</span></p>
+<p class=rvps1070><span class=rvts6701> </span><img width=304 height=55 alt="" style="padding : 1px;" src="img/img_00370.png"><span class=rvts6701> </span></p>
+<p class=rvps1285><span class=rvts6701>где &gt;&gt;&gt; это операция циклического сдвига вправо;</span></p>
+<p class=rvps800><span class=rvts6709>•</span><span class=rvts6706> </span><span class=rvts6707>P</span><span class=rvts6708>i</span><span class=rvts6707> </span><span class=rvts6706>– переключаемая перестановка </span><span class=rvts6712>с минимальным входом, описывается как</span></p>
+<p class=rvps1070><span class=rvts6712> </span><img width=283 height=76 alt="" style="padding : 1px;" src="img/img_00371.png"><span class=rvts6705>, </span></p>
+<p class=rvps962><span class=rvts6705>т. е.</span><span class=rvts6706> первые 31 бит циклически сдвигаются на разное число бит и к ним присоединяется 32-й бит</span><span class=rvts6705>; </span></p>
+<p class=rvps800><span class=rvts1638>•</span><span class=rvts139> </span><span class=rvts148>I </span><span class=rvts139>– фиксированная перестановка;</span></p>
+<p class=rvps800><span class=rvts1638>•</span><span class=rvts139> Нелинейные операции G1 и G2, являются одинаковыми и оп</span><span class=rvts4>ределяются как</span></p>
+<p class=rvps1070><img width=309 height=61 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00372.png"><span class=rvts4>,</span></p>
+<p class=rvps961><span class=rvts4>где значения </span><span class=rvts51>X</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это вход, </span><span class=rvts51>A</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> первый управляющий вход и </span><span class=rvts51>B</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> второй управляющий вход. Значения </span><img width=49 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00373.png"><span class=rvts4> и &nbsp;</span><img width=22 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00374.png"><span class=rvts4>вычисляются как</span></p>
+<p class=rvps1070><img width=228 height=81 alt="" style="padding : 1px;" src="img/img_00375.png"><span class=rvts6711>,</span></p>
+<p class=rvps961><span class=rvts4>операция </span><img width=41 height=18 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00376.png"><span class=rvts4> &nbsp;</span><span class=rvts1638>−</span><span class=rvts4> это поразрядное умножение (операция И).</span></p>
+<p class=rvps800><span class=rvts4>Управляемые шифры с использованием двухместных примитивов с минимальным управляющим входом больше подходят для аппаратной реализации, так как они сложны в программной реализации. Желательно, при создании шифра с использованием управляемых операций, использовать в его составе и проверенные высоконелинейные операции, например, подстановки размерности 8 бит или операции сложения по модулю </span><img width=28 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00377.png"><span class=rvts4>, что позволит повысить общую нелинейность выходных данных блочного шифра.</span></p>
+<p class=rvps800 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps800><span class=rvts4><br></span></p>
+<p class=rvps800><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="740.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1770.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Без названия.&nbsp;3.2.6. Блочный шифр Serpent.</title>
+    <meta charset="UTF-8"> 
+    <meta name="generator" content="SunRav BookEditor"> 	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="3.2.6. Блочный шифр Serpent.">
+    <link href="theme/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/simple-sidebar.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav"><li class="sidebar-brand"><a href="index.html">Без названия</a></li><li ><a href='20.html'>&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Учебное пособие КМЗИ</a></li><li ><a href='1160.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Титульный экран</a></li><li ><a href='1170.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Оглавление</a></li><li ><a href='40.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Предисловие</a></li><li ><a href='50.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;1. Основы криптографии как науки о засекречивании информации</a></li><li ><a href='70.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li><li ><a href='80.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3. Современные блочные шифры и методы из криптоанализа</a></li><li ><a href='170.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.1. Классические блочные алгоритмы шифрования. Альтернативные варианты построения блочных шифров</a></li><li ><a href='180.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.2. Примеры блочных шифров</a></li><li ><a href='550.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.1. Блочный шифр DES</a></li><li ><a href='560.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.2. Блочный шифр ГОСТ-28147-89</a></li><li ><a href='570.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.3. Блочный шифр Rijndael (AES)</a></li><li ><a href='1190.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.4. Блочный шифр ГОСТ Р 34.12-2015 «КУЗНЕЧИК»</a></li><li ><a href='1200.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.5. Блочный шифр RC6.</a></li><li class='sidebar-active'><a href='1210.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.6. Блочный шифр Serpent.</a></li><li ><a href='1220.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.7. Блочный шифр Twofish.</a></li><li ><a href='1230.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.2.8. Блочный шифр MARS.</a></li><li ><a href='1720.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Контрольные вопросы</a></li><li ><a href='580.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;3.3. Классификация методов криптоанализа блочных шифров</a></li><li ><a href='190.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.4. Основы дифференциального криптоанализа блочных шифров</a></li><li ><a href='200.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.5. Линейный криптоанализ блочных шифров</a></li><li ><a href='210.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;3.6. Интегральный и алгебраический криптоанализ блочных шифров</a></li><li ><a href='1270.html'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Тест к главе 3</a></li><li ><a href='90.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;4. Вспомогательные криптографические примитивы</a></li><li ><a href='100.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;5. Криптосистемы с открытым ключом</a></li><li ><a href='110.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li><li ><a href='1320.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-folder-close' aria-hidden='true'></span>&nbsp;Справочные материалы</a></li><li ><a href='2020.html'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-file' aria-hidden='true'></span>&nbsp;Список литературы</a></li>            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><a title="Показать/скрыть меню" href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a> 3.2.6. Блочный шифр Serpent.</h1>
+						<hr>
+                        <h3 class=rvps1022><span class=rvts0><span class=rvts369>3.2.6. </span></span><span class=rvts0><span class=rvts4382>Блочный шифр Serpent</span></span></h3>
+<p class=rvps800><span class=rvts4>Алгоритм SERPENT разработан тремя известнейшими криптологами: Россом Андерсоном, Эли Бихамом и Ларсом Кнудсеном. Каждый из них знаменит своими криптоаналитическими работами, а также разработанными ранее алгоритмами шифрования (например, широкую известность получили алгоритмы </span><span class=rvts51>Bear</span><span class=rvts4> и </span><span class=rvts51>Lion</span><span class=rvts4>, разработанные Андерсоном и Бихамом не менее известен алгоритм </span><span class=rvts51>Square</span><span class=rvts4>, разработанный авторами алгоритма </span><span class=rvts51>Rijndael</span><span class=rvts4> Джоан Деймен и Винсентом Риджменом при участии Ларса Кнудсена). Именно Эли Бихама без преувеличения можно назвать величайшим крипто-аналитиком современности, его авторству (часто в соавторстве с другими специалистами) принадлежит множество работ, посвященных методам вскрытия различных известных алгоритмов шифрования.</span></p>
+<p class=rvps800><span class=rvts4>Еще до конкурса AES появился алгоритм SERPENT-0, отличающийся от присланного на конкурс алгоритма SERPENT-1 (или просто </span><span class=rvts51>Serpent</span><span class=rvts4>) только тем, что в нем были использованы таблицы замен алгоритма DES (в незначительно модифицированном виде). В SERPENT используются уже оригинальные таблицы замен, которые, по словам его авторов, вкупе с незначительным изменением процедуры расширения ключа усилили алгоритм против дифференциального и линейного криптоанализа.</span></p>
+<p class=rvps800><span class=rvts4>Алгоритм SERPENT представляет собой SP-сеть, в которой блок данных в процессе шифрования разбивается на 4 подблока по 32 бита (рис. 3.24).</span></p>
+<p class=rvps1067><img alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00204.png"></p>
+<p class=rvps1071><span class=rvts51>Рис. 3.24. Структура алгоритма SERPENT</span></p>
+<p class=rvps1068><span class=rvts4><br></span></p>
+<p class=rvps800><span class=rvts4>Алгоритм выполняет 32 раунда преобразований; перед первым раундом выполняется начальная перестановка IP, после заключительного раунда </span><span class=rvts1638>−</span><span class=rvts4> финальная перестановка FP. Для перестановки IP характерно, что бит 0 остается на своем месте, бит 32 входного значения становится битом 1, бит 64 </span><span class=rvts1638>−</span><span class=rvts4> битом 2 и т.д. Финальная перестановка является инверсной начальной перестановке.</span></p>
+<p class=rvps800><span class=rvts4>Функция раунда состоит из следующих операций:</span></p>
+<p class=rvps800><span class=rvts30>1. </span><span class=rvts4>Наложение 128-битного ключа раунда побитовой логической операцией «исключающее или» (XOR).</span></p>
+<p class=rvps800><span class=rvts30>2. </span><span class=rvts4>Табличная замена. Обрабатываемый 128-битный блок данных разбивается на 32 фрагмента по 4 бита, над каждым из которых выполняется табличная замена 4 * 4 бит. Полученный результат объединяется обратно в 128-битный блок. </span></p>
+<p class=rvps800><span class=rvts4>В каждом раунде используется одна и та же таблица; всего же в алгоритме определены 8 таблиц замен S</span><span class=rvts376>0</span><span class=rvts4>...S</span><span class=rvts376>7</span><span class=rvts4>, которые циклически используются в 32 раундах шифрования:</span></p>
+<p class=rvps800><span class=rvts4>Ячейки таблицы содержат выходные значения; входное значение определяет требуемый номер столбца. Например, таблица S</span><span class=rvts376>0</span><span class=rvts4>&nbsp;меняет 0 на 3, 1 на 8 и т.д.</span></p>
+<p class=rvps800><span class=rvts4>Таблицы замен алгоритма Serpent определенным образом сгенерированы из таблиц алгоритма DES.</span></p>
+<p class=rvps800><span class=rvts4>Линейное преобразование блока данных определяется таблицей, фрагмент которой представлен далее.</span></p>
+<p class=rvps1075><span class=rvts30> </span></p>
+<div class=rvps1070><table border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td colspan=4 width=701 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1072><span class=rvts51>Таблица 3.5</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td colspan=4 width=701 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps960><span class=rvts30>Линейное преобразование блока данных</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>16, 52, 56, 70, 83, 94, 105</span></p>
+</td>
+<td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>72, 114, 125</span></p>
+</td>
+<td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>2, 9, 15, 30, 76, 84, 126</span></p>
+</td>
+<td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>36, 90, 103</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>20, 56, 60, 74, 87, 98, 109</span></p>
+</td>
+<td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>1, 76, 118</span></p>
+</td>
+<td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>2, 6, 13, 19, 34, 80, 88</span></p>
+</td>
+<td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>40, 94, 107</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>24, 60, 64, 78, 91, 102, 113</span></p>
+</td>
+<td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>5, 80, 122</span></p>
+</td>
+<td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>6, 10, 17, 23, 38, 84, 92</span></p>
+</td>
+<td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>44, 98, 111</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>28, 64, 68, 82, 95, 106, 117</span></p>
+</td>
+<td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>9, 84, 126</span></p>
+</td>
+<td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>10, 14, 21, 27, 42, 88, 96</span></p>
+</td>
+<td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>48, 102, 115</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps800><span class=rvts4><br></span></p>
+<p class=rvps800><span class=rvts4>Каждая ячейка таблицы соответствует биту выходного значения (от 0 до 127); в ячейке перечислены входные биты, XOR которых дает выходное значение.</span></p>
+<p class=rvps800><span class=rvts4>Расшифрование производится выполнением обратных операций в обратной последовательности. В частности, вместо таблиц замен&nbsp;</span><span class=rvts30>S</span><span class=rvts4381>0</span><span class=rvts30>...S</span><span class=rvts4381>7</span><span class=rvts4>&nbsp;применяются в обратной последовательности инверсные таблицы замен&nbsp;</span><span class=rvts30>InvS</span><span class=rvts4381>0</span><span class=rvts30>...InvS</span><span class=rvts4381>7</span><span class=rvts4>:</span></p>
+<p class=rvps800><span class=rvts4>Аналогичным образом вместо «прямого» линейного преобразования используется обратное, которое определяется табл. 3.6 (принцип действия обратного преобразования аналогичен прямому и описан выше).</span></p>
+<div class=rvps1070><table border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+<tr valign=top>
+<td colspan=4 width=623 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1080><span class=rvts51>Таблица 3.6</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td colspan=4 width=623 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps1070><span class=rvts30>Обратное преобразование блока данных</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>53, 55, 72</span></p>
+</td>
+<td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>1, 5, 20, 90</span></p>
+</td>
+<td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>15, 102</span></p>
+</td>
+<td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>3, 31, 90</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>57, 59, 76</span></p>
+</td>
+<td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>5, 9, 24, 94</span></p>
+</td>
+<td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>19, 106</span></p>
+</td>
+<td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>7, 35, 94</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>61, 63, 80</span></p>
+</td>
+<td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>9, 13, 28, 98</span></p>
+</td>
+<td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>23, 110</span></p>
+</td>
+<td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>11, 39, 98</span></p>
+</td>
+</tr>
+<tr valign=top>
+<td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>65, 67, 84</span></p>
+</td>
+<td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>13,17, 32, 102</span></p>
+</td>
+<td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>27, 114</span></p>
+</td>
+<td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>1, 3, 15, 20, 43, 102</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class=rvps1070><span class=rvts4><br></span></p>
+<p class=rvps800 style="page-break-before: always;"><span class=rvts4><br></span></p>
+<p class=rvps800><span class=rvts4><br></span></p>
+
+                    </div>
+					<div class="row">
+						<div class="col-xs-6">
+						<a title="К предыдущей главе" href="1200.html" class="btn btn-default btn-sm" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</a>							
+						</div>
+						<div class="col-xs-6 text-right">
+						<a title="К следующей главе" href="1220.html" class="btn btn-default btn-sm" id="menu-toggle">Вперед<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>							
+						</div>
+					</div>
+                </div>
+            </div>
+<footer>
+        <hr>
+        <p><p class=rvps2><span class=rvts4><br></span></p>
+</p>
+      </footer>			
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="theme/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
