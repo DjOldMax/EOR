@@ -85,6 +85,15 @@ a:hover {
 .menu-toc {
 	list-style: none;
 }
+.menu-toc p{
+	display: block;
+	color: #fff;
+	font-size: 0.8em;
+	line-height: 1.7;
+	padding: 0 20px;
+	cursor: pointer;
+}
+
 
 .menu-toc li a {
 	display: block;
