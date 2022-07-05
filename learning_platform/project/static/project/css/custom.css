@@ -102,6 +102,10 @@ a:hover {
 	background: #ff0000;
 }
 
+.menu-panel{
+	overflow: auto;
+}
+
 .menu-panel div {
 	margin-top: 20px;
 }
