@@ -79,13 +79,13 @@ a.btn-download:hover,
 ::-webkit-scrollbar-thumb,
 .bloglist .date-box,
 #top-bar #mainmenu a.active{
-    background-color: var(--main-color);
+    background-color: #ff0000;
 }
 
 @media only screen and (max-width: 992px) {
     #mainmenu a:hover,
 	#top-bar #mainmenu a:hover 	{
-        background-color: var(--main-color);
+        background-color: #ff0000;
     }
 }
 

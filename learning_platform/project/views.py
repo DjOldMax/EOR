@@ -56,7 +56,7 @@ def stream_video(request,pk:int):
     return response
 
 def show_kurs(request):
-    return render(request,"project/learn.html")
+    return render(request,"project/cryptography.html")
 
 
 
