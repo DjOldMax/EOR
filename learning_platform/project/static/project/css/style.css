@@ -3129,10 +3129,7 @@ span.teaser {
 
 /* feature box style 1 */
 
-. {
-    margin-top: 0px;
-    overflow: hidden;
-}
+
 .feature-box{
     height: 230px;
 }
@@ -3462,7 +3459,7 @@ span.teaser {
 }
 
 
-}
+
 .box-fx .inner {
     position: relative;
     overflow: hidden;
@@ -7267,7 +7264,6 @@ section.no-padding {
 .owl-arrow .next:before {
     font-family: "FontAwesome";
     content: '\f177';
-    color: #2;
     padding: 20px;
     font-size: 32px;
     display: block;
@@ -7955,7 +7951,7 @@ a.btn-download:hover i{
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
  
 ::-webkit-scrollbar-track {
@@ -8615,7 +8611,6 @@ a.btn-slider:hover {
 
 .owl-dots button{
 	display:inline-block;
-	background:#ccccccs;
 	border:none;
 	outline:none;
 	padding:0;
