@@ -4,19 +4,123 @@
 <div id="container" class="container">	
     <div class="menu-panel">
         <h3>Содержание</h3>
+        <input type="text" id="mySearch" style="width: 100%; font-size: 18px; padding: 11px; border: 1px solid #ddd;" onkeyup="myFunction()" placeholder="Поиск.." title="Введите категорию">
         <ul id="menu-toc" class="menu-toc">
             <li class="menu-toc-current"><a href="#item1">Титульный лист</a></li>
             <li><a href="#item2">Предисловие</a></li>
-            <li><a href="#item3">
-                <p>1. Криптографические нападения и понятие о криптоанализе, надежность шифров.</p> 
-                <p>1.1. Основные термины и понятия, используемые в криптографии, модели открытого текста.</p>
-            </a></li>
-            <li><a href="#item3">Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li>
-            <li><a href="#item4">Современные блочные шифры и методы из криптоанализа</a></li>
-            <li><a href="#item5">Вспомогательные криптографические приметивы</a></li>
-            <li><a href="#item6">приметивы</a></li>
-            <li><a href="#item7">Криптосистемы с открытым ключом</a></li>
-            <li><a href="#item7">Криптографические методы </a></li>
+            <li><a href="#item3">Оглавление</a></li>
+            <li><a href="#item4">1. Криптографические нападения и понятие о криптоанализе, надежность шифров.</a></li>
+            <li><a href="#item5">1.1. Основные понятия, используемые в криптографии</a></li>
+            <li><a href="#item6">1.1.1. Основные термины и понятия, используемые в криптографии, модели открытого текста</a></li>
+            <li><a href="#item7">1.1.2. Что должен знать и уметь криптограф</a></li>
+            <li><a href="#item8">Контрольные вопросы</a></li>
+            <li><a href="#item9">2. Криптографические нападения и понятие о криптоанализе, надежность шифров</a></li>
+            <li><a href="#item10">2.1. Криптографическая стойкость алгоритмов шифрования</a></li>
+            <li><a href="#item11">2.1.1. Теоретическая и практическая стойкость шифров</a></li>
+            <li><a href="#item12">2.1.2. Теоретическая и практическая стойкость шифров</a></li>
+            <li><a href="#item13">2.1.3. Теоретическая и практическая стойкость шифров</a></li>
+            <li><a href="#item14">Контрольные вопросы</a></li>
+            <li><a href="#item15">2.2. Криптоанализ, модель и параметры криптоаналитика</a></li>
+            <li><a href="#item16">2.2.1. Криптоанализ, модель криптоаналитика</a></li>
+            <li><a href="#item17">2.2.2. Метод встречи посередине</a></li>
+            <li><a href="#item18">2.2.3. Виды атак на криптографические алгоритмы </a></li>
+            <li><a href="#item19">2.2.4. Методы криптоанализа, использующие перебор ключей </a></li>
+            <li><a href="#item20">Контрольные вопросы</a></li>
+            <li><a href="#item9">3. Современные блочные шифры и методы из криптоанализа</a></li>
+            <li><a href="#item10">3.1. Классические блочные алгоритмы шифрования. Альтернативные варианты построения блочных шифров</a></li>
+            <li><a href="#item11">3.1.1. Модель итерационного блочного шифра</a></li>
+            <li><a href="#item12">3.1.2. Структурные элементы блочного шифра блочного шифра</a></li>
+            <li><a href="#item13">3.1.3. Основные схемы построения блочных шифров</a></li>
+            <li><a href="#item13">3.1.4. Шифры структуры подстановочно-перестановочной сети </a></li>
+            <li><a href="#item13">3.1.5. Альтернативные схемы построения блочных шифров</a></li>
+            <li><a href="#item13">3.1.6. Режимы применения блочных шифров</a></li>
+            <li><a href="#item14">Контрольные вопросы</a></li>
+            <li><a href="#item15">3.2. Примеры блочных шифров</a></li>
+            <li><a href="#item16">3.2.1. Блочный шифр DES</a></li>
+            <li><a href="#item17">3.2.2. Блочный шифр ГОСТ−28147−89</a></li>
+            <li><a href="#item18">3.2.3. Блочный шифр Rijndael (AES)</a></li>
+            <li><a href="#item19">3.2.4. Блочный шифр ГОСТ Р 34.12-2015 «Кузнечик»</a></li>
+            <li><a href="#item19">3.2.5. Блочный шифр RC6 </a></li>
+            <li><a href="#item19">3.2.6. Блочный шифр Serpent </a></li>
+            <li><a href="#item19">3.2.7. Блочный шифр Twofish </a></li>
+            <li><a href="#item19">3.2.8. Блочный шифр MARS </a></li>
+            <li><a href="#item20">Контрольные вопросы</a></li>
+            <li><a href="#item15">3.3. Классификация методов криптоанализа блочных шифров</a></li>
+            <li><a href="#item15">3.4. Основы дифференциального криптоанализа блочных шифров</a></li>
+            <li><a href="#item15">3.4.1 Основные понятия дифференциального криптоанализа </a></li>
+            <li><a href="#item15">3.4.2 Таблица распределения разностей, построение дифференциальной модели</a></li>
+            <li><a href="#item15">3.4.3 Выполнение поиска ключа, оценивание сложности дифференциального криптоанализа</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">4. Вспомогательные криптографические примитивы</a></li>
+            <li><a href="#item15">4.1. Вероятностное шифрование</a></li>
+            <li><a href="#item15">4.1.1. Омофонические шифры</a></li>
+            <li><a href="#item15">4.1.2. Шифры с вероятностным механизмом с увеличением размера блока данных</a></li>
+            <li><a href="#item15">4.1.3. Вероятностное шифрование без увеличения размера блока данных</a></li>
+            <li><a href="#item15">4.1.4. Вероятностное шифрование в асимметричных криптосистемах</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">4.2. Блочные шифры на основе управляемых операций</a></li>
+            <li><a href="#item15">4.2.1. Управляемые криптографические примитивы</a></li>
+            <li><a href="#item15">4.2.2. Недетерминированные шифры на основе управляемых операций</a></li>
+            <li><a href="#item15">4.2.3. Итеративные шифры с раундовой функцией на основе управляемых операций</a></li>
+            <li><a href="#item15">4.2.4. Пример блочного шифра на основе управляемых операций</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">4.3. Криптографические хэш функции</a></li>
+            <li><a href="#item15">4.3.1. Структура и свойства хэш-функций</a></li>
+            <li><a href="#item15">4.3.2. Построение хэш-функций на основе блочных шифров</a></li>
+            <li><a href="#item15">4.3.3. Примеры хэш функций</a></li>
+            <li><a href="#item15">4.3.4. Использование хэш функций при решении практических задач</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">4.4. Поточные алгоритмы шифрования</a></li>
+            <li><a href="#item15">4.4.1. Определение и структурные элементы поточных шифров</a></li>
+            <li><a href="#item15">4.4.2. Классификация поточных алгоритмов шифрования</a></li>
+            <li><a href="#item15">4.4.3. Примеры поточных алгоритмов шифрования</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">5. Криптосистемы с открытым ключом</a></li>
+            <li><a href="#item15">5.1. Асимметричные криптосистемы. История появления</a></li>
+            <li><a href="#item15">5.1.1. Предпосылки к появлению асимметричных криптосистем</a></li>
+            <li><a href="#item15">5.1.2. Асимметричные криптосистемы на основе задачи о ранце и уроки ее применения</a></li>
+            <li><a href="#item15">5.1.3. Внедрение двухключевой криптографии на практике</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">5.2. Асимметричные алгоритмы шифрования</a></li>
+            <li><a href="#item15">5.2.1. Основные определения</a></li>
+            <li><a href="#item15">5.2.2. Криптосистема RSA</a></li>
+            <li><a href="#item15">5.2.3. Криптосистема Рабина</a></li>
+            <li><a href="#item15">5.2.4. Криптосистема Эль-Гамаля</a></li>
+            <li><a href="#item15">5.2.5. Атака методом «человек в середине», инфраструктура открытых ключей</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">5.3. Криптосистемы на основе эллиптических кривых</a></li>
+            <li><a href="#item15">5.3.1. Основные определения</a></li>
+            <li><a href="#item15">5.3.2. Выбор параметров кривой</a></li>
+            <li><a href="#item15">5.3.3. Криптосистема Эль-Гамаля с использованием эллиптических кривых</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">5.4. Методы криптоанализа асимметричных криптосистем</a></li>
+            <li><a href="#item15">5.4.1. Методы факторизации</a></li>
+            <li><a href="#item15">5.4.2. Методы дискретного логарифмирования</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">5.5. Электронно-цифровая подпись, алгоритмы ЭЦП</a></li>
+            <li><a href="#item15">5.5.1. Основные определения</a></li>
+            <li><a href="#item15">5.5.2. ЭЦП на основе алгоритма RSA</a></li>
+            <li><a href="#item15">5.5.3. ЭЦП Эль-Гамаля</a></li>
+            <li><a href="#item15">5.5.4. ЭЦП на эллиптических кривых</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">6. Криптографические методы в современных средствах защиты информации в компьютерных системах</a></li>
+            <li><a href="#item15">6.1. Криптографические генераторы псевдослучайных последовательностей</a></li>
+            <li><a href="#item15">6.1.1. Источники случайности в современных информационных системах</a></li>
+            <li><a href="#item15">6.1.2. Классификация генераторов ПСП</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">6.2. Основы стегананографии</a></li>
+            <li><a href="#item15">6.2.1. Общие сведения</a></li>
+            <li><a href="#item15">6.2.2. Основные алгоритмы реализации стеганографических вложений</a></li>
+            <li><a href="#item15">6.2.3. Атаки на стегосистемы</a></li>
+            <li><a href="#item15">6.2.4. Методы обнаружения стеганографических вложений</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item15">6.3. Квантовая криптография</a></li>
+            <li><a href="#item15">6.3.1. Квантовые каналы связи</a></li>
+            <li><a href="#item15">6.3.2. Квантовые протоколы передачи ключей</a></li>
+            <li><a href="#item15">6.3.3. Атаки на квантовые каналы связи</a></li>
+            <li><a href="#item15">6.3.4. Квантовые компьютеры, квантовый криптоанализ</a></li>
+            <li><a href="#item15">Контрольные вопросы</a></li>
+            <li><a href="#item21">Справочные материалы</a></li>
         </ul>
     </div>
 
@@ -112,109 +216,168 @@
             <div class="bb-item" id="item3">
                 <div class="content">
                     <div class="scroller">
-                        <h2>Страница 3</h2>
-                        <p>In dignissim nisi non mi adipiscing, a tempor mauris porttitor. Curabitur ut auctor augue. Maecenas molestie at nibh vitae tempor. Nulla varius quis metus quis rhoncus. Nam vestibulum quis mi sit amet accumsan. Aenean sit amet gravida tellus. Suspendisse in commodo eros. Integer eu velit ultrices, varius urna vel, ullamcorper sapien. Aenean sit amet consequat orci. Nulla facilisi. Aenean quis lectus sit amet mauris malesuada eleifend. Donec tempus diam eros, eu bibendum ante aliquam ut. Proin eu elit sapien.</p>
-
-                        <p>Sed arcu nunc, molestie non venenatis in, aliquet eget turpis. Curabitur a porta mi. Mauris et mauris eleifend, tristique neque vitae, dignissim diam. Aliquam vel porta quam. Nam lacus diam, adipiscing a mi non, consectetur convallis orci. Fusce euismod sagittis eros, nec tincidunt augue. Vivamus aliquam egestas cursus. Nunc id ultricies leo. Phasellus hendrerit fringilla massa in rhoncus. Donec nec risus quam. Donec vulputate venenatis turpis, tempor accumsan tellus faucibus eget. Nam et luctus dolor, varius tristique risus. Donec auctor bibendum iaculis. </p>
-
-                        <p>Phasellus mollis purus orci, sit amet vehicula tortor dictum iaculis. Curabitur rutrum et diam vel semper. Sed laoreet, odio ultricies ultrices laoreet, turpis risus semper leo, nec vestibulum velit eros luctus risus. Duis lobortis ipsum quis nulla mollis, vitae posuere turpis bibendum. Donec at mi sed purus dictum molestie. Curabitur quis viverra nisl. Pellentesque sapien ipsum, pulvinar vitae euismod et, dapibus sit amet urna. Ut interdum ultrices sem sit amet aliquam. Cras vitae odio eget leo sodales convallis. Nullam molestie vehicula dui, non vestibulum magna ultricies placerat. Sed eu massa massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae lacinia nisl, id sagittis purus. Aenean tincidunt ligula arcu, tincidunt dapibus dolor luctus porta. Vestibulum lacinia in metus non bibendum. </p>
-
-                        <p>Nunc a laoreet mi. In adipiscing magna dui, sed aliquet arcu malesuada ac. Aenean a quam vitae purus dictum mollis.</p>
-
-                        <p>Pellentesque a fermentum orci. Fusce est dolor, rhoncus ut erat at, consequat gravida purus. Morbi eu tristique libero.</p>
-
-                        <p>Ut congue et felis vitae tincidunt. Integer ultrices justo a quam commodo, a vehicula felis rutrum. Suspendisse feugiat enim a nisi vestibulum dignissim. Donec imperdiet, augue vel pharetra blandit, odio dolor vestibulum leo, id porta nibh tellus vehicula ligula. Sed volutpat scelerisque feugiat.</p>
+                        <h2>Оглавление</h2>
+                        <p class=rvps345><a href="#">Предисловие</p>
+                        <p class=rvps345><a href="#">1. Основы криптографии как науки о засекречивании информации</p>
+                        <p class=rvps345><a href="#">2. Криптографические нападения и понятие о криптоанализе, надежность шифров</p>
+                        <p class=rvps345><a href="#">3. Современные блочные шифры и методы из криптоанализа</p>
+                        <p class=rvps345><a href="#">4. Вспомогательные криптографические примитивы</p>
+                        <p class=rvps345><a href="#">5. Криптосистемы с открытым ключом</p>
+                        <p class=rvps345><a href="#">6. Криптографические методы в современных средствах защиты информации в компьютерных системах</p>
+                        <p class=rvps183 style="page-break-before: always;"><span class=rvts858><br></span></p>
                     </div>
                 </div>
             </div>
             <div class="bb-item" id="item4">
                 <div class="content">
                     <div class="scroller">
-                        <h2>Страница 4</h2>
-                        <p>Proin bibendum, augue a blandit luctus, eros tortor porttitor magna, et suscipit felis eros non justo. Maecenas vel elementum risus, non elementum mi. Praesent ullamcorper magna vitae mi elementum pretium. Donec id feugiat libero, et volutpat nisi. Nunc volutpat erat sed purus dapibus, quis mollis augue vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam mattis pulvinar nisi eget interdum. </p>
-
-                        <p>Vestibulum tempor odio lacus. Phasellus interdum varius venenatis. Curabitur dolor turpis, congue ut vestibulum sit amet, tristique eget diam. Mauris rhoncus arcu vitae pellentesque euismod. Nullam sit amet cursus nisi. Suspendisse ullamcorper, turpis ut fringilla mattis, neque diam vulputate leo, vitae hendrerit enim dolor a magna. Nullam rhoncus id justo vel dapibus.</p>
-
-                        <p>Etiam ac condimentum odio. In auctor vitae ante eu malesuada. Integer sed turpis sed dolor fringilla scelerisque ut vel lacus.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nisl ultrices sem euismod luctus. Fusce ante metus, bibendum sit amet tortor at, luctus tincidunt quam. Vivamus tempor tristique mi, vel ullamcorper odio varius sed. Vivamus sed dolor risus. Nam lacinia vestibulum nunc, nec luctus nisl ornare sed. Praesent quis risus erat. Integer at imperdiet nunc. Nulla imperdiet, ante ac luctus feugiat, massa arcu varius elit, at accumsan diam libero et felis. Fusce condimentum tincidunt sagittis. Donec rutrum libero id lacus bibendum, et condimentum risus euismod. Donec id lectus a dui scelerisque hendrerit eget a massa. </p>
+                        <h2>Криптографические нападения и понятие о криптоанализе, надежность шифров</h2>
+                        <p><strong>1.1.</strong> Основные понятия, используемые в криптографии</p>
+                        <p><strong>1.2.</strong> История возникновения алгоритмов шифрования</p>
                     </div>
                 </div>
             </div>
             <div class="bb-item" id="item5">
                 <div class="content">
                     <div class="scroller">
-                        <h2>Страница 5</h2>
-                        <p>Quisque condimentum quam diam, vulputate mollis augue condimentum vel. Quisque accumsan, libero vitae commodo scelerisque, dui nisi porttitor erat, at blandit sapien nunc nec orci. Sed ac ligula vel dui consequat interdum. Curabitur aliquet sollicitudin erat sit amet iaculis. Proin et metus scelerisque, varius sem varius, vulputate mauris. Fusce sed lorem et erat tempus vulputate. Nulla non libero quis nibh lobortis fringilla ac imperdiet sem. Duis ac elementum nibh, eu faucibus magna.</p>
-
-                        <p>Quisque blandit sagittis nulla non ullamcorper. Ut tristique vel risus eu posuere. Quisque posuere tortor at libero rhoncus, eget bibendum augue pellentesque. In viverra vel neque sit amet ultrices. Pellentesque molestie, ligula at ornare cursus, nulla libero molestie ipsum, in ultrices mauris diam lacinia neque. Vivamus eu vulputate neque. </p>
-
-                        <p>Etiam nisl mauris, gravida non metus eu, tincidunt elementum felis. Donec eget suscipit quam, vel lobortis risus. Vivamus turpis nunc, venenatis vulputate rhoncus a, suscipit a augue. Integer viverra accumsan tellus, vitae aliquam arcu elementum in. Ut id aliquet dui. Aliquam lobortis sagittis feugiat. Vivamus ac felis mi. Vivamus iaculis sed enim sit amet luctus. </p>
-
-                        <p>Donec bibendum lacinia accumsan. Phasellus pretium justo sed feugiat hendrerit. Etiam ultrices imperdiet justo, vitae placerat nulla imperdiet id. Maecenas luctus interdum nisi, nec rhoncus massa mollis et. Praesent ut feugiat dolor. Morbi vitae sapien a odio congue ultrices. Vestibulum accumsan lacinia tincidunt.</p>
-
-                        <p>Maecenas ante metus, sodales nec est non, volutpat sollicitudin nulla. Sed convallis posuere ultricies. Suspendisse id suscipit est. Phasellus molestie velit est, quis fermentum leo aliquam vel. Phasellus vulputate orci a vestibulum pulvinar. </p>
-
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vehicula turpis in nunc volutpat rhoncus. Nam pretium bibendum eros, ac sodales est faucibus in. Vestibulum sed lobortis lacus. Morbi elementum pellentesque hendrerit. Integer venenatis diam ut metus faucibus, quis commodo leo tincidunt. Proin tincidunt, dui non consequat pellentesque, dui elit dapibus justo, in sodales ligula mauris vel nisl. Curabitur diam enim, ultricies ac risus nec, blandit vestibulum libero.</p>
-
-                        <p>Donec sed pharetra diam, tristique tempor lacus. Vivamus sit amet tempus magna. Sed iaculis libero ac viverra eleifend. Duis non urna vitae nibh molestie fringilla eget sed mauris. Nunc vehicula, enim eget luctus consectetur, odio neque blandit lacus, eget vestibulum metus orci et nibh. Fusce at varius augue, vitae porta urna. </p>
-
-                        <p>Aenean in massa ut ante egestas rutrum viverra vitae ipsum. Vestibulum vel urna quis turpis pharetra porta. Nunc eleifend mattis justo eu dapibus. Phasellus ac lectus justo.</p>
-
-                        <p>Quisque eleifend gravida nisi sit amet placerat. In iaculis est a purus molestie tempus. Duis diam leo, feugiat a lobortis ut, vestibulum ut sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet molestie ligula, vel posuere turpis. Nulla ultricies vehicula ultrices. </p>
-
-                        <p>Nulla congue bibendum neque nec vehicula. Suspendisse at ornare tortor. Ut posuere nibh ligula, ut bibendum ipsum aliquam id. Curabitur rhoncus tellus eros, et consectetur augue ullamcorper et. Aenean porttitor in neque et semper. Cras vitae tincidunt tellus, at aliquet magna. Vivamus dui orci, venenatis in leo nec, pulvinar condimentum leo. Aenean rutrum imperdiet diam et aliquam. </p>
-
-                        <p>Sed ut iaculis mi, nec laoreet massa. Aliquam erat volutpat. Vivamus auctor ultricies eros ut vulputate. Quisque tincidunt elit vitae sem ultrices, nec laoreet turpis hendrerit. Donec pharetra tincidunt velit, a elementum purus molestie quis. Vivamus viverra risus nec ante ultricies, id luctus est semper. Nullam vel diam sapien. </p>
-
-                        <p>Integer sem massa, vestibulum vel erat sit amet, lobortis adipiscing felis. Nullam semper tortor et nisi tristique pulvinar. Nunc ullamcorper, ante nec rutrum scelerisque, lacus diam tincidunt urna, et consectetur nibh sem et quam. Quisque iaculis molestie dolor pulvinar hendrerit. Nam tempus tincidunt mauris eget euismod. Praesent pellentesque facilisis ultricies.</p>
-
-                        <p>Morbi auctor, nulla eu viverra sollicitudin, nibh sapien tempor purus, quis ultrices sapien ipsum non ligula.</p>
-
-                        <p>Proin molestie egestas egestas. Etiam quam metus, tempus et ligula eget, rutrum mattis mi. Donec faucibus mattis tortor, eget eleifend tellus eleifend vitae. Praesent a rhoncus massa. Donec interdum quam in erat commodo faucibus. Quisque nec neque tellus.</p>
-
-                        <p>Maecenas placerat vehicula turpis sed tempor. Phasellus tristique tortor id sapien volutpat tincidunt eu molestie augue. Sed imperdiet, diam non fermentum fermentum, orci diam rhoncus eros, vestibulum lacinia dui lorem nec tortor. Morbi dignissim elit vitae imperdiet tempor. Praesent sagittis metus quis venenatis venenatis.</p>
-
-                        <p>Mauris et ligula gravida, euismod nunc eget, condimentum nulla. Proin sed dapibus tellus, ut pharetra leo. Phasellus porttitor elit et tortor mollis, egestas iaculis augue sollicitudin. </p>
+                        <h2>Основные понятия, используемые в криптографии</h2>
+                        <p><strong>1.1.1</strong> Основные термины и понятия, используемые в криптографии, модели открытого текста</p>
+                        <p><strong>1.1.2</strong> Что должен знать и уметь криптограф</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item6">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>1.1.1. Основные термины и понятия, используемые в криптографии, модели открытого текста</h2>
+                        <p>Центральным понятием в криптографии является алгоритм шифрования. Рассмотрим классическое определение алгоритма шифрования с секретным ключом.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.1.</p>
+                        <p>Тройка алгоритмов, пространство сообщений <img style="vertical-align: middle;" src="{% static 'project/images/img_00012.png' %}" alt=""> и пространство ключей <img style="vertical-align: middle;" src="{% static 'project/images/img_00013.png' %}" alt=""> называется схемой шифрования с секретным ключом если:</p>
+                        <p> - алгоритм генерации ключей <img style="vertical-align: middle;" src="{% static 'project/images/img_00014.png' %}" alt=""> является рандомизированым (осуществляющим случайный выбор из множества инвариантов) алгоритмом, возвращающим ключ <img style="vertical-align: middle;" src="{% static 'project/images/img_00015.png' %}" alt=""> ;</p>
+                        <p> - алгоритм шифрования <img style="vertical-align: middle;" src="{% static 'project/images/img_00016.png' %}" alt=""> использует ключ <img style="vertical-align: middle;" src="{% static 'project/images/img_00017.png' %}" alt=""> и открытое сообщение <img style="vertical-align: middle;" src="{% static 'project/images/img_00018.png' %}" alt=""> для получения шифртекста ;</p>
+                        <p> - алгоритм расшифрования <img style="vertical-align: middle;" src="{% static 'project/images/img_00019.png' %}" alt=""> использует ключ <img style="vertical-align: middle;" src="{% static 'project/images/img_00020.png' %}" alt=""> и шифртекст <img style="vertical-align: middle;" src="{% static 'project/images/img_00021.png' %}" alt=""> для получения открытого текста ;</p>
+                        <p> - выполняется следующее равенство <img style="vertical-align: middle;" src="{% static 'project/images/img_00022.png' %}" alt=""> <img style="vertical-align: middle;" src="{% static 'project/images/img_00023.png' %}" alt="">. </p>
+                        <p>Классической задачей криптографии является задача защищенного обмена сообщениями между абонентами с использованием открытого канала связи, который прослушивается злоумышленником (рис. 1.1). На данном рисунке: P </span><span class=rvts1638>−</span><span class=rvts4> это открытый текст, C – шифртекст, E – операция зашифрования, D – операция расшифрования. </span></p>
+                        <p>В качестве информации, подлежащей криптографическому преобразованию, рассматриваются открытые тексты, построенные с использованием некоторого алфавита.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.2 </p>
+                        <p> <strong>Криптология</strong> − это наука о математических методах защиты информации с помощью преобразования с использованием специальных математических алгоритмов. Криптология состоит из криптографии и криптоанализа.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.3 </p>
+                        <p> <strong>Криптография</strong> −  это наука, которая изучает методы преобразования информации, обеспечивающие ее конфиденциальность, целостность и аутентичность.</p>
+                        <p></p>
+                        <p style="text-align: center;" ><img style="vertical-align: middle;" src="{% static 'project/images/img_00024.png' %}" alt=""></p>
+                        <p style="text-align: center; font-style: oblique;" >Рис. 1.1. Основная задача криптографии − передача зашифрованных конфиденциальных данных</p>
+                        <p style="text-align: center; font-style: oblique;" >с использованием открытого канала связи</p>
+                        <p></p>
+                        <p style="font-style: oblique; color:red">Определение 1.4 </p>
+                        <p>Криптоанализ объединяет математические методы нарушения конфиденциальности и аутентичности информации без знания секретного ключа.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.5 </p>
+                        <p> <strong>Конфиденциальность</strong> − это защищенность информации от ознакомления с ней лиц, не имеющих соответствующего права допуска с использование криптографических алгоритмов.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.6 </p>
+                        <p> <strong>Целостность</strong> − невозможность несанкционированного изменения информации так, чтобы это не было обнаружено.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.7 </p>
+                        <p> <strong>Аутентификация</strong> − это процесс установления подлинности сторон, обменивающихся сообщениями.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.8 </p>
+                        <p> <strong>Зашифрование</strong> − процесс преобразования открытых данных в зашифрованные, при помощи алгоритма шифрования.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.9 </p>
+                        <p> <strong>Расшифрование</strong> − процесс преобразования шифртекста данных в отрытый текст с использованием ключа.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.10 </p>
+                        <p> <strong>Ключ</strong> − конкретное значение параметров криптографического алгоритма, обеспечивающее выбор одного преобразования из их семейства. Криптографический алгоритм должен обеспечивать невозможность восстановления открытого текста без знания ключа.</p>
+                        <p> <strong>Пространство ключей</strong> − множество всех возможных значений ключа.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.11 </p>
+                        <p> <strong>Авторизация</strong> − это предоставление определенному лицу прав на выполнение определенных действий; а также процесс проверки (подтверждения) данных прав при попытке выполнения этих действий.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.12 </p>
+                        <p> <strong>Пароль</strong> − это условное слово или набор знаков, предназначенный для выполнения аутентификации или авторизации. Пароль можно преобразовать в ключ с использованием хэш-функций.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.13 </p>
+                        <p> <strong>Система управления ключами</strong> − определяет порядок генерации новых ключей, использования ключей, хранения ключей, смены устаревших и скомпрометированных ключей, порядок уничтожения ключей.</p>
+                        <p style="font-style: oblique; color:red">Определение 1.14 </p>
+                        <p> <strong>Криптографическая атака</strong> −<span class=rvts4> это попытка криптоаналитика нарушить конфиденциальность, аутентичность или целостность информации. Успешную криптографическую атаку называют взломом.</span></p>
+                        <p style="font-style: oblique; color:red">Определение 1.13 </p>
+                        <p> <strong>Криптографическая стойкость</strong> −<span class=rvts4> это способность криптографического алгоритма противостоять криптографическим атакам.</span></p>
+                        <p style="font-style: oblique; color:red">Определение 1.13 </p>
+                        <p> <strong>Алфавит</strong> – это конечное множество знаков, используемых для кодирования информации. Главной характеристикой алфавита является его мощность – количество символов, составляющих алфавит. </span></p>
+                        <p class=rvps317><span class=rvts4>Алфавит играет важную роль в трех аспектах криптографии:</span></p>
+                        <p class=rvps595><span class=rvts1640>−</span><span class=rvts31> в задачах криптоанализа исторических шифров знание алфавита открытых текстов дает возможность применить частотный метод криптоанализа;</span></p>
+                        <p class=rvps595><span class=rvts1640>−</span><span class=rvts31> для анализа криптостойкости паролей;</span></p>
+                        <p class=rvps595><span class=rvts1640>−</span><span class=rvts31> для построения моделей открытого текста.</span></p>
+                        <p class=rvps317><span class=rvts4>Большое значение имеет алфавит при рассмотрении стойкости паролей. Символы пароля, в отличие от ключа, неравновероятны и зависят от используемого языка и алфавита сообщения.</span></p>
+                        <p class=rvps317><span class=rvts4>Рассмотрим задачу определения стойкости к перебору пароля пользователя. &nbsp;Предположим, что злоумышленнику известен алфавит, с использованием которого создан пароль. Формула для определения максимального количества паролей (пространства паролей) длины </span><span class=rvts51>п</span><span class=rvts4> с использованием алфавита мощности </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00025.png' %}" alt=""><span class=rvts4> имеет вид </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00026.png' %}" alt=""><span class=rvts4>. Например, для пароля длины 10 заданного с использованием строчных букв английского алфавита пространство паролей составит </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00027.png' %}" alt=""><span class=rvts4> или 205891132094649 вариантов. Размер пространства паролей сложно оценить непосредственно, число 205891132094649 – это много или мало? В этом случае можно воспользоваться простым подходом – определить, сколько равновероятных бит </span><span class=rvts30>ключа</span><span class=rvts4> составляют это пространство. Для этого необходимо найти логарифм по основанию 2 от пространства паролей: </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00028.png' %}" alt=""><span class=rvts4> бит. То есть рассмотренный ранее пароль соответствует ключу размером примерно 47 бит. Неплохо для форума о домашних животных, но недостаточно для важной информации, так как сегодня возможно перебрать ключ длиной примерно 80 бит. Как увеличить стойкость пароля? Это можно сделать двумя способами – или увеличить длину пароля, или увеличить размер алфавита путем добавления в пароль прописных букв, цифр и, возможно, спецсимволов. Рекомендуется использовать сразу оба подхода одновременно – и пароли длиной не менее 12 символов, и строчные/прописные буквы, цифры и спецсимволы в составе пароля.</span></p>
+                        <p class=rvps317><span class=rvts4>Необходимо отметить, что реальные сообщения для любого конкретного языка, характеризуются определенной избыточностью. Статистика частот встречаемости элементов сообщений свидетельствует об их неравномерном распределении. В частности, для достаточно большого объема литературного текста на русском языке наиболее часто встречающимися буквами оказываются {</span><span class=rvts51>о,и</span><span class=rvts4>}, среди наиболее часто встречающихся букв английского языка символы {</span><span class=rvts51>e,t</span><span class=rvts4>}. </span></p>
+                        <p class=rvps317><span class=rvts4>Отмеченные свойства языков используются криптоаналитиками при взломе шифров, поэтому для оценки свойств шифрованных текстов необходимо иметь соответствующую информацию о вероятностных характеристиках открытых сообщений. Предположим, что с помощью некоторого алгоритма шифрования зашифрован открытый текст, являющийся случайными данными, и, злоумышленник пытается угадать использовавшийся ключ. Какое бы ключ он не выбрал, в результате расшифрования всегда будут получаться данные, похожие на случайные. То есть даже если злоумышленник угадает ключ, то не сможет определить, что он правильный, нет никакого критерия правильности. Далее рассмотрим подходы к построению критерия правильного ключа для случая, когда известен тип открытого текста (за исключением данных похожих на случайные), например, открытый текст – это сообщение на английском языке. </span></p>
+                        <p class=rvps317><span class=rvts4>С указанной целью используется ряд математических моделей открытых текстов, приведем примеры наиболее распространенных моделей, характеризующих их важные вероятностно-статистические свойства. Критерий правильности ключа с использованием этих моделей является степенью соответствия модели расшифрованного текста.</span></p>
+                        <p class=rvps317><span class=rvts4>Простейшая вероятностная модель основана на учете частот </span><span class=rvts51>k</span><span class=rvts4>-грамм и приводит к следующей модели открытого текста. </span></p>
+                        <p class=rvps317><span class=rvts4>Пусть </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00029.png' %}" alt=""><span class=rvts4> представляет собой массив, состоящий из приближений для вероятностей </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00030.png' %}" alt=""><span class=rvts4> появления </span><span class=rvts51>k</span><span class=rvts4>-грамм </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00031.png' %}" alt=""><span class=rvts4> в открытом тексте, </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00032.png' %}" alt=""><span class=rvts4>, </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00033.png' %}" alt=""><span class=rvts4> – алфавит открытого текста, </span><span class=rvts51>N</span><span class=rvts4> – длина текста.</span></p>
+                        <p class=rvps317><span class=rvts38>Тогда источник "открытого текста" генерирует последовательность </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00034.png' %}" alt=""><span class=rvts38> знаков алфавита </span><span class=rvts95>А</span><span class=rvts38>, в которой </span><span class=rvts95>k</span><span class=rvts38>-грамма </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00035.png' %}" alt=""><span class=rvts38> появляется с вероятностью </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00036.png' %}" alt=""><span class=rvts38>, следующая </span><span class=rvts95>k</span><span class=rvts38>-грамма появляется с вероятностью </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00037.png' %}" alt=""><span class=rvts38> и т. д. Назовем построенную модель</span><span class=rvts4> открытого текста вероятностной моделью </span><span class=rvts51>k</span><span class=rvts4>-го приближения. То есть для модели открытого текста первого порядка все слова рассматриваются как независимые, имеющие определенную вероятность появления.</span></p>
+                        <p class=rvps317><span class=rvts4>В вероятностной модели второго приближения первый знак </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00038.png' %}" alt=""><span class=rvts4> имеет вероятность </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00039.png' %}" alt=""><span class=rvts4>, а каждый следующий знак зависит от предыдущего и появляется с вероятностью</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00040.png' %}" alt=""><span class=rvts4>,</span></p>
+                        <p class=rvps597><span class=rvts4><br></span></p>
+                        <p class=rvps605><span class=rvts4>где p</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00041.png' %}" alt=""><span class=rvts4>, </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00042.png' %}" alt=""><span class=rvts4>.</span></p>
+                        <p class=rvps317><span class=rvts4>Применив к расшифрованному тексту одну из моделей, можно построить критерий распознавания открытого текста и, соответственно, критерий правильности угадываемого ключа. При этом можно воспользоваться стандартными методами проверки статистических гипотез.</span></p>
+                        <p style="font-style: oblique; color:red">Классификация криптографических методов защиты информации</p>
+                        <p class=rvps317><span class=rvts4>Классификация криптографических методов защиты информации представлена на рис. 1.2. Она состоит из трех блоков:</span></p>
+                        <p class=rvps317><span class=rvts4>1. Криптографические примитивы – алгоритмы, решающие одну задачу, например, вычисление электронной цифровой подписи (ЭЦП).</span></p>
+                        <p class=rvps317><span class=rvts4>2. Методы криптоанализа криптографических примитивов.</span></p>
+                        <p class=rvps317><span class=rvts4>3. Криптографические протоколы, показывают, как объединить несколько криптографических примитивов для решения конкретной практической задачи, например, обмена ключами.</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00043.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 1.</span><span class=rvts51>2</span><span class=rvts51>. Классификация криптографических методов защиты информации</span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>Рассмотрим краткое описание криптографических примитивов:</span></p>
+                        <p class=rvps595><span class=rvts31>1) <strong>Cимметричные алгоритмы шифрования</strong></span><span class=rvts1640>−</span><span class=rvts31> одноключевые алгоритмы шифрования, для шифрования и расшифрования используется одинаковый ключ;</span></p>
+                        <p class=rvps595><span class=rvts31>2) <strong>Блочные шифры</strong></span><span class=rvts1640>−</span><span class=rvts31> симметричные алгоритмы обрабатывающие данные блоками фиксированной длины, одинаковые блоки открытого текста преобразуются в одинаковые блоки шифртекста;</span></p>
+                        <p class=rvps595><span class=rvts31>3) <strong>Поточные алгоритмы шифрования</strong></span><span class=rvts1640>−</span><span class=rvts31> симметричные алгоритмы шифрования обрабатывающие данные побитно или побайтно, в отличие от блочных шифров одинаковые символы открытого текста преобразуются в разные символы шифртекста;</span></p>
+                        <p class=rvps595><span class=rvts31>4) <strong>Асимметричные алгоритмы шифрования</strong></span><span class=rvts1640>−</span><span class=rvts31> двухключевые алгоритмы шифрования; один ключ служит для зашифрования </span><span class=rvts1640>−</span><span class=rvts31> открытый, другой для расшифрования </span><span class=rvts1640>−</span><span class=rvts31> закрытый; применяются при генерации ЭЦП;</span></p>
+                        <p class=rvps595><span class=rvts31>5) <strong>Хэш-функции</strong></span><span class=rvts1640>−</span><span class=rvts31> односторонние криптографические алгоритмы предназначенные для получения свертки сообщения; используются для генерации ЭЦП, проверки целостности и т. д.</span></p>
+                        <p class=rvps595><span class=rvts31>6) <strong>Криптографические генераторы ПСЧ</strong> – алгоритмы генерации ПСЧ, статистически неотличимых от полностью случайного потока данных;</span></p>
+                        <p class=rvps595><span class=rvts31>7) <strong>Алгоритмы ЭЦП</strong></span><span class=rvts1640>−</span><span class=rvts31> алгоритмы вычисления свертки сообщения, позволяющей подтвердить его авторство и целостность;</span></p>
+                        <p class=rvps595><span class=rvts31>8) <strong>Методы криптоанализа</strong></span><span class=rvts1640>−</span><span class=rvts31> алгоритмы, позволяющие на основе анализа данных специального вида уменьшить вычислительную сложность расшифрования сообщения по сравнению с методом полного перебора;</span></p>
+                        <p class=rvps595><span class=rvts31>9) <strong>Криптографические протоколы</strong></span><span class=rvts1640>−</span><span class=rvts31> описание распределенного алгоритма, в процессе выполнения которого два или более участника последовательно выполняют определенные действия и обмениваются сообщениями с использованием криптографических алгоритмов.</span></p>
+                        <p class=rvps317><span class=rvts4>Необходимо отметить, что на основе криптографических алгоритмов одного класса могут быть созданы криптографические алгоритмы других классов. Так, например, широко распространено построение поточных шифров и хеш-функций на основе блочных шифров, поточных шифров на основе хеш-функций, генераторов ПСЧ на основе алгоритмов шифрования разных классов и т.&nbsp;д.</span></p>
+                        <p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item7">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>1.1.2. Что должен знать и уметь криптограф</h2>
+                        <p class=rvps651><span class=rvts4> <strong>Необходимые теоретические знания:</strong> </span></p>
+                        <p class=rvps652><span class=rvts31>1. Уверенное владение английским языком.</span></p>
+                        <p class=rvps652><span class=rvts31>2. Базовое понимание основных языков программирования, т. е. C, C ++, Java и Python.</span></p>
+                        <p class=rvps652><span class=rvts31>3. Сильные математические навыки; дискретная математика, линейная и матричная алгебра.</span></p>
+                        <p class=rvps652><span class=rvts31>4. Базовое понимание теории сложности, теории информации и теории чисел.</span></p>
+                        <p class=rvps652><span class=rvts31>5. Знания в области шифрования, цифровых подписей, обмена ключами.</span></p>
+                        <p class=rvps652><span class=rvts31>6. Симметричная криптография: знание хеш-функций, кодов аутентификации сообщений и симметричного шифрования.</span></p>
+                        <p class=rvps652><span class=rvts31>7. Знание теории алгоритмов и структур данных.</span></p>
+                        <p class=rvps651><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+                        <p class=rvps651><span class=rvts4> <strong>Необходимые практические умения и навыки:</strong> </span></p>
+                        <p class=rvps652><span class=rvts31>1. Защита важной информации от перехвата, копирования, изменения и / или удаления.</span></p>
+                        <p class=rvps652><span class=rvts31>2. Оценка, анализ и выявление слабых мест в криптографических системах и алгоритмах безопасности.</span></p>
+                        <p class=rvps652><span class=rvts31>3. Разработка надежных систем безопасности для предотвращения уязвимостей.</span></p>
+                        <p class=rvps652><span class=rvts31>4. Разработка статистических и математических моделей для анализа данных и решения проблем безопасности.</span></p>
+                        <p class=rvps652><span class=rvts31>5. Тестирование вычислительных моделей на надежность и точность.</span></p>
+                        <p class=rvps652><span class=rvts31>6. Изучение, исследование и тестирование новых теорий и приложений криптологии.</span></p>
+                        <p class=rvps652><span class=rvts31>7. Поиск слабых мест в линиях связи (например, беспроводная сеть, защищенный телефон, мобильные телефоны, электронная почта и т. д.).</span></p>
+                        <p class=rvps652><span class=rvts31>8. Проверки того, что финансовые данные (например, кредитная карта, межбанковский счет, банкомат, онлайн-транзакции и т. д.) надежно зашифрованы и доступны только авторизованным пользователям.</span></p>
+                        <p class=rvps652><span class=rvts31>9. Проверки того, что данные передачи сообщений (например, беспроводная сеть, защищенный телефон, мобильные телефоны, электронная почта и т. д.) не были незаконно доступны или изменены во время транспортировки.</span></p>
+                        <p class=rvps652><span class=rvts31>10. Расшифровка сообщения и системы кодирования для военных, политических и/или правоохранительных органов.</span></p>
+                        <p class=rvps652><span class=rvts31>11. Разработка и обновление методов для эффективной обработки криптографических задач.</span></p>
+                        <p class=rvps652><span class=rvts31>12. Предоставление технической поддержки правительству, предприятиям и промышленности для решения проблем безопасности.</span></p>
+                        <p class=rvps652><span class=rvts31>13. Консультирование коллег и научных сотрудников по криптографическим методам и приложениям.</span></p>
+                        <p class=rvps653 style="page-break-before: always;"><span class=rvts4><br></span></p>
                     </div>
                 </div>
             </div>
 
-            <div class="bb-item" id="item6">
+            <div class="bb-item" id="item8">
                 <div class="content">
                     <div class="scroller">
-                        <h2>Страница 6</h2>
-                        <p>Quisque condimentum quam diam, vulputate mollis augue condimentum vel. Quisque accumsan, libero vitae commodo scelerisque, dui nisi porttitor erat, at blandit sapien nunc nec orci. Sed ac ligula vel dui consequat interdum. Curabitur aliquet sollicitudin erat sit amet iaculis. Proin et metus scelerisque, varius sem varius, vulputate mauris. Fusce sed lorem et erat tempus vulputate. Nulla non libero quis nibh lobortis fringilla ac imperdiet sem. Duis ac elementum nibh, eu faucibus magna.</p>
-
-                        <p>Quisque blandit sagittis nulla non ullamcorper. Ut tristique vel risus eu posuere. Quisque posuere tortor at libero rhoncus, eget bibendum augue pellentesque. In viverra vel neque sit amet ultrices. Pellentesque molestie, ligula at ornare cursus, nulla libero molestie ipsum, in ultrices mauris diam lacinia neque. Vivamus eu vulputate neque. </p>
-
-                        <p>Etiam nisl mauris, gravida non metus eu, tincidunt elementum felis. Donec eget suscipit quam, vel lobortis risus. Vivamus turpis nunc, venenatis vulputate rhoncus a, suscipit a augue. Integer viverra accumsan tellus, vitae aliquam arcu elementum in. Ut id aliquet dui. Aliquam lobortis sagittis feugiat. Vivamus ac felis mi. Vivamus iaculis sed enim sit amet luctus. </p>
-
-                        <p>Donec bibendum lacinia accumsan. Phasellus pretium justo sed feugiat hendrerit. Etiam ultrices imperdiet justo, vitae placerat nulla imperdiet id. Maecenas luctus interdum nisi, nec rhoncus massa mollis et. Praesent ut feugiat dolor. Morbi vitae sapien a odio congue ultrices. Vestibulum accumsan lacinia tincidunt.</p>
-
-                        <p>Maecenas ante metus, sodales nec est non, volutpat sollicitudin nulla. Sed convallis posuere ultricies. Suspendisse id suscipit est. Phasellus molestie velit est, quis fermentum leo aliquam vel. Phasellus vulputate orci a vestibulum pulvinar. </p>
-
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vehicula turpis in nunc volutpat rhoncus. Nam pretium bibendum eros, ac sodales est faucibus in. Vestibulum sed lobortis lacus. Morbi elementum pellentesque hendrerit. Integer venenatis diam ut metus faucibus, quis commodo leo tincidunt. Proin tincidunt, dui non consequat pellentesque, dui elit dapibus justo, in sodales ligula mauris vel nisl. Curabitur diam enim, ultricies ac risus nec, blandit vestibulum libero.</p>
-
-                        <p>Donec sed pharetra diam, tristique tempor lacus. Vivamus sit amet tempus magna. Sed iaculis libero ac viverra eleifend. Duis non urna vitae nibh molestie fringilla eget sed mauris. Nunc vehicula, enim eget luctus consectetur, odio neque blandit lacus, eget vestibulum metus orci et nibh. Fusce at varius augue, vitae porta urna. </p>
-
-                        <p>Aenean in massa ut ante egestas rutrum viverra vitae ipsum. Vestibulum vel urna quis turpis pharetra porta. Nunc eleifend mattis justo eu dapibus. Phasellus ac lectus justo.</p>
-
-                        <p>Quisque eleifend gravida nisi sit amet placerat. In iaculis est a purus molestie tempus. Duis diam leo, feugiat a lobortis ut, vestibulum ut sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet molestie ligula, vel posuere turpis. Nulla ultricies vehicula ultrices. </p>
-
-                        <p>Nulla congue bibendum neque nec vehicula. Suspendisse at ornare tortor. Ut posuere nibh ligula, ut bibendum ipsum aliquam id. Curabitur rhoncus tellus eros, et consectetur augue ullamcorper et. Aenean porttitor in neque et semper. Cras vitae tincidunt tellus, at aliquet magna. Vivamus dui orci, venenatis in leo nec, pulvinar condimentum leo. Aenean rutrum imperdiet diam et aliquam. </p>
-
-                        <p>Sed ut iaculis mi, nec laoreet massa. Aliquam erat volutpat. Vivamus auctor ultricies eros ut vulputate. Quisque tincidunt elit vitae sem ultrices, nec laoreet turpis hendrerit. Donec pharetra tincidunt velit, a elementum purus molestie quis. Vivamus viverra risus nec ante ultricies, id luctus est semper. Nullam vel diam sapien. </p>
-
-                        <p>Integer sem massa, vestibulum vel erat sit amet, lobortis adipiscing felis. Nullam semper tortor et nisi tristique pulvinar. Nunc ullamcorper, ante nec rutrum scelerisque, lacus diam tincidunt urna, et consectetur nibh sem et quam. Quisque iaculis molestie dolor pulvinar hendrerit. Nam tempus tincidunt mauris eget euismod. Praesent pellentesque facilisis ultricies.</p>
-
-                        <p>Morbi auctor, nulla eu viverra sollicitudin, nibh sapien tempor purus, quis ultrices sapien ipsum non ligula.</p>
-
-                        <p>Proin molestie egestas egestas. Etiam quam metus, tempus et ligula eget, rutrum mattis mi. Donec faucibus mattis tortor, eget eleifend tellus eleifend vitae. Praesent a rhoncus massa. Donec interdum quam in erat commodo faucibus. Quisque nec neque tellus.</p>
-
-                        <p>Maecenas placerat vehicula turpis sed tempor. Phasellus tristique tortor id sapien volutpat tincidunt eu molestie augue. Sed imperdiet, diam non fermentum fermentum, orci diam rhoncus eros, vestibulum lacinia dui lorem nec tortor. Morbi dignissim elit vitae imperdiet tempor. Praesent sagittis metus quis venenatis venenatis.</p>
-
-                        <p>Mauris et ligula gravida, euismod nunc eget, condimentum nulla. Proin sed dapibus tellus, ut pharetra leo. Phasellus porttitor elit et tortor mollis, egestas iaculis augue sollicitudin. </p>
+                        <h2>Контрольные вопросы</h2>
+                        <p class=rvps709><span class=rvts69>1. Что такое криптология, из чего она состоит?</span></p>
+                        <p class=rvps709><span class=rvts69>2. Назовите основные требования к криптографическим системам.</span></p>
+                        <p class=rvps709><span class=rvts69>3. Что такое конфиденциальность и аутентичность?</span></p>
+                        <p class=rvps709><span class=rvts69>4. Назовите несколько областей применения криптографии.</span></p>
+                        <p class=rvps709><span class=rvts69>5. Что такое алфавит? Рассчитайте количество различных сообщений длиной 6 символов для английского алфавита.</span></p>
+                        <p class=rvps709><span class=rvts1826><br></span></p>
+                        <p class=rvps249 style="page-break-before: always;"><span class=rvts4><br></span></p>
                     </div>
                 </div>
             </div>
