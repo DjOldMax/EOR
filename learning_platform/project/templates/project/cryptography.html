@@ -864,7 +864,7 @@
                         <p class=rvps767><span class=rvts4>Так как размерность нелинейного преобразования почти всегда меньше размера блока, то используется слой параллельных подстановок. К выбору нелинейного преобразования необходимо подходить особенно тщательно, так как это обычно единственный нелинейный элемент системы. Он имеет ключевую роль в обеспечении криптостойкости блочного шифра. Лучшую стойкость имеет схема, где используются подстановки большого размера. Подстановки бывают биективные (обратимые) и небиективные, также они могут иметь разные размерности входа и выхода. Существуют, также, подстановки с оптимальными характеристиками. Это подстановки, сгенерированные с помощью операции взятия обратного элемента в поле по модулю неприводимого полинома.</span></p>
                         <p class=rvps767><span class=rvts4>Линейное преобразование предназначено для перемешивания данных между различными блоками нелинейного преобразования, чтобы отдельные блоки текста не являлись независимыми друг от друга. В качестве простейшего линейного преобразования используется перестановка бит, более сложные линейные преобразования выполняются в некотором векторном пространстве над различными конечными полями. В случае отсутствия линейной операции блочный шифр вырождается в несколько независимых шифров малой (по размеру используемой подстановки) размерности (рис. 3.2), которые легко можно вскрыть частотным анализом.</span></p>
                         <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00147.png' %}" alt=""></p>
-                        <p class=rvps969><span class=rvts51>Рис. 3.2. Визуализация действия этапа линейного преобразования в блочном шифре</span></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 3.2. Визуализация действия этапа линейного преобразования в блочном шифре</span></p>
                         <p class=rvps767><span class=rvts4><br></span></p>
                         <p class=rvps767><span class=rvts4>Для операции добавления подключа обычно используется операция сложения по модулю 2. Можно также использовать операцию сложения/вычитания и любую другую пару обратимых операций.</span></p>
                         <p class=rvps767 style="page-break-before: always;"><span class=rvts4><br></span></p>
@@ -1642,7 +1642,7 @@
                         <p class=rvps597><span class=rvts4><br></span></p>
                         <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00187.png' %}" alt=""></p>
                         <p class=rvps22><span class=rvts4><br></span></p>
-                        <p class=rvps597><a name="_Toc66357388"></a>
+                        <p style="text-align: center;"><a name="_Toc66357388"></a>
                             <img style="vertical-align: middle;" src="{% static 'project/images/img_00188.jpg' %}" alt=""><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp; </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00189.jpg' %}" alt=""></p>
                         <p style="text-align: center;"><span class=rvts51>Рис. 3.20. Схема процедуры генерации раундовых ключей из ключа</span></p>
                         <p class=rvps317><span class=rvts4><br></span></p>
@@ -1696,13 +1696,1171 @@
             <div class="bb-item" id="item35">
                 <div class="content">
                     <div class="scroller">
+                        <h2>3.2.6. Блочный шифр Serpent.</h2>
+                        <p class=rvps800><span class=rvts4>Алгоритм SERPENT разработан тремя известнейшими криптологами: Россом Андерсоном, Эли Бихамом и Ларсом Кнудсеном. Каждый из них знаменит своими криптоаналитическими работами, а также разработанными ранее алгоритмами шифрования (например, широкую известность получили алгоритмы </span><span class=rvts51>Bear</span><span class=rvts4> и </span><span class=rvts51>Lion</span><span class=rvts4>, разработанные Андерсоном и Бихамом не менее известен алгоритм </span><span class=rvts51>Square</span><span class=rvts4>, разработанный авторами алгоритма </span><span class=rvts51>Rijndael</span><span class=rvts4> Джоан Деймен и Винсентом Риджменом при участии Ларса Кнудсена). Именно Эли Бихама без преувеличения можно назвать величайшим крипто-аналитиком современности, его авторству (часто в соавторстве с другими специалистами) принадлежит множество работ, посвященных методам вскрытия различных известных алгоритмов шифрования.</span></p>
+                        <p class=rvps800><span class=rvts4>Еще до конкурса AES появился алгоритм SERPENT-0, отличающийся от присланного на конкурс алгоритма SERPENT-1 (или просто </span><span class=rvts51>Serpent</span><span class=rvts4>) только тем, что в нем были использованы таблицы замен алгоритма DES (в незначительно модифицированном виде). В SERPENT используются уже оригинальные таблицы замен, которые, по словам его авторов, вкупе с незначительным изменением процедуры расширения ключа усилили алгоритм против дифференциального и линейного криптоанализа.</span></p>
+                        <p class=rvps800><span class=rvts4>Алгоритм SERPENT представляет собой SP-сеть, в которой блок данных в процессе шифрования разбивается на 4 подблока по 32 бита (рис. 3.24).</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00204.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 3.24. Структура алгоритма SERPENT</span></p>
+                        <p class=rvps1068><span class=rvts4><br></span></p>
+                        <p class=rvps800><span class=rvts4>Алгоритм выполняет 32 раунда преобразований; перед первым раундом выполняется начальная перестановка IP, после заключительного раунда </span><span class=rvts1638>−</span><span class=rvts4> финальная перестановка FP. Для перестановки IP характерно, что бит 0 остается на своем месте, бит 32 входного значения становится битом 1, бит 64 </span><span class=rvts1638>−</span><span class=rvts4> битом 2 и т.д. Финальная перестановка является инверсной начальной перестановке.</span></p>
+                        <p class=rvps800><span class=rvts4>Функция раунда состоит из следующих операций:</span></p>
+                        <p class=rvps800><span class=rvts30>1. </span><span class=rvts4>Наложение 128-битного ключа раунда побитовой логической операцией «исключающее или» (XOR).</span></p>
+                        <p class=rvps800><span class=rvts30>2. </span><span class=rvts4>Табличная замена. Обрабатываемый 128-битный блок данных разбивается на 32 фрагмента по 4 бита, над каждым из которых выполняется табличная замена 4 * 4 бит. Полученный результат объединяется обратно в 128-битный блок. </span></p>
+                        <p class=rvps800><span class=rvts4>В каждом раунде используется одна и та же таблица; всего же в алгоритме определены 8 таблиц замен S</span><span class=rvts376>0</span><span class=rvts4>...S</span><span class=rvts376>7</span><span class=rvts4>, которые циклически используются в 32 раундах шифрования:</span></p>
+                        <p class=rvps800><span class=rvts4>Ячейки таблицы содержат выходные значения; входное значение определяет требуемый номер столбца. Например, таблица S</span><span class=rvts376>0</span><span class=rvts4>&nbsp;меняет 0 на 3, 1 на 8 и т.д.</span></p>
+                        <p class=rvps800><span class=rvts4>Таблицы замен алгоритма Serpent определенным образом сгенерированы из таблиц алгоритма DES.</span></p>
+                        <p class=rvps800><span class=rvts4>Линейное преобразование блока данных определяется таблицей, фрагмент которой представлен далее.</span></p>
+                        <p class=rvps1075><span class=rvts30> </span></p>
+                        <div class=rvps1070><table border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+                        <tr valign=top>
+                        <td colspan=4 width=701 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1072><span class=rvts51>Таблица 3.5</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td colspan=4 width=701 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps960><span class=rvts30>Линейное преобразование блока данных</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>16, 52, 56, 70, 83, 94, 105</span></p>
+                        </td>
+                        <td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>72, 114, 125</span></p>
+                        </td>
+                        <td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>2, 9, 15, 30, 76, 84, 126</span></p>
+                        </td>
+                        <td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>36, 90, 103</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>20, 56, 60, 74, 87, 98, 109</span></p>
+                        </td>
+                        <td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>1, 76, 118</span></p>
+                        </td>
+                        <td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>2, 6, 13, 19, 34, 80, 88</span></p>
+                        </td>
+                        <td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>40, 94, 107</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>24, 60, 64, 78, 91, 102, 113</span></p>
+                        </td>
+                        <td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>5, 80, 122</span></p>
+                        </td>
+                        <td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>6, 10, 17, 23, 38, 84, 92</span></p>
+                        </td>
+                        <td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>44, 98, 111</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=203 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>28, 64, 68, 82, 95, 106, 117</span></p>
+                        </td>
+                        <td width=101 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>9, 84, 126</span></p>
+                        </td>
+                        <td width=215 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>10, 14, 21, 27, 42, 88, 96</span></p>
+                        </td>
+                        <td width=182 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>48, 102, 115</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps800><span class=rvts4><br></span></p>
+                        <p class=rvps800><span class=rvts4>Каждая ячейка таблицы соответствует биту выходного значения (от 0 до 127); в ячейке перечислены входные биты, XOR которых дает выходное значение.</span></p>
+                        <p class=rvps800><span class=rvts4>Расшифрование производится выполнением обратных операций в обратной последовательности. В частности, вместо таблиц замен&nbsp;</span><span class=rvts30>S</span><span class=rvts4381>0</span><span class=rvts30>...S</span><span class=rvts4381>7</span><span class=rvts4>&nbsp;применяются в обратной последовательности инверсные таблицы замен&nbsp;</span><span class=rvts30>InvS</span><span class=rvts4381>0</span><span class=rvts30>...InvS</span><span class=rvts4381>7</span><span class=rvts4>:</span></p>
+                        <p class=rvps800><span class=rvts4>Аналогичным образом вместо «прямого» линейного преобразования используется обратное, которое определяется табл. 3.6 (принцип действия обратного преобразования аналогичен прямому и описан выше).</span></p>
+                        <div class=rvps1070><table border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+                        <tr valign=top>
+                        <td colspan=4 width=623 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1080><span class=rvts51>Таблица 3.6</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td colspan=4 width=623 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps1070><span class=rvts30>Обратное преобразование блока данных</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>53, 55, 72</span></p>
+                        </td>
+                        <td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>1, 5, 20, 90</span></p>
+                        </td>
+                        <td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>15, 102</span></p>
+                        </td>
+                        <td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>3, 31, 90</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>57, 59, 76</span></p>
+                        </td>
+                        <td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>5, 9, 24, 94</span></p>
+                        </td>
+                        <td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>19, 106</span></p>
+                        </td>
+                        <td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>7, 35, 94</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>61, 63, 80</span></p>
+                        </td>
+                        <td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>9, 13, 28, 98</span></p>
+                        </td>
+                        <td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>23, 110</span></p>
+                        </td>
+                        <td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>11, 39, 98</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=165 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>65, 67, 84</span></p>
+                        </td>
+                        <td width=128 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1074><span class=rvts41>13,17, 32, 102</span></p>
+                        </td>
+                        <td width=130 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>27, 114</span></p>
+                        </td>
+                        <td width=200 valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps1069><span class=rvts41>1, 3, 15, 20, 43, 102</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps1070><span class=rvts4><br></span></p>
+                        <p class=rvps800 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps800><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item36">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.2.7. Блочный шифр Twofish.</h2>
+                        <p class=rvps171><span class=rvts4>Twofish разработан коллективом известных криптологов под руководством Брюса Шнайера (Bruce Schneier) </span><span class=rvts651>−</span><span class=rvts4> автора множества работ в области криптологии, разработчика известного алгоритма шифрования Blowfish и основателя американской компании&nbsp;Counterpane Systems, являющейся одним из мировых лидеров в области разработки средств криптографической защиты информации. Кроме него в разработке алгоритма принимали участие Джон Келси (John Kelsey), Крис Холл (Chris Hall) и Нильс Фергюсон (Niels Ferguson) из той же компании Counterpane Systems, а также Дуг Уайтинг (Doug Whiting) из&nbsp;Hifn Incorporated&nbsp;(разработка аппаратных средств защиты Internet-коммуникаций) и Дэвид Вагнер (David Wagner) из&nbsp;Университета штата Калифорния.</span></p>
+                    <p class=rvps171><span class=rvts4>Twofish разбивает шифруемые данные на четыре 32-битных подблока (обозначим их&nbsp;A,&nbsp;B,&nbsp;C,&nbsp;D) (рис. 3.25), над которыми производится 16 раундов преобразований, в каждом из которых выполняются следующие операции:</span></p>
+                    <p class=rvps171><span class=rvts4>1. Содержимое подблока&nbsp;B&nbsp;циклически сдвигается влево на 8 бит.</span></p>
+                    <p class=rvps171><span class=rvts4>2. Подблок&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;обрабатывается операцией&nbsp;</span><span class=rvts51>g</span><span class=rvts4>( ), которая будет подробно описана ниже.</span></p>
+                    <p class=rvps171><span class=rvts4>3. Подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;также обрабатывается операцией&nbsp;</span><span class=rvts51>g</span><span class=rvts4>( ).</span></p>
+                    <p class=rvps171><span class=rvts4>4. Подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;накладывается на&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;с помощью сложения по модулю 2</span><span class=rvts363>32</span><span class=rvts4>, после чего аналогичным образом выполняется наложение подблока&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;на подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>.</span></p>
+                    <p class=rvps171><span class=rvts4>5. Фрагмент расширенного ключа&nbsp;</span><span class=rvts51>K</span><span class=rvts376>2</span><span class=rvts349>r</span><span class=rvts376>+8</span><span class=rvts4>&nbsp;(где&nbsp;</span><span class=rvts51>r</span><span class=rvts4>&nbsp;</span><span class=rvts651>−</span><span class=rvts4> номер текущего раунда, начиная с 0) складывается с подблоком </span><span class=rvts51>A</span><span class=rvts4> по модулю 2</span><span class=rvts363>32</span><span class=rvts4>.</span></p>
+                    <p class=rvps171><span class=rvts4>6. Аналогично предыдущему шагу,&nbsp;</span><span class=rvts51>K</span><span class=rvts376>2</span><span class=rvts349>r</span><span class=rvts376>+9</span><span class=rvts4>&nbsp;накладывается на подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>.</span></p>
+                    <p class=rvps4><span class=rvts4><br></span></p>
+                    <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00205.png' %}" alt=""></p>
+                    <p style="text-align: center;"><span class=rvts51>Рис. 3.25. Структура алгоритма Twofish</span></p>
+                    <p class=rvps22><span class=rvts4><br></span></p>
+                    <p class=rvps590><span class=rvts4>7. Подблок&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;накладывается на&nbsp;</span><span class=rvts51>C</span><span class=rvts4>&nbsp;операцией XOR.</span></p>
+                    <p class=rvps590><span class=rvts4>8. Содержимое подблока&nbsp;</span><span class=rvts51>D</span><span class=rvts4>&nbsp;циклически сдвигается влево на 1 бит.</span></p>
+                    <p class=rvps590><span class=rvts4>9. Подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;накладывается на&nbsp;</span><span class=rvts51>D</span><span class=rvts4>&nbsp;операцией XOR.</span></p>
+                    <p class=rvps590><span class=rvts4>10. Содержимое подблока&nbsp;</span><span class=rvts51>C</span><span class=rvts4>&nbsp;циклически сдвигается вправо на 1 бит.</span></p>
+                    <p class=rvps1087><span class=rvts51>B</span><span class=rvts4> = </span><span class=rvts51>B</span><span class=rvts4> &lt;&lt;&lt; 8,</span></p>
+                    <p class=rvps1087><span class=rvts51>A</span><span class=rvts4> = </span><span class=rvts51>g</span><span class=rvts4>(</span><span class=rvts51>A</span><span class=rvts4>),</span></p>
+                    <p class=rvps1087><span class=rvts51>B</span><span class=rvts4> = </span><span class=rvts51>g</span><span class=rvts4>(</span><span class=rvts51>B</span><span class=rvts4>),</span></p>
+                    <p class=rvps1087><span class=rvts51>A</span><span class=rvts4> = </span><span class=rvts51>A</span><span class=rvts4> + </span><span class=rvts51>B</span><span class=rvts4> mod </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00206.png' %}" alt=""><span class=rvts4>,</span></p>
+                    <p class=rvps1087><span class=rvts51>B</span><span class=rvts4> = </span><span class=rvts51>A</span><span class=rvts4> + </span><span class=rvts51>B</span><span class=rvts4> mod </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00207.png' %}" alt=""><span class=rvts4>,</span></p>
+                    <p class=rvps1088><span class=rvts51>A</span><span class=rvts4> = </span><span class=rvts51>A</span><span class=rvts4> + </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00208.png' %}" alt=""><span class=rvts4>,</span></p>
+                    <p class=rvps1088><span class=rvts51>B</span><span class=rvts4> = </span><span class=rvts51>B</span><span class=rvts4> + </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00209.png' %}" alt=""><span class=rvts4>,</span></p>
+                    <p class=rvps1088><span class=rvts148>C</span><span class=rvts139> = </span><span class=rvts148>C</span><span class=rvts139> </span><span class=rvts148>Å</span><span class=rvts139> </span><span class=rvts148>A</span><span class=rvts139>,</span></p>
+                    <p class=rvps1088><span class=rvts51>D</span><span class=rvts4> = </span><span class=rvts51>D</span><span class=rvts4> &lt;&lt;&lt; 1,</span></p>
+                    <p class=rvps1088><span class=rvts51>D</span><span class=rvts4> = </span><span class=rvts51>D</span><span class=rvts139> </span><span class=rvts148>Å </span><span class=rvts51>B</span><span class=rvts4>,</span></p>
+                    <p class=rvps1088><span class=rvts51>C</span><span class=rvts4> = </span><span class=rvts51>C</span><span class=rvts4> &gt;&gt;&gt; 1.</span></p>
+                    <p class=rvps1089><span class=rvts4><br></span></p>
+                    <p class=rvps1089><span class=rvts4>Операция&nbsp;</span><span class=rvts51>g</span><span class=rvts4>()&nbsp;(рис. 3.26) обрабатывает 32-битных входной подблок выполнением перечисленных ниже шагов.</span></p>
+                    <div class=rvps718><table width="100%" border=0 cellpadding=1 cellspacing=2 style="border-width: 0px; background-color: #ffffff; border-spacing: 2px;">
+                    <tr valign=top>
+                    <td style="padding: 1px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00210.png' %}" alt=""></p>
+                    </td>
+                    </tr>
+                    <tr valign=top>
+                    <td style="padding: 1px;"><p style="text-align: center;"><span class=rvts51>Рис. 3.26. Структура операции&nbsp;g() алгоритма Twofish</span></p>
+                    </td>
+                    </tr>
+                    </table>
+                    </div>
+                    <p class=rvps22><span class=rvts4><br></span></p>
+                    <p class=rvps1100><span class=rvts4>1. Подблок делится на 4 фрагмента по 8 бит каждый.</span></p>
+                    <p class=rvps1100><span class=rvts4>2. Фрагменты прогоняются через таблицы замен 8*8 бит&nbsp;S</span><span class=rvts376>0</span><span class=rvts4>...S</span><span class=rvts376>3</span><span class=rvts4>. Таблицы замен вычисляются динамически и зависят от ключа шифрования; алгоритм построения таблиц замен будет подробно описан ниже.</span></p>
+                    <p class=rvps1100><span class=rvts4>3. Результат замен (обозначим его&nbsp;</span><span class=rvts51>s</span><span class=rvts376>0</span><span class=rvts4>...</span><span class=rvts51>s</span><span class=rvts376>3</span><span class=rvts4>) умножается на фиксированную матрицу&nbsp;</span><span class=rvts51>M</span><span class=rvts376>1</span><span class=rvts4>:</span></p>
+                    <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00211.png' %}" alt=""></p>
+                    <p class=rvps1102><span class=rvts4>где&nbsp;</span><span class=rvts51>g</span><span class=rvts376>0</span><span class=rvts4>...</span><span class=rvts51>g</span><span class=rvts376>3</span><span class=rvts4>&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> байты выходного значения функции&nbsp;</span><span class=rvts51>g</span><span class=rvts4>().</span><br><span class=rvts4>Умножение выполняется в конечном поле GF(2</span><span class=rvts363>8</span><span class=rvts4>) с образующим полиномом&nbsp;</span><span class=rvts51>x</span><span class=rvts363>8</span><span class=rvts4>&nbsp;+ </span><span class=rvts51>x</span><span class=rvts363>6</span><span class=rvts4>&nbsp;+</span><span class=rvts51>x</span><span class=rvts363>5</span><span class=rvts4>&nbsp;+</span><span class=rvts51>x</span><span class=rvts363>3</span><span class=rvts4>&nbsp;+1.</span></p>
+                    <p class=rvps1100><span class=rvts4>Матрица </span><span class=rvts51>M</span><span class=rvts376>1</span><span class=rvts4>&nbsp;определена следующим </span><span class=rvts38>образом (здесь указаны шестнадцатеричные значения):</span></p>
+                    <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00212.png' %}" alt=""></p>
+                    <p class=rvps1100><span class=rvts4>В конце каждого раунда, за исключением последнего, подблоки&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;(значение до описанной выше обработки) и&nbsp;</span><span class=rvts51>C</span><span class=rvts4>&nbsp;меняются местами; подблоки&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;(значение до обработки) и&nbsp;</span><span class=rvts51>D</span><span class=rvts4>&nbsp;также меняются местами.</span></p>
+                    <p class=rvps1100><span class=rvts4>Перед первым раундом выполняется&nbsp;</span><span class=rvts51>входное отбеливание</span><span class=rvts4>&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> наложение операцией XOR на обрабатываемые подблоки четырех фрагментов расширенного ключа&nbsp;</span><span class=rvts51>K</span><span class=rvts376>0</span><span class=rvts4>...</span><span class=rvts51>K</span><span class=rvts376>3</span><span class=rvts4>. Аналогично выполняется выходное отбеливание </span><span class=rvts1638>−</span><span class=rvts4> после последнего раунда с использованием подключей&nbsp;</span><span class=rvts51>K</span><span class=rvts376>4</span><span class=rvts4>...</span><span class=rvts51>K</span><span class=rvts376>7</span><span class=rvts4>.</span></p>
+                    <p class=rvps1100><span class=rvts4>Как видно, алгоритм Twofish имеет существенно более сложную структуру, чем Serpent, что компенсируется вдвое меньшим количеством раундов.</span></p>
+                    <p class=rvps1100 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item37">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.2.8. Блочный шифр MARS.</h2>
+                        <p class=rvps317><span class=rvts4>Алгоритм MARS был разработан коллективом криптологов из корпорации IBM. Именно IBM в свое время разработала семейство алгоритмов Lucifer, которое легло в основу прошлого стандарта шифрования США </span><span class=rvts1638>−</span><span class=rvts4> DES. Из авторов Lucifer в разработке алгоритма MARS принял участие Дон Копперсмит (Don Coppersmith), известный также и другими работами в области криптологии.</span></p>
+                        <p class=rvps317><span class=rvts4>Структура алгоритма MARS представлена на рис. 3.27.</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00213.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 3.27. Структура алгоритма MARS</span></p>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                        <p class=rvps767><span class=rvts4>1. Предварительное наложение ключа: на 32-битные подблоки&nbsp;</span><span class=rvts51>A</span><span class=rvts4>,&nbsp;</span><span class=rvts51>B</span><span class=rvts4>,&nbsp;</span><span class=rvts51>C</span><span class=rvts4>,&nbsp;</span><span class=rvts51>D</span><span class=rvts4>&nbsp;накладываются 4 фрагмента расширенного ключа&nbsp;</span><span class=rvts51>k</span><span class=rvts376>0</span><span class=rvts4>...</span><span class=rvts51>k</span><span class=rvts376>3</span><span class=rvts4>&nbsp;операцией сложения по модулю 2</span><span class=rvts363>32</span><span class=rvts4>.</span></p>
+                        <p class=rvps767><span class=rvts4>2. Выполняются 8 раундов прямого перемешивания (без участия ключа шифрования).</span></p>
+                        <p class=rvps767><span class=rvts4>3. Выполняются 8 раундов прямого криптопреобразования.</span></p>
+                        <p class=rvps767><span class=rvts4>4. Выполняются 8 раундов обратного криптопреобразования. </span></p>
+                        <p class=rvps767><span class=rvts4>5. Выполняются 8 раундов обратного перемешивания, также без участия ключа шифрования.</span></p>
+                        <p class=rvps767><span class=rvts4>6. Финальное наложение фрагментов расширенного ключа&nbsp;</span><span class=rvts51>k</span><span class=rvts376>36</span><span class=rvts4>...</span><span class=rvts51>k</span><span class=rvts376>39</span><span class=rvts4>&nbsp;операцией вычитания по модулю 2</span><span class=rvts363>32</span><span class=rvts4>.</span></p>
+                        <p class=rvps767><span class=rvts4>Этапы 3 и 4 называются «криптографическим ядром» алгоритма MARS.</span></p>
+                        <p class=rvps767><span class=rvts4>Алгоритм представляет собой расширенную сеть Фейстеля. В каждом раунде выполняется обработка одного из подблоков и наложение результатов обработки на остальные подблоки, после чего подблоки меняются местами (рис. 3.28). Конкретные преобразования зависят от типа раунда и будут рассмотрены ниже. Кроме того, между раундами могут выполняться различные дополнительные действия, которые также будут описаны далее.</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00214.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 3.28. Раунд прямого перемешивания</span></p>
+                        <p class=rvps1027><span class=rvts51><br></span></p>
+                        <p class=rvps1047><span class=rvts4>Как видно из рисунка, в раунде прямого перемешивания выполняются следующие действия:</span></p>
+                        <p class=rvps730><span class=rvts4>1. Значение подблока&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;прогоняется через таблицу замен&nbsp;</span><span class=rvts51>S</span><span class=rvts376>0</span><span class=rvts4>&nbsp;и накладывается на подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;операцией XOR.</span></p>
+                        <p class=rvps730><span class=rvts4>2. Исходное значение подблока&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;вращается на 8 бит вправо.</span></p>
+                        <p class=rvps730><span class=rvts4>3. Результат предыдущего шага обрабатывается таблицей замен&nbsp;</span><span class=rvts51>S</span><span class=rvts376>1</span><span class=rvts4>&nbsp;и снова накладывается на подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;операцией сложения по модулю 2</span><span class=rvts363>32</span><span class=rvts4>.</span></p>
+                        <p class=rvps730><span class=rvts4>4. Результат шага 2 вращается на 8 бит вправо.</span></p>
+                        <p class=rvps730><span class=rvts4>5. Результат предыдущего шага обрабатывается таблицей замен&nbsp;</span><span class=rvts51>S</span><span class=rvts376>0</span><span class=rvts4>&nbsp;и накладывается на подблок&nbsp;</span><span class=rvts51>С</span><span class=rvts4>&nbsp;операцией сложения по модулю 2</span><span class=rvts363>32</span><span class=rvts4>.</span></p>
+                        <p class=rvps730><span class=rvts4>6. Результат шага 4 вращается на 8 бит вправо.</span></p>
+                        <p class=rvps730><span class=rvts4>7. Результат предыдущего шага обрабатывается таблицей замен&nbsp;</span><span class=rvts51>S</span><span class=rvts376>1</span><span class=rvts4>&nbsp;и накладывается на подблок&nbsp;</span><span class=rvts51>D</span><span class=rvts4>&nbsp;операцией XOR.</span></p>
+                        <p class=rvps730><span class=rvts4>8. Подблоки меняются местами, как показано на рис. 3.28.</span></p>
+                        <p class=rvps730><span class=rvts4>Кроме того, в некоторых раундах прямого перемешивания выполняются следующие дополнительные операции (рис. 3.29):</span></p>
+                        <p class=rvps730><span class=rvts4>1) в раундах 0 и 4 после шага 7 выполняется наложение значения подблока&nbsp;</span><span class=rvts51>D</span><span class=rvts4>&nbsp;на подблок&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;операцией сложения по модулю 2</span><span class=rvts363>32</span><span class=rvts4>;</span></p>
+                        <p class=rvps730><span class=rvts4>2) в раундах 1 и 5 подблок&nbsp;</span><span class=rvts51>B</span><span class=rvts4>&nbsp;аналогичным образом накладывается на подблок&nbsp;</span><span class=rvts51>A</span><span class=rvts4>.</span></p>
+                        <div class=rvps22><table border=0 cellpadding=1 cellspacing=2 style="border-width: 0px; background-color: #ffffff; border-spacing: 2px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=1086 style="padding: 1px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00215.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=1086 style="padding: 1px;"><p style="text-align: center;"><span class=rvts51>Рис. 3.29. Структура раунда прямого криптопреобразования</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps1085><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>По словам авторов алгоритма, эти операции существенно усиливают алгоритм MARS против дифференциального криптоанализа.</span></p>
+                        <p class=rvps317><span class=rvts4>Основой раунда является расширяющее криптопреобразование&nbsp;</span><span class=rvts51>E</span><span class=rvts4>, преобразующее 32-битное входное слово&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;в три выходных 32-битных значения, каждое из которых определенным образом накладывается на остальные подблоки (рис. 3.30). После этого подблок&nbsp;</span><span class=rvts51>A</span><span class=rvts4>&nbsp;вращается влево на 13 бит, затем подблоки меняются местами аналогично раунду прямого перемешивания.</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00216.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 3.30. Структура преобразования&nbsp;E</span></p>
+                        <p class=rvps1027><span class=rvts51><br></span></p>
+                        <p class=rvps737><span class=rvts4>Из входного значения формируются три потока&nbsp;</span><span class=rvts51>O</span><span class=rvts376>1</span><span class=rvts4>...</span><span class=rvts51>O</span><span class=rvts376>3</span><span class=rvts4>, над которыми производятся следующие действия:</span></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00217.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00218.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00219.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00220.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00221.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00222.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00223.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00224.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00225.png' %}" alt=""></p>
+                        <p class=rvps1103><img style="vertical-align: middle;" src="{% static 'project/images/img_00226.png' %}" alt=""></p>
+                        <p class=rvps1104><img style="vertical-align: middle;" src="{% static 'project/images/img_00227.png' %}" alt=""></p>
+                        <p class=rvps1052><span class=rvts2813><br></span></p>
+                        <p class=rvps952><span class=rvts4>Здесь:&nbsp;</span><span class=rvts166>I</span><span class=rvts4>&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> входное значение; </span><span class=rvts166>r</span><span class=rvts4>&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> номер текущего раунда, считая с 0-го (при нумерации раундов в данном случае учитываются только раунды криптоядра алгоритма); </span><span class=rvts166>S</span><span class=rvts4>&nbsp;</span><span class=rvts1638>−</span><span class=rvts4> табличная замена для операции&nbsp;</span><span class=rvts166>E</span><span class=rvts4>, представляет собой объединение описанных выше таблиц&nbsp;</span><span class=rvts166>S</span><span class=rvts4381>0</span><span class=rvts4>&nbsp;и&nbsp;</span><span class=rvts166>S</span><span class=rvts4381>1</span><span class=rvts4>; объединенная таблица содержит 512 значений, выходное значение выбирается по значению 9 младших бит входного слова.</span></p>
+                        <p class=rvps952><span class=rvts4>Стоит обратить внимание на то, что в преобразовании&nbsp;</span><span class=rvts166>E</span><span class=rvts4>&nbsp;используются операции вращения на переменное число бит; в этом случае запись&nbsp;</span><span class=rvts166>O</span><span class=rvts4381>3</span><span class=rvts30>’</span><span class=rvts4>&nbsp;обозначает, что число бит вращения определяется значением младших пяти бит текущего значения&nbsp;</span><span class=rvts166>O</span><span class=rvts4381>3</span><span class=rvts4>.</span></p>
+                        <p class=rvps952><span class=rvts4>Расшифрование выполняется применением обратных операций в обратной последовательности.</span></p>
+                        <p class=rvps4 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item38">
+                <div class="content">
+                    <div class="scroller">
+                        <h2> Контрольные вопросы</h2>
+                        <p>1. Перечислите преимущества и недостатки операции проволочной коммутации (битовой перестановки).</p>
+                        <p>2. Почему не получил распространения алгоритм DESX, хотя он более удобен, чем 3DES и обладает одинаковой с ним криптостойкостью?</p>
+                        <p>3. Из каких операций состоит алгоритм AES, что в нем является нелинейным элементом?</p>
+                        <p>4. Поясните структуру БШ ГОСТ, назначение операций сдвига и сложения в его составе.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item39">
+                <div class="content">
+                    <div class="scroller">
+                        <h2> 3.3. Классификация методов криптоанализа блочных шифров</h2>
+                        <p class=rvps730><span class=rvts4>Методы криптоанализа блочных шифров направлены на вычисление ключа алгоритма шифрования с использованием одной из атак, рассмотренных в п. 1.3.2. В каждом методе криптоанализа, кроме переборных методов, вычисление ключа основывается на построении модели блочного шифра. Далее, эта модель используется для вычисления ключа при подстановке в нее реальных данных и выполнении всех вычислений. Классификация методов криптоанализа блочных шифров представлена на рис. 3.31. Метод криптоанализа считается успешным, если он имеет вычислительную сложность меньше, чем полный перебор, даже если взлом все еще невозможно осуществить на практике.</span></p>
+                        <p class=rvps730><span class=rvts4><br></span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00229.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts51>Рис. 3.31. Классификация методов криптоанализа блочных шифров</span></p>
+                        <p class=rvps1027><span class=rvts51><br></span></p>
+                        <p class=rvps730><span class=rvts4>Существуют четыре основных класса методов криптоанализа блочных шифров, отличающиеся методикой проведения. Одни из них могут быть использованы при реальном взломе шифров, другие используются для подтверждения криптостойкости алгоритмов шифрования.</span></p>
+                        <p class=rvps730><span class=rvts657> <strong>Первый класс</strong></span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это технические методы криптоанализа. Дадим краткую характеристику каждого из методов данного класса. Метод криптоанализа на основе генерации аппаратных ошибок основан на анализе поведения устройства, в котором реализован алгоритм шифрования и возможном оказании на него воздействий, не предусмотренных назначением устройства. В качестве непредусмотренных воздействий могут использоваться мощный электромагнитный импульс, воздействие ионизирующим излучением, специально сгенерированные помехи в цепи питания и даже обычное нагревание. Цель воздействия состоит в появлении ошибки в заданном месте алгоритма шифрования. С использованием этого метода можно взломать большинство блочных шифров. </span></p>
+                        <p class=rvps730><span class=rvts4>Следующий </span><span class=rvts38>метод</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это замер энергопотребления с высокой точностью при выполнении операции шифрования/расшифрования. В зависимости от потребления энергии при выполнении различных операций блочного шифра, можно предположить какие данные при этом использовались. Так, например, картина энергопотребления при шифровании с помощью алгоритма AES и разделением на отдельные операции, замеренная с периодом 352&nbsp;нс, представлена на рисунке 3.32. Синим цветом выделены обращения к памяти, красным </span><span class=rvts1638>−</span><span class=rvts4> сложение с ключом, зеленым </span><span class=rvts1638>−</span><span class=rvts4> операции замены и черным </span><span class=rvts1638>−</span><span class=rvts4> смешивание столбцов. При этом имеется возможность уменьшить этот интервал до 100пс (на 3 порядка) и получить гораздо более детальную картину. На практике для устранения влияния шумов такие замеры необходимо проводить многократно с последующим усреднением. Кроме энергопотребления существует аналогичный способ, основанный на измерении излучения устройства шифрования. </span></p>
+                        <p class=rvps731><span class=rvts4><br></span></p>
+                        <div class=rvps731><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=842 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><<img style="vertical-align: middle;" src="{% static 'project/images/img_00230.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=842 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts51>Рис. 3.32. Динамика изменения входного напряжения при работе алгоритма AES</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps730><span class=rvts4><br></span></p>
+                        <p class=rvps730><span class=rvts4>Завершающим, в классе технических, является метод, заключающийся в высокоточном измерении времени шифрования. В основном этот метод предназначен для криптоанализа асимметричных криптосистем. Он основан на том факте, что шифрования с различными параметрами алгоритма (например, ключами), могут заметно отличаться по времени. С использованием высокоточных замеров времени вычислений возможно уменьшение общего пространства перебора ключей, так как путем анализа времени вычислений можно предположить, в какой части пространства перебора располагается искомый ключ. Рассмотрим пример, пусть выполняется анализ алгоритма RSA путем анализа времени расшифрования. С учетом того, что расшифрование выполняется как </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00231.png' %}" alt=""><span class=rvts4> время расшифрования будет тем больше, чем больше </span><span class=rvts51>x</span><span class=rvts4>.</span></p>
+                        <p class=rvps730><span class=rvts4>Технические методы криптоанализа интересны тем, что многие алгоритмы шифрования являются уязвимыми к этим методам, хотя и существуют шифры, специально спроектированные для защиты от технического криптоанализа. Применение технических методов ограничено условием доступа к устройству шифрования, что на практике встречается крайне редко. Как правило, криптоаналитик перехватывает информацию за сотни километров от места применения шифровальной аппаратуры.</span></p>
+                        <p class=rvps730><span class=rvts30><strong>Второй класс</strong></span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это вероятностные методы, они основаны на выявлении в алгоритме шифрования статистических отклонений от случайного поведения, и использования этих отклонений для проведения атаки на алгоритм. Основным недостатком вероятностных методов является экспоненциальная зависимость сложности атаки и количества данных, требующихся для ее проведения, от числа раундов блочного шифра. Поэтому, такие атаки обычно являются практически недоступными, но играют важную роль в подтверждении криптостойкости новых шифров. Вместе с тем, это действительно универсальные методы, с тем или иным успехом работающие для большинства блочных алгоритмов шифрования. Суть вероятностных методов состоит в построении вероятностной модели алгоритма шифрования таким образом, что с ее помощью можно будет отличить результат шифрования с разными подключами от истинно случайной последовательности, и, таким образом, найти верный подключ. Так как в современных шифрах статистические отклонения проявляются только в больших объемах данных, то для статистических методов анализа обычно требуется очень большое количество данных вида «открытый текст/шифртекст», зашифрованных на одном ключе, что, чаще всего, неосуществимо на практике. </span></p>
+                        <p class=rvps730><span class=rvts30><strong>Третий класс</strong></span><span class=rvts51> </span><span class=rvts651>−</span><span class=rvts4> алгебраические методы криптоанализа, основанные на представлении системы в виде некоторой математической задачи, решение которой позволяет взломать алгоритм. Алгебраические методы несмотря на то, что они в настоящее время еще недостаточно развиты, являются одними из самых перспективных в криптоанализе. Теоретически, они позволяют определять секретный ключ с помощью анализа одной или двух пар «открытый текст/шифртекст». Суть этих методов заключается в построении сверхопределенной (имеющей намного больше уравнений, чем переменных) разреженной (имеющих малое число членов в каждом уравнении) системы нелинейных (квадратичных, реже кубических) уравнений, описывающей поведение алгоритма. Решение этой системы дает секретный ключ, используемый при шифровании. С другой стороны, несмотря на перспективность этих методов, за прошедшие 8</span><span class=rvts1638>−</span><span class=rvts4>10 лет с момента их появления существенных успехов с их использованием достигнуто не было, и пока не существует ни одного примера криптоанализа практического блочного шифра с использованием этих методов.</span></p>
+                        <p class=rvps730><span class=rvts30><strong>Четвертый класс</strong></span><span class=rvts51> </span><span class=rvts1638>−</span><span class=rvts4> это переборные методы. Стойкость к прямому перебору определяется длиной ключа. Остальные методы в данном классе </span><span class=rvts1638>−</span><span class=rvts4> это оптимизированные техники поиска ключа.</span></p>
+                        <p class=rvps730 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item40">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.4. Основы дифференциального криптоанализа блочных шифров</h2>
+                        <p>3.4.1. Основные понятия дифференциального криптоанализа</p>
+                        <p>3.4.2. Таблица распределения разностей, построение дифференциальной модели</p>
+                        <p>3.4.3. Выполнение поиска ключа, оценивание сложности дифференциального криптоанализа</p>
+                        <p>Контрольные вопросы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item41">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.4.1. Основные понятия дифференциального криптоанализа</h2>
+                        <p class=rvps767><span class=rvts4>Дифференциальный криптоанализ </span><span class=rvts1638>−</span><span class=rvts4> это вероятностный метод криптоанализа, впервые предложенный в 1990 году израильскими специалистами </span><a class=rvts65 href="#"  OnClick="javascript:NewWindow=window.open('#','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;">Эли Бихамом</a><span class=rvts4> и</span><a class=rvts65 href="#"  OnClick="javascript:NewWindow=window.open('#','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;"> Ади Шамиром</a><span class=rvts4> в работе «дифференциальный криптоанализ DES-подобных криптосистем». Он основан на неравномерном распределении бит в разностях пар шифртекстов, при фиксированных разностях в открытых текстах. Разность вычисляется с помощью сложения по модулю 2.</span></p>
+                        <p class=rvps767><span class=rvts4>Целью дифференциального анализа является построение дифференциальных моделей блочного шифра, каждая из которых при подстановке в нее реальных данных, позволяет определить часть подключа независимо от других частей. Это означает сведение задачи полного перебора ключа к задаче перебора его отдельных сегментов.</span></p>
+                        <p class=rvps767><span class=rvts4>Дифференциальный криптоанализ относится к виду анализа с выбранным исходным текстом и соответствующим ему шифртекстом. </span></p>
+                        <p class=rvps767><span class=rvts4>Развитием метода дифференциального криптоанализа является дифференциальный анализ высоких порядков, усеченный дифференциальный анализ и дифференциальный криптоанализ с невозможными дифференциалами.</span></p>
+                        <p class=rvps4 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item42">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.4.2. Таблица распределения разностей, построение дифференциальной модели</h2>
+                        <p class=rvps1047><span class=rvts4>Дифференциальный криптоанализ основан на свойствах, используемых в алгоритме шифрования нелинейных операций(подстановок). Исходными данными для дифференциального криптоанализа являются пары открытых текстов и соответствующие им пары шифртекстов. Дифференциальные свойства подстановок отражаются в таблице распределения разностей. Она строится таким образом, что в ней содержатся статистические свойства всех возможных входных разностей и соответствующих им выходных разностей. Пусть на вход некоторой подстановки подаются пары значений </span><img width=52 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00232.png"><span class=rvts4>, имеющие размерность равную размерности подстановки и фиксированное значение разности </span><img width=111 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00233.png"><span class=rvts4>. Рассмотрим все возможные значения разности между двумя входными значениями. Очевидно, что всего таких разностей будет </span><img width=22 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00234.png"><span class=rvts4>, где </span><span class=rvts51>n</span><span class=rvts4> – размерность входа подстановки. Эти значения будут соответствовать строкам таблицы распределения разностей, причем значение разности в шестнадцатеричном виде является первым элементом строки. Столбцы будут соответствовать выходным разностям, т.&nbsp;е. полученным после преобразования с помощью подстановки значений, составляющих входные разности. В результате такого преобразования из пар значений с заданной разностью</span><img width=114 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00235.png"><span class=rvts4>с помощью подстановки преобразуются в </span><img width=98 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00236.png"><span class=rvts4>, где разность </span><img width=31 height=18 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00237.png"><span class=rvts4> соответствует столбцам таблицы. Значением ячеек таблицы является количество появления определенной выходной разности для заданной входной. Так, например, для всех возможных входных разностей равных 0x0a после преобразования с помощью подстановки преобразуются в разности, в которых 10 раз встречается разность 0x08. То есть вероятность того, что при входной разности 0x0a встретится выходная разность 0x08 равна </span><img width=24 height=49 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00238.png"><span class=rvts4>. Рассмотрим, как выполняется построение таблицы распределения разностей. Сначала первый столбец и первая строка заполняются нулевыми значениями. Это означает, что если сумма входных значений равна 0, т. е. они одинаковые, то и сумма выходных значений тоже будет равна 0, так как одинаковые входные значения преобразуются в одинаковые выходные значения.</span></p>
+                        <p class=rvps1047><span class=rvts4>Таблица распределения разностей, приведенная на рис. 3.33, соответствует подстановке из табл. 3.7.</span></p>
+                        <p class=rvps1047><span class=rvts4><br></span></p>
+                        <p class=rvps1145><span class=rvts51>Таблица 3.7</span></p>
+                        <p class=rvps1146><span class=rvts30>Пример подстановки размером 4 бита</span></p>
+                        <div class=rvps1144><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+                        <tr valign=top>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>0</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>1</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>2</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>3</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>4</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>5</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>6</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>7</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>8</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>9</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>A</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>B</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>C</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>D</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>E</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>F</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>0</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>6</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>7</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>9</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>B</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>5</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>E</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>4</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>A</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>1</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>8</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>2</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>F</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>C</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>3</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps99><span class=rvts41>D</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps22><span class=rvts38><br></span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00239.png' %}" alt=""></p>
+                        <p style="text-align: center;"><span class=rvts95>Рис. 3.33. Пример таблицы распределения разностей</span></p>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                        <p class=rvps767><span class=rvts4>Далее приведен алгоритм генерации одной строки таблицы распределения разностей для подстановки, приведенной в таблице 3.8 для построения строки таблицы с входной разностью 01h. Для этого сгенерируем все возможные пары значений из трех бит так, чтобы сумма по модулю 2 (она же разность) каждой пары была равна 01h. Сначала берем все возможные значения от 0 до </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00240.png' %}" alt=""><span class=rvts4>, это будут первые значения в парах. Вторые значения получаем, прибавляя к первым наше искомое значение разности 01h. Таким образом, получим 8 различных пар значений, причем сумма любой пары дает 01h. После этого, все значения пар пропускаем через подстановку, </span><span class=rvts38>приведенную в таблице 3.8, и вычисляем</span><span class=rvts4>, сколько раз при этом встретилось разных значений суммы по модулю 2 при суммировании каждой пары. Количество каждых уникальных значений суммы записываем в ячейку таблицы, где строка </span><span class=rvts1638>−</span><span class=rvts4> это 01, а столбец </span><span class=rvts1638>−</span><span class=rvts4> это значение суммы. Схема этого алгоритма приведена на рис. 3.34.</span></p>
+                        <p class=rvps767><span class=rvts4><br></span></p>
+                        <p class=rvps1147><span class=rvts51>Таблица 3.8</span></p>
+                        <p class=rvps22><span class=rvts30>Пример подстановки размерности 3 бита</span></p>
+                        <div class=rvps1141><table width="80%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>0</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>1</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>2</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>3</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>4</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>5</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>6</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>7</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>1</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>0</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>6</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>4</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>5</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>3</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>7</span></p>
+                        </td>
+                        <td width="12%" valign=middle style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps43><span class=rvts4>2</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>В результате выполнения вычисления мы видим, что значение 001 встречается 2 раза, это значение стоит в ячейке с координатами 01h*01h, так же вычисляются значения для столбца 2(010), 5(101) и 6(110), что можно увидеть в строке с номером 01. Этот результат означает, что для входной разности 01 вероятность выходной разности 01 равны </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00241.png' %}" alt=""><span class=rvts4>, такие же вероятности имеют значения 2, 5,6. Вероятность появления остальных значений разности равна нулю. Очевидно, что дифференциальный криптоанализ работает потому, что все операции, кроме подстановки, изменяя значение данных в процессе шифрования, не изменяют значения их разности (суммы по модулю два).</span></p>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                        <div class=rvps43><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=1075 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00242.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=1075 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts51>Рис. 3.34. Схематичное изображение процесса заполнения ячеек </span><span class=rvts95>таблицы распределения разностей</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>Каждой ячейке таблицы распределения разностей соответствует пара значений, состоящая из входной и выходной разности, которая называется дифференциалом и обозначается как </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00243.png' %}" alt=""><span class=rvts4>. Значение в ячейке, деленное на </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00244.png' %}" alt=""><span class=rvts4>, является вероятностью появления определенного дифференциала. В идеале, вероятность появления каждой выходной разности, при любой входной, должна быть равна </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00245.png' %}" alt=""><span class=rvts4>, в реальности идеальных подстановок не бывает, и вероятности разных дифференциалов отличаются друг от друга. Дифференциальный анализ использует отклонение вероятности дифференциалов от теоретического значения для некоторых входных разностей для построения дифференциальной модели всего шифра.</span></p>
+                        <p class=rvps317><span class=rvts4>Для построения дифференциальной модели всего шифра необходимо выбрать наиболее подходящие дифференциалы из таблицы распределения разностей с помощью двух критериев:</span></p>
+                        <p class=rvps595><span class=rvts1640>−</span><span class=rvts31> необходимо выбирать дифференциалы с максимальной вероятностью;</span></p>
+                        <p class=rvps595><span class=rvts1640>−</span><span class=rvts31> необходимо выбирать дифференциалы с минимального весом </span><a class=rvts2807 href="#"  OnClick="javascript:NewWindow=window.open('1470.html','NewWindow','width=700,height=700,menubar=no,scrollbars');return false;">Хэмминга</a><span class=rvts31> выходной разности.</span></p>
+                        <p class=rvps317><span class=rvts51>Вес Хэмминга для некоторого значения или вектора — это количество бит, которые равны 1.</span><span class=rvts4> </span></p>
+                        <p class=rvps317><span class=rvts4>После анализа подстановок в шифре в первом раунде можно начинать построение дифференциальной модели всего блочного шифра. Для того, чтобы это сделать, необходимо для подстановки первого раунда выбрать дифференциал в соответствии с двумя приведенными критериями, а для всех последующих раундов необходимо выбирать дифференциалы так, чтобы выход предыдущего раунда (ненулевые биты) стал входом следующего раунда и так далее до предпоследнего раунда. В дифференциальной модели алгоритма шифрования недопустимы «висячие ветки» и дифференциалы с нулевой вероятностью. Эта модель имеет свое входное значение разности открытых текстов и выходное значение разности шифртекстов, желательно, чтобы количество подстановок, которые в ней участвуют, было минимальным.</span></p>
+                        <p class=rvps317><span class=rvts4>Рассмотрим пример построения дифференциальной модели всего шифра. Для ее построения используем учебный шифр (рис. 3.35). </span></p>
+                        <div class=rvps597><table border=0 cellpadding=1 cellspacing=2 style="border-width: 0px; background-color: #ffffff; border-spacing: 2px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=1070 style="padding: 1px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00246.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=1070 style="padding: 1px;"><p style="text-align: center;"><span class=rvts95>Рис. 3.35. Структура учебного блочного шифра</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>Тестовый шифр состоит из 4 раундов, в нем используются одинаковые подстановки размером 4 бита в качестве нелинейного преобразования, перестановка в качестве линейного преобразования и добавления подключа с помощью операции сложения по модулю 2.</span></p>
+                        <p class=rvps317><span class=rvts4>В качестве начального дифференциала выбираем (05, 04) с вероятностью 0,5 в 1-й подстановке первого раунда. Его выход после перестановки поступает на вход третьей подстановки второго раунда, 3-й бит (при отсчете с нуля). В качестве второго дифференциала выбираем (08,01) с вероятностью 0,5. Далее выход этого дифференциала после перестановки поступает на вход четвертой подстановки третьего раунда (2 бит).</span></p>
+                        <p class=rvps317><span class=rvts4>Таблица распределения разностей для выбранной случайной подстановки представлена на рис. 3.36. </span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=610 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00247.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=610 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 3.36. Таблица распределения разностей</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps597><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4364>Дифференциалом третьего раунда выбираем (04, 01) с вероятностью 0,5. Дифференциальная модель всего шифра записывается как </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00248.png' %}" alt=""><span class=rvts4364>.</span></p>
+                        <p class=rvps317><span class=rvts4364>Вероятность этой модели равна произведению вероятностей дифференциалов </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00249.png' %}" alt=""><span class=rvts4364>, в нашем случае &nbsp;</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00250.png' %}" alt=""><span class=rvts4364>. Это означает, что при заданной входной разности 05 на выходе шифра получится разность 01 с вероятностью 0.125. Чем выше вероятность, тем легче проводить криптоанализ.</span></p>
+                        <p class=rvps317><span class=rvts51>Из этой формулы становится понятно, почему должно быть, как можно меньше дифференциалов в модели, а, следовательно, почему выходной вес Хэмминга для выходных разностей дифференциалов должен быть минимальным. Также, если вероятность дифференциала равна нулю, то все выражение равно нулю, т. е. криптоанализ невозможен.</span></p>
+                        <p class=rvps317><span class=rvts4>С помощью этой модели, и определенного количества данных вида выбранный открытый текст/шифртекст, можно найти часть ключа, </span><span class=rvts38>показанную на рисунке 3.35 красным </span><span class=rvts4>овалом. Для нахождения остальных частей последнего ключа необходимо построить другие модели, влияющие на другие финальные подстановки. После нахождения всего последнего подключа выполняется частичное расшифрование используемых шифртекстов, а именно расшифрование последнего раунда. После этого, таким же образом выполняется поиск предыдущего ключа и так далее до получения всех подключей шифрования.</span></p>
+                        <p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item43">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.4.3. Выполнение поиска ключа, оценивание сложности дифференциального криптоанализа</h2>
+                        <p class=rvps798><span class=rvts4>Расшифровка части ключа перед последней подстановкой, как показано на </span><span class=rvts38>рис. 3.35, или</span><span class=rvts4> аналогичная может быть выполнена следующим образом. Берется большое количество пар данных вида «выбранный открытый текст/соответствующий ему шифртекст». Открытый текст во входных данных в парах выбирается таким образом, чтобы в позиции входа первого дифференциала модели всего шифра разность соответствовала модельной. В нашем случае разность между парами открытых текстов в четырех битах перед первой подстановкой слева должна быть равна 5(0101). Остальные биты открытых текстов могут быть любыми. Итак, у нас есть пары открытых текстов с нужными разностями и пары шифртекстов, которые им соответствуют. Как видно из модели, разность в парах блоков данных перед последней подстановкой должна быть равна 1(0001). Но на эту характеристику влияет 4 бита последнего подключа и подстановка последнего раунда. Для того чтобы найти верное значение этих 4 бит, необходимо поочередно перебрать все возможные их значения (0000-1111) и выбрать то, у которого вероятность ближе всего совпадает с вероятностью дифференциальной модели. Для подсчета вероятности, соответствующей каждому значению ключа, необходимо выполнить частичное расшифрование последнего раунда с этим ключом всех пар шифртекстов, и рассчитать отношение числа пар с нужной разностью к общему числу пар. Обычно для верной части ключа это значение максимально.</span></p>
+                        <p class=rvps798><span class=rvts4>Точное определение количества выбранных пар исходных текстов, требуемых для проведения криптоанализа, является достаточно сложной задачей. Однако, существует хорошее правило аппроксимации числа выбранных пар открытых текстов, требуемых для анализа правильных пар при опробовании различных значений ключа:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00251.png' %}" alt=""><span class=rvts4>,</span></p>
+                        <p class=rvps1151><span class=rvts4>где </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00252.png' %}" alt=""><span class=rvts1638>−</span><span class=rvts4> вероятность дифференциальной модели </span><span class=rvts51>R</span><span class=rvts4>-1 раундов алгоритма шифрования с числом раундов равным </span><span class=rvts51>R</span><span class=rvts4>, а </span><span class=rvts51>c</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> небольшая константа, </span><span class=rvts51>c</span><span class=rvts4>&gt;1. </span></p>
+                        <p class=rvps741><span class=rvts4>Вероятность дифференциальной модели вычисляется как</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00253.png' %}" alt=""><span class=rvts4773>,</span></p>
+                        <p class=rvps1151><span class=rvts39>где </span><span class=rvts40>N</span><span class=rvts39> – количество активных (входящих в состав дифференциальной модели) подстановок; вероятность появления дифференциалов, входящих в модель, равна </span><img width=16 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00254.png"><span class=rvts39>.</span></p>
+                        <p class=rvps798><span class=rvts39>Сложность проведения дифференциального криптоанализа оценивается по количеству требуемых для его проведения выбранных пар "открытый текст/шифртекст", с учетом количества требуемых для атаки операций шифрования. Атака считается успешной, если она дает выигрыш в обоих компонентах по сравнению с атакой методом полного перебора.</span></p>
+                        <p class=rvps798><span class=rvts39>Обеспечения стойкости блочных шифров к дифференциальному криптоанализу сосредоточены на улучшении дифференциальных свойств SBox-ов (т. е. минимизации вероятностей дифференциалов), максимальном размере SBox-ов и поиске структуры линейного преобразования с максимальным числом активных SBox-ов. Рекомендуется выбирать подстановки максимального размера, так как это существенно уменьшает вероятности дифференциалов. Кроме этого, можно выбрать сложное зависящее от ключа конечное преобразование с высокой нелинейностью в поле по модулю </span><img width=28 height=27 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00255.png"><span class=rvts39>. Этот прием не позволит провести частичное расшифрование последнего раунда, и следовательно, дифференциальный криптоанализ будет неработоспособным.</span></p>
+                        <p class=rvps798><span class=rvts39>Применительно к современным блочным шифрам, дифференциальный криптоанализ скорее является инструментом доказательства криптостойкости, чем взлома. Это связано с высокими требованиями к объему данных и числу вычислительных операций.</span></p>
+                        <p class=rvps798 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps798><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item44">
+                <div class="content">
+                    <div class="scroller">
                         <h2>Контрольные вопросы</h2>
-                        <p>1. Что такое перемешивание и рассеивание, почему БШ обязательно должны содержать нелинейные элементы?</p>
-                        <p>2. Почему нельзя использовать подстановки большой размерности?</p>
-                        <p>3. Что будет, если в шифре отсутствует линейное преобразование?</p>
-                        <p>4. Назвать основные варианты построения блочных шифров.</p>
-                        <p>5. В чем опасность использования альтернативных вариантов построения блочных шифров?</p>
-                        <p>6. Назвать основные режимы применения БШ.</p>
+                        <p>1. Какие бывают классы методов криптоанализа? К какому классу относится дифференциальные криптоанализ?</p>
+                        <p>2. Что лежит в основе дифференциального криптоанализа?</p>
+                        <p>3. Какого типа исходные данные требуются для проведения дифференциального криптоанализа?</p>
+                        <p>4. Что такое дифференциальная модель блочного шифра?</p>
+                        <p>5. Какие способы защиты от дифференциального криптоанализа вы знаете?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item45">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.5. Линейный криптоанализ блочных шифров</h2>
+                        <p>3.5.1. Основные понятия линейного криптоанализа</p>
+                        <p>3.5.2. Восстановление части подключа с помощью линейной модели</p>
+                        <p>3.5.3. Оценивание сложности линейной криптоатаки, защита от линейного кряфйиптоанализа</p>
+                        <p>Контрольные вопросы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item46">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.5.1. Основные понятия линейного криптоанализа</h2>
+                        <p class=rvps317><span class=rvts4>Линейный криптоанализ был впервые представлен на Eurocrypt'93 криптографом Mitsuro Matsui в работе «</span><a class=rvts1050 href="#">Linear Cryptanalysis Method for DES Cipher</a><span class=rvts4>». Данный метод криптоанализа относится к атакам с известными открытыми текстами (known plaintext attack) и в этом отношении является менее требовательным, чем метод дифференциального криптоанализа, использующий специально сформированные (выбранные) открытые тексты. </span></p>
+                        <p class=rvps317><span class=rvts166><strong>Линейный криптоанализ</strong> </span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это метод криптоанализа блочных шифров, основанный на использовании линейных зависимостей между входными и выходными битами подстановок, и, соответственно, всего блочного шифра с участием бит ключа. В общем виде такие линейные выражения имеют вид </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00257.png' %}" alt=""><span class=rvts4>. Выражения такого вида, содержащие случайно выбранные коэффициенты из всего возможного набора, должны иметь вероятность выполнения равную 0.5, т. е. выполняться и не выполняться в одинаковом количестве случаев для разных данных. На практике получается, что вероятности выполнения некоторых линейных выражений сильно отклоняются от 0.5. В предельных случаях, если вероятность выражения равна 1 (а отклонение 0.5), то оно становится полностью линейным, если вероятность равна 0 (отклонение -0.5), то выражение превращается в аффинное, т. е. содержащее 1, отклонение вероятности вычисляется как&nbsp;</span><span class=rvts41> </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00258.png' %}" alt=""><span class=rvts4>. Чем больше отклонение линейного выражения от 0.5, тем лучше оно подходит для использования в линейном криптоанализе. Из линейных выражений отдельных раундов строится линейная модель всего шифра, позволяющая подобрать часть подключа последнего раунда отдельно от всех остальных частей.</span></p>
+                        <p class=rvps317><span class=rvts4>В линейном криптоанализе, как и в дифференциальном криптоанализе, определяющую роль играют подстановки, так как для них строятся линейные выражения, которые потом связываются и распространяются на весь блочный шифр. Для выбора оптимальных линейных выражений используется таблица линейной аппроксимации подстановок, используемых в блочном шифре. Перед тем как переходить непосредственно к анализу таблицы линейной аппроксимации и выбору линейных выражений, необходимо рассмотреть каким образом из вероятностей отдельных линейных выражений можно получить вероятность линейной модели. Для этого рассмотрим предложенную Матсуи лемму «О набегании».</span></p>
+                        <p class=rvps317><span class=rvts4>Пусть имеются две случайные двоичные переменные </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00259.png' %}" alt=""><span class=rvts4>, тогда уравнение </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00260.png' %}" alt=""><span class=rvts4> будет линейным отношением, а уравнение </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00261.png' %}" alt=""><span class=rvts4> будет аффинным выражением. Предположим, что распределение вероятностей равно:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00262.png' %}" alt=""><span class=rvts4772>.</span></p>
+                        <p class=rvps317><span class=rvts4>Если две случайные переменные являются независимыми, тогда </span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00263.png' %}" alt=""><img style="vertical-align: middle;" src="{% static 'project/images/img_00264.png' %}" alt=""><span class=rvts2815>.</span><br><span class=rvts2813><br></span></p>
+                        <p class=rvps317><span class=rvts649>Следовательно</span><span class=rvts4> вероятность того, что </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00265.png' %}" alt=""><span class=rvts4> &nbsp;составит (сумма случаев 1 и 4): </span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00266.png' %}" alt=""><span class=rvts4330>.</span></p>
+                        <p class=rvps317><span class=rvts4>Обозначим как </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00267.png' %}" alt=""><span class=rvts4> отклонение вероятности соответствующего линейного выражения от 0.5, тогда:</span></p>
+                        <p class=rvps22><img style="vertical-align: middle;" src="{% static 'project/images/img_00268.png' %}" alt=""></p>
+                        <p class=rvps1151><span class=rvts4>и получим в результате подстановки</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00269.png' %}" alt=""><span class=rvts4771>.</span></p>
+                        <p class=rvps317><span class=rvts4>Эти рассуждения могут быть расширены более чем на две двоичные переменные. Матсуи предложил следующую лемму, которая предполагает, что все </span><span class=rvts51>n</span><span class=rvts4> случайных двоичных переменных являются независимыми:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00270.png' %}" alt=""></p>
+                        <p class=rvps1151><span class=rvts4>или, что эквивалентно </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00271.png' %}" alt=""><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это суммарное отклонение вероятности линейного выражения.</span></p>
+                        <h4 class=rvps1163><span class=rvts0><span class=rvts50>Таблица линейной аппроксимации и метод ее построения</span></span></h4>
+                        <p class=rvps317> <strong>Таблица линейной аппроксимации</strong> <span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это статистическая характеристика подстановки, в которой содержатся все линейные выражения для этой подстановки, и отклонение их вероятностей от 0.5. </span><span class=rvts39>Для случайной подстановки, использованной ранее в дифференциальном криптоанализе и приведенной в табл. 3.9, таблица линейной аппроксимации приведена на рис. 3.37.</span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps914><span class=rvts51>Таблица 3.9</span></p>
+                        <p style="text-align: center;"><span class=rvts30>Пример случайной подстановки размерностью 4 бита</span></p>
+                        <div class=rvps919><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse;">
+                        <tr valign=top>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>0</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>1</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>2</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>3</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>4</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>5</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>6</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>7</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>8</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>9</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>A</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>B</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>C</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>D</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>E</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>F</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>0</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>6</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>7</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>9</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>B</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>5</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>E</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>4</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>A</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>1</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>8</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>2</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>F</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>C</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>3</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1164><span class=rvts41>D</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>Чем темнее ячейка в таблице, тем больше ее отклонение вероятности. Они вычисляется как значение в таблице, деленное на </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00272.png' %}" alt=""><span class=rvts4>, где </span><span class=rvts51>n</span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> размерность подстановки. Если значение ячейки в таблице равно нулю (т. е. отклонение линейного выражения равно нулю), это значит, что ее использование в составе линейной модели невозможно.</span></p>
+                        <p class=rvps317><span class=rvts4>Строки этой таблицы являются масками, которые определяют, какие из входных бит участвуют в линейном выражении. Столбцы это маски, определяющие, какие выходные переменные участвуют в линейном выражении. Рассмотрим пример: возьмем строку 0Eh=1110 и столбец 0001h. Это будет соответствовать выражению (0eh, 01h) или </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00273.png' %}" alt=""><span class=rvts4>, так как в строке используются переменные 1,2 и 3, а в столбце только переменную с индексом 0. Отклонение вероятности для этого выражения будет составлять</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00274.png' %}" alt=""><span class=rvts4> .</span></p>
+                        <div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=628 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00275.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=628 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 3.37. Таблица </span><span class=rvts51>линейной аппроксимации</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>Для построения таблицы линейной аппроксимации в качестве исходных данных используется только подстановка. Для построения одной ячейки таблицы линейной аппроксимации сначала необходимо выбрать входную и выходную маску. После этого для каждого числа из набора всех возможных входов подстановки, т. е. чисел от 0 до </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00276.png' %}" alt=""><span class=rvts4> выполняется извлечение бит, соответствующих входной маске. Эти биты будут значениями переменных </span><span class=rvts51>X</span><span class=rvts4> в соответствующих каждому значению линейных выражениях. После этого все возможные значения (от 0 до </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00277.png' %}" alt=""><span class=rvts4> ) пропускаются через подстановку и из каждого числа результата извлекаются </span><span class=rvts38>значения переменных </span><span class=rvts95>Y</span><span class=rvts38>. Далее</span><span class=rvts4>, каждое выражение приравнивается к нулю и подсчитывается сколько из них выполняется, а сколько нет. Далее, из числа тех выражений, которые выполнились, вычитается число тех, которые не выполнились. Это и есть искомое значение в таблице. Иллюстрация этого метода приведена на рис. 3.38 для подстановки из табл. 3.10.</span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=983 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00278.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=983 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts51>Рис. 3.38. Схематичное изображение процесса заполнения ячеек </span><span class=rvts95>таблицы </span><span class=rvts51>линейной аппроксимации</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps597><span class=rvts30><br></span></p>
+                        <div class=rvps597><table width="82%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+                        <tr valign=top>
+                        <td colspan=8 width="96%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class=rvps1166><span class=rvts51>Таблица 3.10</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td colspan=8 width="96%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px; border-top: none; border-right: none; border-left: none;"><p class=rvps597><span class=rvts30>Пример подстановки размерности 3 бита</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>0</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>1</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>2</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>3</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>4</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>5</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>6</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>7</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>1</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>0</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>6</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>4</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>5</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>3</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>7</span></p>
+                        </td>
+                        <td width="12%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 4px;"><p class=rvps597><span class=rvts4>2</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps317><span class=rvts39><br></span></p>
+                        <p class=rvps317><span class=rvts39>В качестве входной маски было выбрано 05, выходной 03. Получившееся линейное выражение приведено в верхней правой части, таблица линейной аппроксимации приведена в нижней правой части рис. 3.38. Синим цветом в таблице, под линейным выражением, выделены выражения, которые оказались верными, красным те, которые оказались неверными.</span></p>
+                        <p class=rvps317><span class=rvts4>Для построения линейной модели всего шифра используют подстановки, выбираемые с помощью двух критериев, таких же, как и в дифференциальном криптоанализе. Первый из них предписывает отдавать предпочтение при выборе </span><span class=rvts38>линейным выражениям с максимальным</span><span class=rvts4> отклонением вероятности от 0.5. Подходят отклонения как в сторону 1, так и в сторону нуля. Второй критерий состоит в том, что для использования рекомендуется выбирать линейные выражения</span><span class=rvts38> с минимальным весом Хэмминга</span><span class=rvts4> выходных переменных. После выбора первого линейного выражения последующие выбираются так, чтобы они были связаны от одного раунда к другому, и выходы предыдущего раунда, после линейного преобразования, попадали на входы последующего. В результате получается линейная модель всего блочного шифра, состоящая из множества связанных линейных выражений. Рассмотрим пример составления линейной модели алгоритма шифрования, приведенный на рис. 3.39.</span></p>
+                        <div class=rvps597><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=937 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00279.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=937 valign=top style="padding: 0px 7px;"><p class=rvps1039><span class=rvts51>Рис. 3.39. Пример составления линейной модели алгоритма шифрования</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4>В этом примере используется учебный алгоритм шифрования и подстановка из подраздела 2.4.2. Тестовый шифр состоит из 4 раундов, в нем используются одинаковые подстановки размером 4 бита в качестве нелинейного преобразования, перестановка бит в качестве линейного преобразования и добавление подключа с помощью операции сложения по модулю 2. В первом раунде выбираем линейное выражение (0Eh,01), на втором (04, 04), на третьем (01, 02). Это соответствует линейному выражению</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00280.png' %}" alt=""><span class=rvts4> . Исходя из этого, линейной моделью всего шифра будет (0Eh, 02) или </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00281.png' %}" alt=""><span class=rvts4>, где переменные </span><span class=rvts1638>−</span><span class=rvts4> это входы и выходы алгоритма шифрования. Эта модель должна иметь отклонение вероятности равное</span></p>
+                        <p style="text-align: center;"><span class=rvts4> </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00282.png' %}" alt=""><span class=rvts39> =&nbsp;</span><span class=rvts41> </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00283.png' %}" alt=""><span class=rvts5144>.</span></p>
+                        <p class=rvps317><span class=rvts39>Использование этой модели и данных вида «известный открытый текст ‹‹шифртекст›› позволяет найти часть подключа, </span><span class=rvts649>обозначенную на рис. </span><span class=rvts38>3.39</span><span class=rvts649> красным </span><span class=rvts39>овалом.</span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                        <p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps317><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item47">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.5.2. Восстановление части подключа с помощью линейной модели</h2>
+                        <p class=rvps317><span class=rvts4>Для </span><span class=rvts39>восстановления</span><span class=rvts4> части подключа с использованием линейной модели алгоритма шифрования необходимо использовать достаточное количество данных вида «известный открытый текст/шифртекст». На первом этапе необходимо составить линейные выражения по количеству используемых текстов, соответствующие линейной модели блочного шифра. В первом случае, в выражения подставляются в виде констант значения соответствующих битов. </span></p>
+                        <p class=rvps317><span class=rvts4>Вторым этапом для каждого значения искомой части подключа (красный овал на</span><span class=rvts38> рис. 3.39) </span><span class=rvts4>выполняем частичное расшифрование последнего раунда блочного шифра для всех зашифрованных текстов. Значения бит перед последней подстановкой, соответствующие выходным битам линейной модели блочного шифра, подставляем в ранее составленные выражения. </span></p>
+                        <p class=rvps317><span class=rvts4>Третьим этапом для каждого значения искомой части подключа подсчитываем количество выражений, которые являются справедливыми, и вычисляем вероятность выполнения линейного выражения для этой части подключа путем деления числа истинных выражений на общее количество выражений. Сравнивая практические вероятности линейного выражения, являющегося линейной моделью блочного шифра, для разных значений ключа с теоретическими, приведенными в конце подраздела 2.5.2, выбираем вероятность, наиболее соответствующую теоретической. Часть подключа, с использованием которого была получена эта вероятность, считается верной, обычно ее практическая вероятность выше, чем у всех остальных. </span></p>
+                        <p class=rvps317><span class=rvts4>После нахождения одной части подключа последнего раунда необходимо, с использованием других моделей, найти остальные части и потом, расшифровав последний раунд с использованием такой же методики, находим подключи предыдущего. Когда все подключи будут найдены, алгоритм шифрования будет взломан. Как правило, блочные шифры используют некоторую схему расширения ключа пользователя для получения раундовых ключей. При качественном проектировании такого расширения получение ключа пользователя из раундовых ключей невозможно, поэтому в большинстве случаев линейная атака проводится на раундовые ключи блочного шифра. В реальности, вероятности дифференциалов имеют на несколько порядков меньшие значения, чем в приведенном примере, поэтому, чтобы эти слабые вероятностные отклонения проявились, необходимо использовать огромное количество данных требуемого вида.</span></p>
+                        <p class=rvps317 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item48">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.5.3. Оценивание сложности линейной криптоатаки, защита от линейного криптоанализа</h2>
+                        <p class=rvps767><span class=rvts4>Точное определение количества выбранных пар исходных текстов, требуемых для проведения криптоанализа, является достаточно сложной задачей. Однако существует хорошее правило аппроксимации числа известных открытых текстов, соответствующих им шифртекстов, требуемых для анализа при опробовании различных значений ключа:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00284.png' %}" alt=""><span class=rvts4>,</span></p>
+                        <p class=rvps1167><span class=rvts38>где </span><span class=rvts95>e </span><span class=rvts2016>−</span><span class=rvts38> смещение вероятности выполнения линейного выражения </span><span class=rvts95>R</span><span class=rvts38>-1 раундов алгоритма шифрования с числом раундов равным </span><span class=rvts95>R</span><span class=rvts38>. </span></p>
+                        <p class=rvps1047><span class=rvts38>Смещение вероятности выполнения линейного выражения, согласно лемме о набегании, вычисляется как</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00285.png' %}" alt=""></p>
+                        <p ><span class=rvts38>где </span><span class=rvts95>N</span><span class=rvts38> – количество активных (входящих в состав дифференциальной модели) SBox, смещение вероятности выполнения которых от 0,5 равно </span><a name="MTBlankEqn"></a>
+                            <img style="vertical-align: middle;" src="{% static 'project/images/img_00286.png' %}" alt=""><span class=rvts38>.</span></p>
+                        <p class=rvps767><span class=rvts4>Элементами, существенно затрудняющими линейный криптоанализ (как и дифференциальный), являются хорошо спроектированные линейные (перемешивающие) преобразования, например, арифметические операции над числами большой размерности (32 бита и более), которые приводят к резкому увеличению количества активных подстановок в линейной модели и, следовательно, увеличение сложности атаки. Также для обеспечения стойкости блочных шифров к линейному криптоанализу необходимо улучшать линейные свойства подстановок (т. е. минимизировать вероятности линейных </span><span class=rvts38>выражений) или использовать подстановки</span><span class=rvts4> большой размерности. Еще одним методом защиты блочного шифра от линейного криптоанализа является начальное и конечное преобразование, которое должно работать c блоками данных большого размера (64 бита) с помощью операций, не допускающих частичного перебора значений, зависящих от ключа, что делает невозможным поиск части подключа. В простейшем случае это может быть пара операций умножения и деления в поле 264. При этом необходимо помнить, что для биективности такой пары операций множитель должен быть нечетным. Это не позволит выполнить частичное расшифрование последнего раунда, и, таким образом, не даст провести криптоанализ.</span></p>
+                        <p class=rvps767><span class=rvts4>Современные блочные алгоритмы шифрования (AES) используют для реализации линейного преобразования коды с максимальным расстоянием Хэмминга (MDS), что гарантирует максимальное количество линейно активных подстановок в каждых двух последующих раундах, которое будет равно кодовому расстоянию [</span><a class=rvts228 href="#">10</a><span class=rvts4>].</span></p>
+                        <p class=rvps767 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item49">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Контрольные вопросы</h2>
+                        <p>1. Что такое линейный криптоанализ?</p>
+                        <p>2. Какой вид исходных данных требуется для линейного криптоанализа?</p>
+                        <p>3. В каком случае криптоатака считается успешной?</p>
+                        <p>4. Назовите критерии выбора линейных аппроксимаций Sbox-ов.</p>
+                        <p>5. Назовите известные вам методы защиты от линейного криптоанализа.</p>
+                        <p>6. Как определяется количество исходных текстов для линейного криптоанализа?</p>
+                        <p>7. Назовите основные этапы проведения линейного криптоанализа.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item50">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.6. Интегральный и алгебраический криптоанализ блочных шифров</h2>
+                        <p>3.6.1. Основные понятие интегрального криптоанализа</p>
+                        <p>3.6.2. Алгебраический криптоанализ</p>
+                        <p>3.6.3. Использование методов линеаризации для решения систем нелинейных уравнений </p>
+                        <p>Контрольные вопросы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item51">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.6.1. Основные понятие интегрального криптоанализа</h2>
+                        <p class=rvps741><span class=rvts4>Интегральный криптоанализ это метод криптоанализа, основанный на одновременном рассмотрении большого набора открытых текстов со специально подобранными значениями байт в определенной позиции.</span></p>
+                        <p class=rvps741><span class=rvts39>Он использует свойства некоторых распространенных операций, применяемых в блочных шифрах, которые при изменении значений каждого открытого текста не изменяют значения суммы байт в определенной позиции этих текстов. Такими свойствами обладают операции «исключающее или», подстановки, операции сложения по модулю и др. </span></p>
+                        <p class=rvps741><span class=rvts39>Интегральный криптоанализ имеет ряд важных особенностей. Он особенно хорошо подходит для шифров с только биективными элементами. Интегральный криптоанализ применим для ряда шифров не подверженных дифференциальному криптоанализу, и иногда он показывает лучшие результаты, чем линейный криптоанализ. Впервые он был использован для криптоанализа алгоритма «SQUARE» и предназначался только для алгоритмов с одноименной архитектурой, но впоследствии он был использован также для атаки на шифры с архитектурой Фейстеля. Фактически это универсальный инструмент, который с тем или иным успехом может быть применен к большинству блочных алгоритмов шифрования. Существует также расширение интегрального криптоанализа – интегральный криптоанализ высших порядков, использующий несколько активных байт в интегральной модели алгоритма. </span></p>
+                        <p class=rvps741><span class=rvts4>Пусть </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00288.png' %}" alt=""><span class=rvts4>будет конечной абелевой группой порядка </span><span class=rvts51>k</span><span class=rvts4>. Рассмотрим производную группу </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00289.png' %}" alt=""><span class=rvts4>, </span><span class=rvts4>т. е. группа содержит элементы формы </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00290.png' %}" alt=""><span class=rvts4>, где </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00291.png' %}" alt=""><span class=rvts4>. Операция сложения для </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00292.png' %}" alt=""><span class=rvts4>определена как покомпонентная, т. е. </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00293.png' %}" alt=""><span class=rvts4>предполагает, что </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00294.png' %}" alt=""><span class=rvts4>и </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00295.png' %}" alt=""><span class=rvts4>для всех </span><span class=rvts51>i</span><span class=rvts4>. Пусть </span><span class=rvts51>S</span><span class=rvts4> – используемый набор открытых текстов. При проведении криптоанализа в качестве интегрального показателя используется </span><span class=rvts39>формула</span></p>
+                        <div class=rvps1185><table width="100%" border=0 cellpadding=0 cellspacing=0 style="border-width: 0px; border-spacing: 0px;">
+                        <tr valign=top>
+                        <td width="88%" valign=middle style="padding: 0px 1px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00296.png' %}" alt=""></p>
+                        </td>
+                        <td width="11%" valign=middle style="padding: 0px 1px;"><p class=rvps57><span class=rvts5520>(3.1)</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps1151><span class=rvts4>где сумма определена в контексте групповой операции для </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00297.png' %}" alt=""><span class=rvts4>.</span></p>
+                        <p class=rvps741><span class=rvts4>В интегральном криптоанализе </span><span class=rvts51>n</span><span class=rvts4> будет представлять число слов в открытом тексте и шифртексте, и </span><span class=rvts51>m</span><span class=rvts4> будет обозначать количество открытых текстов и шифртекстов рассматриваемых одновременно. Обычно </span><span class=rvts51>m</span><span class=rvts4>=</span><span class=rvts51>k</span><span class=rvts4>, где </span><span class=rvts51>k</span><span class=rvts4> – это порядок группы </span><span class=rvts51>G</span><span class=rvts4>, т. е. </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00298.png' %}" alt=""><span class=rvts4>, вектор </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00299.png' %}" alt=""><span class=rvts4>представляет открытый текст и шифртекст. Интегральный криптоанализ основан на том, что в ряде случаев существует возможность предсказать значение интегрального показателя после определенного количества раундов шифрования.</span></p>
+                        <p class=rvps741><span class=rvts40>Группой</span><span class=rvts51> называется множество элементов, на котором задана групповая операция, удовлетворяющая следующим аксиомам:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00300.png' %}" alt=""></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00301.png' %}" alt=""></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00302.png' %}" alt=""></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00303.png' %}" alt=""></p>
+                        <p class=rvps741><span class=rvts40>Группа</span><span class=rvts39> называется Абелевой если: &nbsp;</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00304.png' %}" alt=""><span class=rvts51>.</span></p>
+                        <p class=rvps741><span class=rvts4>Для </span><span class=rvts39>проведения</span><span class=rvts4> ИК используются наборы открытых текстов следующего вида:</span></p>
+                        <p class=rvps875><span class=rvts31>1) все </span><span class=rvts1637>i</span><span class=rvts31>-е слова одинаковы;</span></p>
+                        <p class=rvps875><span class=rvts31>2) все являются различными;</span></p>
+                        <p class=rvps875><span class=rvts31>3) сумма байт в определенной позиции известна заранее.</span></p>
+                        <p class=rvps741><span class=rvts4>Поиск ключевых байт основан на построении интегральной модели (или интеграла) в которой, с некоторой вероятностью, возможно предсказание показателя </span><span class=rvts51>I</span><span class=rvts4> в заданной позиции для всех текстов, используемых в анализе. </span></p>
+                        <p class=rvps741><span class=rvts4>Для построения интеграла используются следующие символы:</span></p>
+                        <p class=rvps875><span class=rvts31>1) символ "</span><span class=rvts1637>С</span><span class=rvts31>" (</span><span class=rvts1637>constant</span><span class=rvts31>);</span></p>
+                        <p class=rvps875><span class=rvts31>2) символ "</span><span class=rvts1637>A</span><span class=rvts31>" (</span><span class=rvts1637>all</span><span class=rvts31>);</span></p>
+                        <p class=rvps875><span class=rvts31>3) символ "</span><span class=rvts1637>S</span><span class=rvts31>" (</span><span class=rvts1637>Sum</span><span class=rvts31>);</span></p>
+                        <p class=rvps875><span class=rvts31>4) символ "?" (</span><span class=rvts1637>Unknown</span><span class=rvts31>).</span></p>
+                        <p class=rvps741><span class=rvts38>Пример интеграла для </span><span class=rvts649>трехраундовой</span><span class=rvts1267> </span><span class=rvts38>урезанной версии блочного шифра Square приведен на рис. 3.40.</span></p>
+                        <p class=rvps741><span class=rvts38><br></span></p>
+                        <div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=797 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts38> &nbsp; &nbsp; &nbsp; &nbsp;</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00305.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=797 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 3.40. Пример интеграла урезанной версии блочного шифра Square</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts39><br></span></p>
+                        <p class=rvps741><span class=rvts39>Устойчивость к интегральному криптоанализу во многом определяется свойствами линейного преобразования. Важной характеристикой линейного преобразования является количество байтовых ветвлений. Число байтовых ветвлений </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00306.png' %}" alt=""><span class=rvts39> линейного преобразования </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00307.png' %}" alt=""><span class=rvts39> определяется как</span></p>
+                        <div class=rvps1185><table width="100%" border=0 cellpadding=0 cellspacing=0 style="border-width: 0px; border-spacing: 0px;">
+                        <tr valign=top>
+                        <td width="88%" valign=middle style="padding: 0px 1px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00308.png' %}" alt=""></p>
+                        </td>
+                        <td width="11%" valign=middle style="padding: 0px 1px;"><p class=rvps57><span class=rvts5520>(3.2)</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps1151><span class=rvts4>где </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00309.png' %}" alt=""><span class=rvts4>– это байтовый вес Хэмминга вектора </span><span class=rvts51>а</span><span class=rvts4> (т. е. количество ненулевых байтов в </span><span class=rvts51>а</span><span class=rvts4>). </span></p>
+                        <p class=rvps741><span class=rvts4>Если число байтовых ветвлений исследуемого линейного преобразования невелико </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00310.png' %}" alt=""><span class=rvts4>, то это говорит о слабой рассеивающей способности примитива. В таком случае алгоритм может оказаться неустойчивым к интегральному криптоанализу на таком количестве раундов, пока криптографические свойства используемых нелинейных компонентов и добавлений подключа не компенсируют слабых рассеивающих свойств операции линейного преобразования.</span></p>
+                        <p class=rvps741><span class=rvts39>Как</span><span class=rvts4> и другие вероятностные методы криптоанализа, интегральный криптоанализ. скорее является средством доказательства криптостойкости, чем инструментом практического взлома. Это связано с тем, что он, как правило, неприменим к полному количеству раундов алгоритма, а работает на версии, в которой количество раундов является урезанным.</span></p>
+                        <p class=rvps741 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item52">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.6.2. Алгебраический криптоанализ</h2>
+                        <p class=rvps741><span class=rvts4>Алгебраические методы криптоанализа, несмотря на то, что они в настоящее время еще недостаточно развиты, являются одними из самых перспективных в отношении практического взлома. Теоретически, они позволяют определять секретный ключ с помощью анализа одной или двух пар "открытый текст/шифртекст". Суть этих методов заключается в построении сверхопределенной разреженной системы нелинейных уравнений, описывающей поведение алгоритма, решение которой дает секретный ключ, используемый при шифровании. Для составления этой системы требуется несколько блоков открытого текста и соответствующего ему шифртекста. </span></p>
+                        <p class=rvps741><strong>Сверхопределенная система уравнений</strong><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> система, в которой уравнений намного больше, чем переменных. Разреженная система уравнений </span><span class=rvts1638>−</span><span class=rvts4> это система, в которой каждое уравнение имеет небольшое количество членов.</span></p>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p style="font-style: oblique; color:red">Основы алгебраического криптоанализа</p>
+                        <p class=rvps741><span class=rvts166><strong>Алгебраический криптоанализ</strong></span><span class=rvts4> </span><span class=rvts1638>−</span><span class=rvts4> это метод криптоанализа, основанный на построении детерминированной математической модели блочных шифров, имеющей вид сверхопределенной разреженной системы нелинейных (обычно квадратичных) уравнений, решением которой является ключ шифрования. Принципиальной особенностью алгебраического криптоанализа является то, что его сложность растет субэкспоненциально с ростом числа раундов, что позволяет проводить криптоанализ шифров без уменьшения числа раундов, как это часто делалось в классических вероятностных методах, а это повышает практическую применимость методов алгебраического криптоанализа.</span></p>
+                        <p class=rvps741><span class=rvts4>Единственным нелинейным компонентом блочных шифров являются подстановки, которые могут быть описаны системой нелинейных уравнений. Максимальная степень этих уравнений зависит от размерности подстановок, но для проведения анализа выбираются уравнения, содержащие члены минимальной степени, как правило, используются только члены 1 и 2 степени. Поиск разреженных квадратных уравнений, описывающих нелинейный компонент, используемый блочным шифром, является нетривиальной задачей, пока не имеющей эффективных и универсальных методов решения. Как правило, при этом используются разновидности метода перебора, не дающие хороших результатов. При малом размере подстановок появляется возможность перебрать все возможные уравнения и выбрать из них наиболее подходящие для составления базиса, чего нельзя сделать для подстановок размерности 8 бит из-за большого объема требуемых вычислений. </span></p>
+                        <p class=rvps741><span class=rvts4>Так, например, для случайной подстановки размерности 4 бита, представленной в табл. 3.11, могут быть найдены следующие квадратичные уравнения:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00311.png' %}" alt=""></p>
+                        <p class=rvps1203><span class=rvts51>Таблица 3.11</span></p>
+                        <p class=rvps742><span class=rvts30>Пример подстановки размерности 4 бита</span></p>
+                        <div class=rvps742><table width="100%" border=1 cellpadding=4 cellspacing=-1 style="border-width: 0px; border-collapse: collapse; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>0</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>1</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>2</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>3</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>4</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>5</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>6</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>7</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>8</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>9</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>a</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>b</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>c</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>d</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>e</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>f</span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>5</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>a</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>6</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>1</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>e</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>4</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>b</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>3</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>7</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>2</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>8</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>9</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>0</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>d</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>c</span></p>
+                        </td>
+                        <td width="6%" valign=top style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px 7px;"><p class=rvps1204><span class=rvts56>f</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps742><span class=rvts4330>.</span></p>
+                        <p class=rvps741><span class=rvts4>Всего существует 21 такое уравнение. Существует ряд методов, позволяющих получить дополнительные уравнения из уже имеющихся. Например, простым умножением </span><span class=rvts38>уравнения на 2 &nbsp;можно</span><span class=rvts4> получить новое уравнение:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00312.png' %}" alt=""><span class=rvts4364>.</span></p>
+                        <p class=rvps741><span class=rvts39>Для построения систем уравнений не обязательно используются двоичные переменные, например, для атаки на урезанную версию алгоритма Rijndael использовались уравнения с переменными в поле </span><img style="vertical-align: middle;" src="{% static 'project/images/img_00313.png' %}" alt=""><span class=rvts39>.</span></p>
+                        <p class=rvps741><span class=rvts4>Исследования показали, что используемые в ряде алгоритмов подстановки (Square, Rijndael) не являются случайными и допускают построение очень разреженных систем квадратичных уравнений из-за своих алгебраических свойств. Алгебраические свойства присущи таким </span><span class=rvts38>компонентам, из-за особенностей их построения на основе обратной</span><span class=rvts4> функции в поле. Так как этот метод построения является одним из немногих методов получения подстановок большой размерности (8 бит) с оптимальными линейными и дифференциальными характеристиками, требование отсутствия алгебраической структуры не выполняется во многих алгоритмах шифрования. Хорошим предложением по противодействию алгебраическим методам является использование случайных подстановок большого размера.</span></p>
+                        <p class=rvps741><span class=rvts4>Сложность нахождения ключа с помощью алгебраического криптоанализа в основном зависит от размерности системы уравнений и степени ее разреженности. Формула для определения применимости АК:</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00314.png' %}" alt=""><img style="vertical-align: middle;" src="{% static 'project/images/img_00315.png' %}" alt=""></p>
+                        <p class=rvps1151><span class=rvts4>где </span><span class=rvts51>r</span><span class=rvts4> – число уравнений в системе, </span><span class=rvts51>t</span><span class=rvts4> – число одночленов в этих уравнениях, </span><span class=rvts51>s</span><span class=rvts4> – размерность подстановки.</span></p>
+                        <p class=rvps741 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item53">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>3.6.3. Использование методов линеаризации для решения систем нелинейных уравнений</h2>
+                        <p class=rvps767><span class=rvts4>Для систем нелинейных уравнений в общем виде не существует эффективных методов решения, но для разреженных сверхопределенных систем существует ряд так называемых методов линеаризации, т. е. преобразования нелинейных уравнений в линейные путем введения дополнительных переменных. Основываясь на последних достижениях в технике линеаризации, которая дает субэкспоненциальные алгоритмы для решения сверхопределенных (имеющих значительно больше уравнений чем неизвестных) систем квадратичных уравнений, N.Courtois и J.Pieprzyk доказали, что метод, называемый XSL, может обеспечить путь для эффективного решения уравнений этого типа и восстановить ключ из малого числа пар "открытый текст / шифртекст". </span></p>
+                        <p class=rvps767><span class=rvts4>Преимуществом этого метода атаки, в отличие от стандартных статистических методов криптоанализа, являются следующие особенности:</span></p>
+                        <p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> он требует достаточно малого количества пар "открытый текст / шифртекст";</span></p>
+                        <p class=rvps1004><span class=rvts1640>−</span><span class=rvts31> его сложность растет субэкспоненциально с ростом числа раундов.</span></p>
+                        <p class=rvps767><span class=rvts4>Несмотря не перспективы алгебраического анализа, до сих пор не было продемонстрировано атак этого типа на полные версии блочных шифров. Их исследование находится все еще на ранней стадии, точная сложность этого метода пока полностью не определена и остаются открытыми много вопросов связанных с его применимостью. </span></p>
+                        <p class=rvps767><span class=rvts4>Существует две разновидности алгебраической атаки. Первая </span><span class=rvts1638>−</span><span class=rvts4> не использует ключевое расписание и рассматривает раундовые подключи как полностью независимые случайные последовательности. Вторая </span><span class=rvts1638>−</span><span class=rvts4> включает в общую систему уравнений уравнения для ключевого расписания и имеет меньшую сложность решения. Первая из них требует количество пар "открытый текст/шифртекст", равное числу раундов или более для проведения атаки, для второй достаточно одной-двух в качестве исходных данных. В качестве примера второго сценария задача восстановления ключа 128-битного AES может быть записана как система из 8000 квадратичных уравнений с 1600 переменными. </span></p>
+                        <p class=rvps767><span class=rvts4>Алгоритм XL состоит из следующих шагов:</span></p>
+                        <p class=rvps1004><span class=rvts31>1. Построение исходной системы квадратичных уравнений.</span></p>
+                        <p class=rvps1004><span class=rvts31>2. Для каждой переменной, входящей в уравнения исходной системы, отбираются уравнения, которые содержат члены 2-й степени только с участием выбранной переменной, и при этом содержат любые члены первой степени, а также, возможно единичную константу.</span></p>
+                        <p class=rvps1004><span class=rvts31>3. Умножаем отобранные уравнения для каждой переменной на эту переменную, в результате чего получаем в ряде случаев набор новых линейно-независимых уравнений.</span></p>
+                        <p class=rvps1004><span class=rvts31>4. Для вновь полученных уравнений определяем одночлены, которые не участвуют в их записи, и подставляем вместо одночленов нового уравнения выражения, полученные из исходного набора уравнений для данной переменной. В результате этого в ряде случаев получаются дополнительные линейно-независимые уравнения.</span></p>
+                        <p class=rvps1004><span class=rvts31>5. Повторяем шаги 2</span><span class=rvts1640>−</span><span class=rvts31>4 до получения системы с рангом, равным количеству различных одночленов, присутствующих в исходной системе или до тех пор, пока не останется ни одного уравнения, удовлетворяющего условию п. 2.</span></p>
+                        <p class=rvps1004><span class=rvts31>6. Выполняем замену одночленов 2-й степени путем введения новых переменных, после чего решаем систему линейных уравнений методом Гаусса.</span></p>
+                        <p class=rvps767><span class=rvts4>Кроме алгоритма XL был предложен другой алгоритм XSL, что означает «extended sparse linearization». В алгоритме XL требуется умножить каждое уравнение на все возможные одночлены некоторой степени. Вместо этого оказывается выгодным использовать не все переменные, а умножать их на тщательно выбранные одночлены. Наилучшие результаты приносит использование произведения одночленов, которые уже имеются в других уравнениях. </span></p>
+                        <p class=rvps767><span class=rvts4>Конечной целью этих алгоритмов является примерное соответствие количества уравнений в системе количеству используемых в них одночленов. Если число уравнений немного меньше числа одночленов, то система имеет множество решений, которые в некоторых случаях могут быть найдены с помощью полного перебора значений недостающих переменных.</span></p>
+                        <p class=rvps767 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item54">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Контрольные вопросы</h2>
+                        <p>1. Что такое интегральная модель блочного шифра?</p>
+                        <p>2. Какие символы используются при построении интеграла?</p>
+                        <p>3. Что такое нелинейная система уравнений, что такое разреженная система уравнений?</p>
+                        <p>4. Назовите два основных варианта алгебраической атаки.</p>
+                        <p>5. Какие методы решения систем нелинейных уравнений вам известны? Что такое линеаризация?</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End 3d modul -->
+            <!-- Start 4d modul -->
+            <div class="bb-item" id="item55">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>4. Вспомогательные криптографические примитивы</h2>
+                        <p>4.1. Вероятностное шифрование</p>
+                        <p>4.2. Блочные шифры на основе управляемых операций</p>
+                        <p>4.3. Криптографические хэш функции</p>
+                        <p>4.4. Поточные алгоритмы шифрования</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item55">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>4.1. Вероятностное шифрование</h2>
+                        <p class=rvps576><span class=rvts4><br></span></p>
+                        <p class=rvps576><span class=rvts4>Одним из перспективных способов повышения стойкости существующих и новых алгоритмов шифрования является привнесение элементов случайности в процесс обработки информации. Это может быть реализовано несколькими способами:</span></p>
+                        <p class=rvps1217><span class=rvts31>1) добавление к преобразуемому сообщению случайных данных;</span></p>
+                        <p class=rvps1217><span class=rvts31>2) использование операций, зависящих от преобразуемых данных;</span></p>
+                        <p class=rvps1217><span class=rvts31>3) случайное изменение структуры алгоритма шифрования.</span></p>
+                        <p class=rvps576><span class=rvts4>Идея привнесения случайности преследует цель: затруднения использования как вероятностных, так и алгебраических методов криптоанализа. В первом случае достигается выравнивание статистических характеристик результата шифрования, во втором случае возникает необходимость описания системы вероятностными моделями, для которых более сложно найти единственное детерминированное решение. Также, при использовании вероятностного шифрования одному и тому же открытому тексту, зашифрованному на одном и том же ключе, может соответствовать много различных шифртекстов, что делает неэффективной атаку по словарю и получение структурной о зашифрованных данных. </span></p>
+                        <p class=rvps526></p>
+                        <p class=rvps526>4.1.1. Омофонические шифры</p>
+                        <p class=rvps526>4.1.2. Шифры с вероятностным механизмом с увеличением размера блока данных</p>
+                        <p class=rvps526>4.1.3. Вероятностное шифрование без увеличения размера блока данных</p>
+                        <p class=rvps526>4.1.4. Вероятностное шифрование в асимметричных криптосистемах</p>
+                        <p class=rvps526>Контрольные вопросы</p>
+                        <p class=rvps319><span class=rvts4><br></span></p>
+                        <p class=rvps576><span class=rvts4><br></span></p>
+                        <p class=rvps319><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item56">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Контрольные вопросы</h2>
+                        <p class=rvps576><span class=rvts4><br></span></p>
+                        <p class=rvps576><span class=rvts4>Одним из перспективных способов повышения стойкости существующих и новых алгоритмов шифрования является привнесение элементов случайности в процесс обработки информации. Это может быть реализовано несколькими способами:</span></p>
+                        <p class=rvps1217><span class=rvts31>1) добавление к преобразуемому сообщению случайных данных;</span></p>
+                        <p class=rvps1217><span class=rvts31>2) использование операций, зависящих от преобразуемых данных;</span></p>
+                        <p class=rvps1217><span class=rvts31>3) случайное изменение структуры алгоритма шифрования.</span></p>
+                        <p class=rvps576><span class=rvts4>Идея привнесения случайности преследует цель: затруднения использования как вероятностных, так и алгебраических методов криптоанализа. В первом случае достигается выравнивание статистических характеристик результата шифрования, во втором случае возникает необходимость описания системы вероятностными моделями, для которых более сложно найти единственное детерминированное решение. Также, при использовании вероятностного шифрования одному и тому же открытому тексту, зашифрованному на одном и том же ключе, может соответствовать много различных шифртекстов, что делает неэффективной атаку по словарю и получение структурной о зашифрованных данных. </span></p>
+                        <p class=rvps526></p>
+                        <p class=rvps526>4.1.1. Омофонические шифры</p>
+                        <p class=rvps526>4.1.2. Шифры с вероятностным механизмом с увеличением размера блока данных</p>
+                        <p class=rvps526>4.1.3. Вероятностное шифрование без увеличения размера блока данных</p>
+                        <p class=rvps526>4.1.4. Вероятностное шифрование в асимметричных криптосистемах</p>
+                        <p class=rvps526>Контрольные вопросы</p>
+                        <p class=rvps319><span class=rvts4><br></span></p>
+                        <p class=rvps576><span class=rvts4><br></span></p>
+                        <p class=rvps319><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item57">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>4.1.1. Омофонические шифры</h2>
+                        <p class=rvps741><span class=rvts4>Идея привнесения случайности в процесс шифрования не является новой.</span><span class=rvts42> </span><span class=rvts4>В качестве простейшего примера применения вероятностного механизма можно рассмотреть омофоническое шифрование, относящееся к историческим шифрам. Основным недостатком шифров простой замены, как одноалфавитных, так и многоалфавитных, является неравномерное распределение символов открытого текста и, соответственно шифртекста, поэтому они легко вскрываются частотным криптоанализом. Применение омофонического шифрования позволяет получить криптограммы с одинаковыми частотами появления символов. Рассмотрим один из способов реализации гомофонического шифрования. Пусть имеется таблица частот символов алфавита. Для того чтобы ее составить, необходимо взять большой объем данных, содержащих только текст, и посчитать, сколько раз встречается каждый символ. Отношение количества вхождений буквы в текст к общему количеству текстовых символов будет частотой или встречаемостью этой буквы. Для использования омофонического шифрования необходимо, чтобы частоты всех букв были выражены целыми символами. Чтобы все частоты выразить целыми числами, необходимо меньшую частоту частоту взять за единицу, а остальные вычислить путем деления частоты на минимальную частоту и приведения результата к целому числу. Для повышения точности необходимо самую маленькую частоту взять за 5, а остальные вычислить с помощью пропорции. Это позволит получить точность не хуже 20% от минимальной частоты. Пусть в результате выполнения вышеописанной операции построения целочисленных частот символов мы имеем соответствие </span><img width=60 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00318.png"><span class=rvts4>, где </span><img width=16 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00319.png"><span class=rvts4> </span><span class=rvts57>-</span><span class=rvts4> это символы алфавита, а </span><img width=18 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00320.png"><span class=rvts4> </span><span class=rvts651>−</span><span class=rvts4> соответствующие им частоты, тогда каждому символу необходимо поставить в соответствие множество случайных символов </span><img width=23 height=23 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00321.png"><span class=rvts4> такое, что </span><img width=157 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00322.png"><span class=rvts4>, т. е. мощность множества равна встречаемости (целому значению частоты) символа. Все символы всех множеств должны быть не повторяющимися, поэтому в процессе шифрования произойдет увеличение размера шифртекста. При выполнении шифрования каждый символ открытого текста </span><img width=16 height=27 alt="" style="vertical-align: middle; padding : 1px;" src="img/img_00323.png"><span class=rvts4> заменяется на случайно выбранный символ из соответствующего множества </span><img width=23 height=23 alt="" style="vertical-align: text-bottom; padding : 1px;" src="img/img_00324.png"><span class=rvts4>. При этом, каждый знак выходного алфавита будет использоваться, в среднем, одинаковое количество раз. Расшифрование производится в обратном порядке, определяется какому подмножеству принадлежит принятый символ, и, таким образом, восстанавливается исходный символ. Основной недостаток такого подхода </span><span class=rvts1638>−</span><span class=rvts4> увеличение количества знаков в выходном алфавите (а значит, увеличение длины шифртекста), основное достоинство </span><span class=rvts1638>−</span><span class=rvts4> элемент случайности при шифровании, т. е. при шифровании одинаковых криптограмм получится разный шифртекст. Если символов исходного алфавита недостаточно для кодирования всех символов открытого текста, то используются двухбуквенные символы.</span></p>
+                        <p class=rvps741><span class=rvts4>В качестве примера рассмотрим простейший алфавит из 10 символов:</span></p>
+                        <p style="text-align: center;"><span class=rvts56> &nbsp; &nbsp; &nbsp; &nbsp;</span><img style="vertical-align: middle;" src="{% static 'project/images/img_00325.png' %}" alt=""><span class=rvts6287>.</span></p>
+                        <p class=rvps741><span class=rvts4>Тогда текст «ACFCCDA» может быть зашифрован как «BPYPQTE» или как </span><span class=rvts38>«EQZPPRC».</span></p>
+                        <p class=rvps741><span class=rvts4>Сегодня в практических шифрах такой подход не применяется (например, из-за нестойкости к атакам на основе известного открытого текста), но может быть использован как составная часть алгоритма шифрования [</span><a class=rvts228 href="#">31</a><span class=rvts4>].</span></p>
+                        <p class=rvps741 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                        <p class=rvps4><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item58">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>4.1.2. Шифры с вероятностным механизмом с увеличением размера блока данных</h2>
+                        <p class=rvps741><span class=rvts4>Одним из вариантов добавления вероятностного механизма к уже существующему шифру является подмешивание случайных данных к открытому тексту. Путем изменения соотношения случайных данных и шифртекста можно управлять стойкостью итоговой схемы шифрования. Чем больше объем случайных данных, тем выше стойкость, но меньше скорость шифрования. Датчик псевдослучайных чисел в данной схеме должен быть криптографически стойким и недоступным для изменения и </span><span class=rvts38>управления извне шифрующего устройства.</span></p>
+                        <p class=rvps741><span class=rvts4>Применение такой схемы позволяет защитить алгоритм от большинства классических методов криптоанализа. </span></p>
+                        <p class=rvps741><span class=rvts4>Преимущества данной схемы:</span></p>
+                        <p class=rvps875><span class=rvts31>1) возможность применения с уже существующими шифрами;</span></p>
+                        <p class=rvps875><span class=rvts31>2) возможность управления стойкостью.</span></p>
+                        <p class=rvps741><span class=rvts4>Недостаток: увеличение </span><span class=rvts139>размера</span><span class=rvts4> шифртекста.</span></p>
+                        <p class=rvps741><span class=rvts4>Простейший пример добавления случайных данных приведен на рис. 4.1. В нем случайные данные составляют половину блока открытого текста. При расшифровании эта половина отбрасывается, т. е. размер полезных данных уменьшается вдвое. Эта схема хоть и подмешивает случайные данные в шифртекст, но при этом позволяет сделать предположение о том, какое значение может иметь правый подблок открытого текста.</span></p>
+                        <div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=1020 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00326.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=1020 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 4.1. Постой вариант добавления случайных данных к открытому тексту</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4>Чтобы это стало невозможным, используется схема, приведенная на рис. 4.2. В ней генерируется две части случайных данных. Одна из них подмешивается к данным, вторая служит ключом для выполнения случайной перестановки бит открытого текста, состоящего из случайных данных и полезных данных. Случайная часть, используемая для перестановки, присоединяется к открытому тексту и все это зашифровывается. В данной схеме невозможно предположить где находятся биты открытого текста и где биты шифртекста. При этом доля полезных </span><span class=rvts38>данных в блоке уменьшается более чем на 50%, предположительно до 25</span><span class=rvts2016>−</span><span class=rvts38>30%. Кроме этого, недостатком данной схемы является то, что данные смешиваются с помощью линейной операции.</span></p>
+                        <div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=865 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00327.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=865 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 4.2. Схема вероятностного шифрования с перемешиванием битов</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4>Заменяя в данной схеме операцию управляемой перестановки на предварительное шифрование, получим схему с двумя операциями шифрования (рис. 4.3).</span></p>
+                        <div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=963 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00328.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=963 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 4.3. Схема вероятностного шифрования </span><br><span class=rvts95>с двумя блочными шифрами</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4>В данной схеме достигается гораздо большая стойкость, чем в предыдущей, но при этом требуется использование двух алгоритмов шифрования с разной длиной блока, что не всегда удобно в практической реализации. Тем не менее, в данной схеме вместо простой перестановки, которая является линейной операцией, на выходе получается сложная нелинейная зависимость всех бит шифртекста от всех бит открытого текста, ключа и случайных данных. Это полностью исключает применение традиционных методов криптоанализа, так как невозможно получить данные нужного вида, надежно упрятанные между двумя алгоритмами шифрования. Данный алгоритм имеет высокую стойкость, но такой же стойкости можно достичь при менее сложной схеме шифрования. Схема, аналогичная по стойкости, но менее сложная в реализации приведена на рис. 4.4. Назовем ее оптимальной.</span></p>
+                        <p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00329.png' %}" alt=""></p>
+                        <div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=844 valign=top style="padding: 0px 7px;"><p class=rvps742><span class=rvts6295><br></span></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=844 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 4.4. Оптимальная схема вероятностного шифрования </span><br><span class=rvts95>с увеличением размера блока</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741 style="page-break-before: always;"><span class=rvts4><br></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item57">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>4.1.3. Вероятностное шифрование без увеличения размера блока данных</h2>
+                        <p class=rvps741><span class=rvts4>Вероятностное шифрование без увеличения размера блока данных </span><span class=rvts38>более выгодно в плане</span><span class=rvts4> использования пропускной способности канала. При этом &nbsp;на приемной стороне необходимо получить такую же случайную последовательность, как и ту, что была использована при шифровании. Это означает, что в случае применения вероятностного шифрования без увеличения размеров блока данных возникает необходимость в синхронизации. Пример такой схемы приведен на рис. 4.5. В ней для получения случайного блока данных, складываемого по модулю 2 с открытым текстом, используется генератор псевдослучайных чисел. При этом, для правильного расшифрования на приемной стороне требуется знать начальное значение генератора, которое использовалось для шифрования первого блока. Это</span><span class=rvts38> требует обмена между отправителем и получателем не только ключом, но и начальным значением генератора, которое может рассматриваться как разовый ключ. Заметим, что в данной схеме нельзя передавать начальный</span><span class=rvts4> вектор, который инициализирует генератор случайных чисел.</span></p>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <div class=rvps742><table border=0 cellpadding=4 cellspacing=0 style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+                        <tr valign=top>
+                        <td width=874 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><img style="vertical-align: middle;" src="{% static 'project/images/img_00330.png' %}" alt=""></p>
+                        </td>
+                        </tr>
+                        <tr valign=top>
+                        <td width=874 valign=top style="padding: 0px 7px;"><p style="text-align: center;"><span class=rvts95>Рис. 4.5. Схема вероятностного шифрования </span><br><span class=rvts95>без увеличения размера блока данных</span></p>
+                        </td>
+                        </tr>
+                        </table>
+                        </div>
+                        <p class=rvps741><span class=rvts4><br></span></p>
+                        <p class=rvps741><span class=rvts4>Особенно легко для внедрения элементов случайности подходят так называемые шифры с использованием управляемых операций. Такие шифры будут рассмотрены далее.</span></p>
+                        <p class=rvps741 style="page-break-before: always;"><span class=rvts4><br></span></p>
                     </div>
                 </div>
             </div>
