@@ -1,2 +1,0 @@
-Jonna 1.0.1
-Fixes for preloader issue
