@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
   
 # Opening the html file
-HTMLFile = open("HTML/710.html", "r", encoding="UTF 8")
+HTMLFile = open("HTML/1090.html", "r", encoding="UTF 8")
   
 # Reading the file
 index = HTMLFile.read()
