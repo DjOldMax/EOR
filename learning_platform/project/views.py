@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import StreamingHttpResponse
 from .models import *
+from .forms import *
 import random
 from .services import open_file
 # Create your views here.
@@ -57,6 +58,10 @@ def stream_video(request,pk:int):
 
 def show_kurs(request):
     return render(request,"project/cryptography.html")
+
+def get_simulators(request):
+    form=simulator_form()
+    return render(request,"project/simulators.html")
 
 
 
