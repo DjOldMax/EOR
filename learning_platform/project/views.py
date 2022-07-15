@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import StreamingHttpResponse
 from .models import *
 from .forms import *
+from .ciphers import *
 import random
 from .services import open_file
 # Create your views here.
@@ -60,8 +61,28 @@ def show_kurs(request):
     return render(request,"project/cryptography.html")
 
 def get_simulators(request):
-    form=simulator_form()
+    request.GET.get('id')
     return render(request,"project/simulators.html")
+
+def post(request):
+    post=''
+    ciphers={
+        'MD5':'',
+        'SHA256':''
+    }
+    if request.method == 'POST':
+        ciphers={
+        'MD5':MD5(request.POST['text']),
+        'SHA256':SHA256(request.POST['text'])
+        }
+        form = simulator_form(request.POST)
+        post=MD5(request.POST['text'])
+        return render(request,"project/cipher.html",{'form': form,'post':post})
+    else:
+        form = simulator_form()
+        return render(request,"project/cipher.html",{'ciphers':ciphers['MD5'],'form': form})
+
+
 
 
 

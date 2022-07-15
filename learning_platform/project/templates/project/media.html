@@ -12,9 +12,6 @@
 
     <!-- CSS Files
     ================================================== -->
-    <!-- <link rel="stylesheet" href="{% static 'project/css/normalize.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/font-awesome.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/templatemo-style.css' %}" type="text/css"> -->
     <link rel="stylesheet" href="{% static 'project/css/bootstrap.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/animate.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/owl.carousel.css' %}" type="text/css">
@@ -23,6 +20,8 @@
     <link rel="stylesheet" href="{% static 'project/css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'project/css/media.css' %}" type="text/css">
 	<link rel="stylesheet" href="{% static 'project/css/coloring.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'project/css/simulator.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'project/css/cipher.css' %}" type="text/css">
 
     <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 
@@ -36,33 +35,8 @@
 		<div id="bg-overlay"></div>
 		
         <div id="main">
-
-            <!-- TOP BAR BEGIN -->
-            <div id="top-bar" class="transparent dark">
-                <div id="logo">
-                    62 кафедра
-                </div>
-                <nav>
-                    <ul id="mainmenu">
-                            <li><a href="{% url 'Home' %}" class="active"><span>Вернуться</span> на домашнюю страницу</a></li>
-                        </ul>
-                    </nav>
-                    <span id="menu-btn">
-					    <span class="lt"></span>
-					    <span class="lm"></span>
-					    <span class="lb"></span>
-				    </span>
-                    <div class="clearfix"></div>
-            </div>
-            <!-- TOP BAR CLOSE -->
-
-            <!-- CONTENT BEGIN -->
-            <div id="content" >
-                {% block content %}
-                {% endblock %}
-            </div>
-        <!-- CONTENT CLOSE -->
-
+            {% block content %}
+            {% endblock %}
         </div>
 
     

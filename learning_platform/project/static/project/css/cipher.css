@@ -1,0 +1,88 @@
+.text-cipher{
+    background-color: rgb(99, 105, 110);
+    text-align: center;
+    width: 70%;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.text-cipher .form{
+    padding-top: 20px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+label, label{
+    display:block;
+    color: white;
+}
+
+#id_text{
+    color: black;
+    width: 700px;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.text-cipher .result{
+    background-color: white;
+    padding-top: 20px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+    border: 4px black;
+}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #6c757d; 
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #ff0000;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn:focus {
+	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
+}
+.btn:hover {
+	color: #fff;
+	background-color: #ff0000;
+	border-color: #6c757d;
+}
+.btn:active {
+	color: #fff;
+	background-color: #ff0000;
+	border-color: #6c757d;
+}
+.btn:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}

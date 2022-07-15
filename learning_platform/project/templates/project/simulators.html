@@ -1,7 +1,24 @@
-{% extends 'project/cipher.html' %}
+{% extends 'project/media.html' %}
 {% load static %}
 {% block content %}
-<section class="author-archive">
+<div id="top-bar" class="transparent dark">
+    <div id="logo">
+        62 кафедра
+    </div>
+    <nav>
+        <ul id="mainmenu">
+                <li><a href="{% url 'Home' %}" class="active"><span>Вернуться</span> на домашнюю страницу</a></li>
+            </ul>
+        </nav>
+        <span id="menu-btn">
+            <span class="lt"></span>
+            <span class="lm"></span>
+            <span class="lb"></span>
+        </span>
+        <div class="clearfix"></div>
+</div>
+<div id="content" >
+    <section class="author-archive">
     <div class="container">
       <h1>Криптографические алгоритмы</h1>
       <input type="radio" id="All" name="categories" value="All" checked>
@@ -62,7 +79,7 @@
                   </li>
                 </ol>
                 <h2 style="text-align: center;" class="post-title">
-                  <a style="color: black;" href="#" target="_blank">Алгоритм шифрования RSA
+                  <a style="color: black;" href="#" >Алгоритм шифрования RSA
                   </a>
                 </h2>
               </figcaption>
@@ -85,7 +102,7 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#" target="_blank">Алгоритм шифрования AES
+                  <a style="color: black;" href="#">Алгоритм шифрования AES
                   </a>
                 </h2>
               </figcaption>
@@ -108,7 +125,7 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#" target="_blank">Алгоритм шифрования "Кузнечик"
+                  <a style="color: black;" href="#">Алгоритм шифрования "Кузнечик"
                   </a>
                 </h2>
               </figcaption>
@@ -125,7 +142,7 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#" target="_blank">MD5
+                  <a style="color: black;" href="{% url 'cipher' %}">MD5
                   </a>
                 </h2>
               </figcaption>
@@ -142,7 +159,7 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#" target="_blank">SHA256
+                  <a style="color: black;" href="#">SHA256
                   </a>
                 </h2>
               </figcaption>
@@ -159,7 +176,7 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#" target="_blank">Хэш-функция Стриборг</a>
+                  <a style="color: black;" href="#">Хэш-функция Стриборг</a>
                 </h2>
               </figcaption>
             </figure>
@@ -169,6 +186,8 @@
       </ol>
     </div>
   </section>
+</div>
+
 
 {% endblock %}
 

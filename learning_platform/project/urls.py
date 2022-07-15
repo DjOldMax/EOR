@@ -8,5 +8,6 @@ urlpatterns = [
     path('media/video/<int:pk>/', show_video, name='video'),
     path('media/video/stream/<int:pk>', stream_video, name='stream'),
     path('learning/',show_kurs, name='learn'),
-    path('simulators/',get_simulators,name='simulators')
+    path('simulators/',get_simulators,name='simulators'),
+    path('simulators/cipher/',post,name='cipher')
 ]
