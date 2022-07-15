@@ -1,111 +1,179 @@
+{% extends 'project/cipher.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="zxx">
+{% block content %}
+<section class="author-archive">
+    <div class="container">
+      <h1>Криптографические алгоритмы</h1>
+      <input type="radio" id="All" name="categories" value="All" checked>
+      <input type="radio" id="cipher" name="categories" value="cipher">
+      <input type="radio" id="symmetrical" name="categories" value="symmetrical">
+      <input type="radio" id="block" name="categories" value="block">
+      <input type="radio" id="in-line" name="categories" value="in-line">
+      <input type="radio" id="asymmetrical" name="categories" value="asymmetrical">
+      <input type="radio" id="hash" name="categories" value="hash">
+      <input type="radio" id="PSCH" name="categories" value="PSCH">
+      <input type="radio" id="EDS" name="categories" value="EDS">
+      
+  
+      <ol class="filters">
+        <li>
+          <label for="All">Все алгоритмы</label>
+        </li>
+        <li>
+          <label for="cipher">Алгоритмы шифрования</label>
+        </li>
+        <li>
+          <label for="symmetrical">Симметричные шифры</label>
+        </li>
+        <li>
+          <label for="block">Блочные шифры</label>
+        </li>
+        <li>
+          <label for="in-line">Поточные шифры</label>
+        </li>
+        <li>
+          <label for="asymmetrical">Асимметричные шифры</label>
+        </li>
+        <li>
+          <label for="hash">Хэш-функции</label>
+        </li>
+        <li>
+            <label for="PSCH">Генераторы ПСЧ</label>
+        </li>
+        <li>
+            <label for="EDS">Алгоритмы ЭЦП</label>
+        </li>
+      </ol>
+  
+      <ol class="posts">
+        <li class="post" data-category="symmetrical asymmetrical cipher">
+          <article>
+            <figure>
+              <figcaption>
+                <ol class="post-categories">
+                  <li>
+                    <a href="">Асимметричные</a>
+                  </li>
+                  <li>
+                    <a href="">Симметричные</a>
+                  </li>
+                  <li>
+                    <a href="">Алгоритмы шифрования</a>
+                  </li>
+                </ol>
+                <h2 style="text-align: center;" class="post-title">
+                  <a style="color: black;" href="#" target="_blank">Алгоритм шифрования RSA
+                  </a>
+                </h2>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+        <li class="post" data-category="symmetrical block cipher">
+          <article>
+            <figure>
+              <figcaption>
+                <ol class="post-categories">
+                  <li>
+                    <a href="">Симметричные</a>
+                  </li>
+                  <li>
+                    <a href="">Блочные шифры</a>
+                  </li>
+                  <li>
+                    <a href="">Алгоритмы шифрования</a>
+                  </li>
+                </ol>
+                <h2 class="post-title">
+                  <a style="color: black;" href="#" target="_blank">Алгоритм шифрования AES
+                  </a>
+                </h2>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+        <li class="post" data-category="symmetrical block cipher">
+          <article>
+            <figure>
+              <figcaption>
+                <ol class="post-categories">
+                  <li>
+                    <a href="">Симметричные</a>
+                  </li>
+                  <li>
+                    <a href="">Блочные шифры</a>
+                  </li>
+                  <li>
+                    <a href="">Алгоритмы шифрования</a>
+                  </li>
+                </ol>
+                <h2 class="post-title">
+                  <a style="color: black;" href="#" target="_blank">Алгоритм шифрования "Кузнечик"
+                  </a>
+                </h2>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+        <li class="post" data-category="hash">
+          <article>
+            <figure>
+              <figcaption>
+                <ol class="post-categories">
+                  <li>
+                    <a href="">Хэш-функции</a>
+                  </li>
+                </ol>
+                <h2 class="post-title">
+                  <a style="color: black;" href="#" target="_blank">MD5
+                  </a>
+                </h2>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+        <li class="post" data-category="hash">
+          <article>
+            <figure>
+              <figcaption>
+                <ol class="post-categories">
+                  <li>
+                    <a href="">Хэш-функции</a>
+                  </li>
+                </ol>
+                <h2 class="post-title">
+                  <a style="color: black;" href="#" target="_blank">SHA256
+                  </a>
+                </h2>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+        <li class="post" data-category="hash">
+          <article>
+            <figure>
+              <figcaption>
+                <ol class="post-categories">
+                  <li>
+                    <a href="">Хэш-функции</a>
+                  </li>
+                </ol>
+                <h2 class="post-title">
+                  <a style="color: black;" href="#" target="_blank">Хэш-функция Стриборг</a>
+                </h2>
+              </figcaption>
+            </figure>
+          </article>
+        </li>
+        
+      </ol>
+    </div>
+  </section>
 
-<head>
-    <meta charset="utf-8">
-    <title>EOR</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% endblock %}
 
-    <!-- CSS Files
-    ================================================== -->
-    <!-- <link rel="stylesheet" href="{% static 'project/css/normalize.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/font-awesome.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/templatemo-style.css' %}" type="text/css"> -->
-    <link rel="stylesheet" href="{% static 'project/css/bootstrap.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/animate.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/owl.carousel.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/owl.theme.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/owl.transitions.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/magnific-popup.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'project/css/media.css' %}" type="text/css">
-	<link rel="stylesheet" href="{% static 'project/css/coloring.css' %}" type="text/css">
-
-    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
-
-
-</head>
-
-<body id="homepage" class="homepage" scrolling="yes">
-
-    <div id="wrapper" class="fullwidth no-padding">
-		
-		<div id="bg-overlay"></div>
-		
-        <div id="main">
-
-            <!-- TOP BAR BEGIN -->
-            <div id="top-bar" class="transparent dark">
-                <div id="logo">
-                    62 кафедра
-                </div>
-                <nav>
-                    <ul id="mainmenu">
-                            <li><a href="{% url 'Home' %}" class="active"><span>Вернуться</span> на домашнюю страницу</a></li>
-                        </ul>
-                    </nav>
-                    <span id="menu-btn">
-					    <span class="lt"></span>
-					    <span class="lm"></span>
-					    <span class="lb"></span>
-				    </span>
-                    <div class="clearfix"></div>
-            </div>
-            <!-- TOP BAR CLOSE -->
-
-            <!-- CONTENT BEGIN -->
-            <div id="content" >
-                {% block content %}
-                <form action="{% url 'simulators' %}" method="post">
+                <!-- <form action="{% url 'simulators' %}" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="insert" >Запустить</button>
-
-                </form>
-                {% endblock %}
-            </div>
-            <!-- CONTENT CLOSE -->
-
-        </div>
-
-    
-    </div>
-
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="{% static 'project/js/jquery.min.js' %}"></script>
-    <script src="{% static 'project/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'project/js/jquery.isotope.min.js' %}"></script>
-    <script src="{% static 'project/js/easing.js' %}"></script>
-    <script src="{% static 'project/js/owl.carousel.js' %}"></script>
-    <script src="{% static 'project/js/jquery.countTo.js' %}"></script>
-    <script src="{% static 'project/js/wow.min.js' %}"></script>
-    <script src="{% static 'project/js/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'project/js/enquire.min.js' %}"></script>
-    <script src="{% static 'project/js/jquery.stellar.min.js' %}"></script>
-    <script src="{% static 'project/js/jquery.plugin.js' %}"></script>
-    <script src="{% static 'project/js/jquery.scrollTo.min.js' %}"></script>
-    <script src="{% static 'project/js/typed.js' %}"></script>
-    <script src="{% static 'project/js/typed-custom.js' %}"></script>
-    <script src="{% static 'project/js/designesia.js' %}" %}></script>
-
-    <script src="{% static 'project/js/plugins.js' %}"></script>
-    <script src="{% static 'project/js/main.js' %}"></script>
-
-    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
-<!-- Preloader -->
-    <script type="text/javascript">
-        //<![CDATA[
-        $(window).load(function () { // makes sure the whole site is loaded
-            $('#loader').fadeOut(); // will first fade out the loading animation
-            $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-            $('body').delay(350).css({'overflow-y': 'visible'});
-        })
-        //]]>
-    </script>
-
-</body>
-
-</html>
+                </form> -->
