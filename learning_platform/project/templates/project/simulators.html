@@ -133,7 +133,7 @@
                 <h2 class="post-title">
                     <form action="{% url 'cipher' %}" method="post">
                         {% csrf_token %}
-                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="Grasshopper">Алгоритм шифрования "Кузнечик"</button>
+                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="Кузнечик">Алгоритм шифрования "Кузнечик"</button>
                     </form>
                 </h2>
               </figcaption>
@@ -205,9 +205,3 @@
 
 
 {% endblock %}
-
-                <!-- <form action="{% url 'simulators' %}" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="insert" >Запустить</button>
-                </form> -->
