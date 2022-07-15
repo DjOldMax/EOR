@@ -78,6 +78,11 @@ def post(request):
             form = simulator_form()
             return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
         # elif request.method == 'POST' and request.POST['cipher']=='MD5':
+        elif request.method == 'POST' and request.POST['cipher']=='RSA':
+            name.clear()
+            name.append(request.POST['cipher'])
+            form = simulator_form()
+            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
         else:
             name.clear()
             name.append(request.POST['cipher'])
@@ -87,7 +92,8 @@ def post(request):
         if request.method == 'POST' and request.POST['sub']=='run':
             ciphers={
                 'MD5':MD5(request.POST['text']),
-                'SHA256':SHA256(request.POST['text'])
+                'SHA256':SHA256(request.POST['text']),
+                'RSA':RSA(request.POST['text'])
             }
             form = simulator_form(request.POST)
             post=ciphers[name[0]]
