@@ -79,8 +79,10 @@
                   </li>
                 </ol>
                 <h2 style="text-align: center;" class="post-title">
-                  <a style="color: black;" href="#" >Алгоритм шифрования RSA
-                  </a>
+                    <form action="{% url 'cipher' %}" method="post">
+                        {% csrf_token %}
+                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="RSA">Алгоритм шифрования RSA</button>
+                    </form>
                 </h2>
               </figcaption>
             </figure>
@@ -103,8 +105,10 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#">Алгоритм шифрования AES
-                  </a>
+                    <form action="{% url 'cipher' %}" method="post">
+                        {% csrf_token %}
+                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="AES">Алгоритм шифрования AES</button>
+                    </form>
                 </h2>
               </figcaption>
             </figure>
@@ -127,7 +131,10 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                    <button style="color: black; background: transparent; border: none !important;" >Алгоритм шифрования "Кузнечик"</button>
+                    <form action="{% url 'cipher' %}" method="post">
+                        {% csrf_token %}
+                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="Grasshopper">Алгоритм шифрования "Кузнечик"</button>
+                    </form>
                 </h2>
               </figcaption>
             </figure>
@@ -144,8 +151,8 @@
                 </ol>
                 <h2 class="post-title">
                     <form action="{% url 'cipher' %}" method="post">
-                    {% csrf_token %}
-                    <button style="color: black; background: transparent; border: none !important;" name="cipher" value="MD5">MD5</button>
+                        {% csrf_token %}
+                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="MD5">MD5</button>
                     </form>
                 </h2>
               </figcaption>
@@ -181,7 +188,10 @@
                   </li>
                 </ol>
                 <h2 class="post-title">
-                  <a style="color: black;" href="#">Хэш-функция Стриборг</a>
+                    <form action="{% url 'cipher' %}" method="post">
+                        {% csrf_token %}
+                        <button style="color: black; background: transparent; border: none !important;" name="cipher" value="Striborg">Хэш-функция Стриборг</button>
+                    </form>
                 </h2>
               </figcaption>
             </figure>
