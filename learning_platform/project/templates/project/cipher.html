@@ -20,13 +20,12 @@
 </div>
 <div id="content" >
     <div class="text-cipher">
-        <h2 style=" padding: 20px;">128-битный алгоритм хеширования MD5</h2>
+        <h2 style=" padding: 20px;">Криптографический алгоритм {{ value }}</h2>
         <p style="color: azure;" >Здесь вам предлагается опробовать работу алгоритма</p>
         <form class='form' action="{% url 'cipher' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button class='btn' type="submit">Запуск</button>
-
+            <button class='btn' type="submit" name="sub" value="run">Запуск</button>
         </form>
         <p></p>
         <p style="color: white;" >Результат вывода:</p>

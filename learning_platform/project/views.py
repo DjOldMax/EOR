@@ -64,23 +64,37 @@ def get_simulators(request):
     request.GET.get('id')
     return render(request,"project/simulators.html")
 
+name=[]
 def post(request):
     post=''
     ciphers={
         'MD5':'',
         'SHA256':''
     }
-    if request.method == 'POST':
-        ciphers={
-        'MD5':MD5(request.POST['text']),
-        'SHA256':SHA256(request.POST['text'])
-        }
-        form = simulator_form(request.POST)
-        post=MD5(request.POST['text'])
-        return render(request,"project/cipher.html",{'form': form,'post':post})
-    else:
-        form = simulator_form()
-        return render(request,"project/cipher.html",{'ciphers':ciphers['MD5'],'form': form})
+    try:
+        if request.method == 'POST' and request.POST['cipher']=='SHA256':
+            name.clear()
+            name.append(request.POST['cipher'])
+            form = simulator_form()
+            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
+        # elif request.method == 'POST' and request.POST['cipher']=='MD5':
+        else:
+            name.clear()
+            name.append(request.POST['cipher'])
+            form = simulator_form()
+            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
+    except:
+        if request.method == 'POST' and request.POST['sub']=='run':
+            ciphers={
+                'MD5':MD5(request.POST['text']),
+                'SHA256':SHA256(request.POST['text'])
+            }
+            form = simulator_form(request.POST)
+            post=ciphers[name[0]]
+            return render(request,"project/cipher.html",{'form': form,'post':post,'value':name[0]})
+        else:
+            form = simulator_form()
+            return render(request,"project/cipher.html",{'ciphers':ciphers[name],'form': form,'value':name[0]})
 
 
 
