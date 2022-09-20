@@ -5,6 +5,7 @@ from .forms import *
 from .ciphers import *
 import random
 from .services import open_file
+from .example import *
 # Create your views here.
 
 def home(request):
@@ -83,6 +84,11 @@ def post(request):
             name.append(request.POST['cipher'])
             form = simulator_form()
             return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
+        elif request.method == 'POST' and request.POST['cipher']=='kuz':
+            name.clear()
+            name.append(request.POST['cipher'])
+            form = simulator_form()
+            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
         else:
             name.clear()
             name.append(request.POST['cipher'])
@@ -93,7 +99,8 @@ def post(request):
             ciphers={
                 'MD5':MD5(request.POST['text']),
                 'SHA256':SHA256(request.POST['text']),
-                'RSA':RSA(request.POST['text'])
+                'RSA':RSA(request.POST['text']),
+                'Кузнечик':func_crypt(request.POST['text'])
             }
             form = simulator_form(request.POST)
             post=ciphers[name[0]]
