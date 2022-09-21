@@ -26,9 +26,11 @@ SECRET_KEY = 'django-insecure-g0igcn4#-47%lmab)t%-u(yxj+5kr9q!+474f1n+d=2=4)84zq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
+X_FRAME_OPTIONS = 'ALLOWALL'
 
+XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']
 # Application definition
 
 INSTALLED_APPS = [

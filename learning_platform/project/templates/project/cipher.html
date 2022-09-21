@@ -22,17 +22,84 @@
     <div class="text-cipher">
         <h2 style=" padding: 20px;">Криптографический алгоритм {{ value }}</h2>
         <p style="color: azure;" >Здесь вам предлагается опробовать работу алгоритма</p>
-        <form class='form' action="{% url 'cipher' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class='btn' type="submit" name="sub" value="run">Запуск</button>
-        </form>
-        <p></p>
-        <p style="color: white;" > <strong>Результат шифрования:</strong> </p>
-        <div style=" padding: 20px;" class="result">
-            <textarea style="width: 100%;" disabled>{{ post }}</textarea>
-          <!-- <p style="color: black;" >{{ post }}</p>   -->
+        {% if ciphers == 'RSA' %}
+            <div class="column" >
+                <form class='form' action="{% url 'cipher' %}" method="post">
+                    {% csrf_token %}
+                    {{ form1.as_p }}
+                    <button class='btn' type="submit" name="sub" value="run_сrypt_RSA">Запуск</button>
+                </form>
+                <p></p>
+                <p style="color: white;" > <strong>Результат шифрования:</strong> </p>
+                <div style=" padding: 20px;" class="result">
+                    <textarea style="width: 100%;" disabled>{{ post1 }}</textarea>
+            <!-- <p style="color: black;" >{{ post }}</p>   -->
+                </div>
+            </div>
+            <div class="column" >
+                <form class='form' action="{% url 'cipher' %}" method="post">
+                    {% csrf_token %}
+                    {{ form2.as_p }}
+                    <button class='btn' type="submit" name="sub" value="run_decrypt_RSA">Запуск</button>
+                </form>
+                <p></p>
+                <p style="color: white;" > <strong>Результат дешифровки:</strong> </p>
+                <div style=" padding: 20px;" class="result">
+                    <textarea style="width: 100%;" disabled>{{ post2 }}</textarea>
+            <!-- <p style="color: black;" >{{ post }}</p>   -->
+                </div>
+            </div>
+        {% elif ciphers == 'Кузнечик' %}
+        <div class="column" >
+            <form class='form' action="{% url 'cipher' %}" method="post">
+                {% csrf_token %}
+                {{ form1.as_p }}
+                <button class='btn' type="submit" name="sub" value="run_сrypt_kuz">Запуск</button>
+            </form>
+            <p></p>
+            <p style="color: white;" > <strong>Результат шифрования:</strong> </p>
+            <div style=" padding: 20px;" class="result">
+                <textarea style="width: 100%;" disabled>{{ post1 }}</textarea>
+        <!-- <p style="color: black;" >{{ post }}</p>   -->
+            </div>
         </div>
+        <div class="column" >
+            <form class='form' action="{% url 'cipher' %}" method="post">
+                {% csrf_token %}
+                {{ form2.as_p }}
+                <button class='btn' type="submit" name="sub" value="run_decrypt_kuz">Запуск</button>
+            </form>
+            <p></p>
+            <p style="color: white;" > <strong>Результат дешифровки:</strong> </p>
+            <div style=" padding: 20px;" class="result">
+                <textarea style="width: 100%;" disabled>{{ post2 }}</textarea>
+        <!-- <p style="color: black;" >{{ post }}</p>   -->
+            </div>
+        </div>
+        {% elif ciphers == 'MD5' %}
+            <form class='form' action="{% url 'cipher' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class='btn' type="submit" name="sub" value="run_crypt_MD5">Запуск</button>
+            </form>
+            <p></p>
+            <p style="color: white;" > <strong>Результат хэш-функции:</strong> </p>
+            <div style=" padding: 20px;" class="result">
+                <textarea style="width: 100%;" disabled>{{ result }}</textarea>
+        {% elif ciphers == 'SHA256' %}
+            <form class='form' action="{% url 'cipher' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class='btn' type="submit" name="sub" value="run_crypt_SHA256">Запуск</button>
+            </form>
+            <p></p>
+            <p style="color: white;" > <strong>Результат хэш-функции:</strong> </p>
+            <div style=" padding: 20px;" class="result">
+                <textarea style="width: 100%;" disabled>{{ result }}</textarea>
+        
+        <!-- <p style="color: black;" >{{ post }}</p>   -->
+            </div>
+        {% endif %}
       </div>
     </div>
 </div>

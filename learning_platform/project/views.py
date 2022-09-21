@@ -65,49 +65,91 @@ def get_simulators(request):
     request.GET.get('id')
     return render(request,"project/simulators.html")
 
-name=[]
+value={
+    'RSA':[],
+    'Кузнечик':[],
+    'MD5':[],
+    'SHA256':[]
+}
 def post(request):
-    post=''
-    ciphers={
-        'MD5':'',
-        'SHA256':''
-    }
     try:
-        if request.method == 'POST' and request.POST['cipher']=='SHA256':
-            name.clear()
-            name.append(request.POST['cipher'])
-            form = simulator_form()
-            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
+        # if request.method == 'POST' and request.POST['cipher']=='SHA256':
+        #     name.clear()
+        #     name.append(request.POST['cipher'])
+        #     form1 = simulator_form()
+        #     form2 = simulator_form_()
+        #     return render(request,"project/cipher.html",{'ciphers':'','form1': form1, 'form2': form2, 'value':name[0]})
         # elif request.method == 'POST' and request.POST['cipher']=='MD5':
-        elif request.method == 'POST' and request.POST['cipher']=='RSA':
-            name.clear()
-            name.append(request.POST['cipher'])
-            form = simulator_form()
-            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
-        elif request.method == 'POST' and request.POST['cipher']=='kuz':
-            name.clear()
-            name.append(request.POST['cipher'])
-            form = simulator_form()
-            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
-        else:
-            name.clear()
-            name.append(request.POST['cipher'])
-            form = simulator_form()
-            return render(request,"project/cipher.html",{'ciphers':'','form': form, 'value':name[0]})
-    except:
-        if request.method == 'POST' and request.POST['sub']=='run':
-            ciphers={
-                'MD5':MD5(request.POST['text']),
-                'SHA256':SHA256(request.POST['text']),
-                'RSA':RSA(request.POST['text']),
-                'Кузнечик':func_crypt(request.POST['text'])
+        if request.method == 'POST' and request.POST['cipher']=='RSA':
+            value['RSA'].clear()
+            value['RSA'].append(request.POST['cipher'])
+            form1 = simulator_form()
+            form2 = simulator_form_()
+            return render(request,"project/cipher.html",{'ciphers':'RSA','form1': form1, 'form2': form2, 'value': value['RSA'][0]})
+        elif request.method == 'POST' and request.POST['cipher']=='Кузнечик':
+            value['Кузнечик'].clear()
+            value['Кузнечик'].append(request.POST['cipher'])
+            form1 = kuz_encode()
+            form2 = kuz_decode()
+            return render(request,"project/cipher.html",{'ciphers':'Кузнечик','form1': form1, 'form2': form2, 'value':value['Кузнечик'][0]})
+        elif request.method == 'POST' and request.POST['cipher']=='MD5':
+            value['MD5'].clear()
+            value['MD5'].append(request.POST['cipher'])
+            form = hash_form()
+            return render(request,"project/cipher.html",{'ciphers':'MD5','form': form, 'value':value['MD5'][0]})
+        elif request.method == 'POST' and request.POST['cipher']=='SHA256':
+            value['SHA256'].clear()
+            value['SHA256'].append(request.POST['cipher'])
+            form = hash_form()
+            return render(request,"project/cipher.html",{'ciphers':'SHA256','form': form, 'value': value['SHA256'][0]})
+    except:  
+        result=['','']    
+        # ciphers_={
+        #         'MD5':MD5_decrypt(request.POST['decrypt']),
+        #         'SHA256':SHA256_decrypt(request.POST['decrypt']),
+        #         'RSA':RSA_decrypt(request.POST['decrypt'],request.POST['privkey']),
+        #         'Кузнечик':func_crypt(request.POST['decrypt'])
+        #             }    
+        if request.method == 'POST' and request.POST['sub']=='run_сrypt_RSA':
+            form1 = simulator_form(request.POST)
+            form2 = simulator_form_(request.POST)
+            # form = simulator_form(request.POST)
+            result[0]=RSA_crypt(request.POST['crypt'])
+            return render(request,"project/cipher.html",{'ciphers':'RSA','form1': form1, 'form2': form2,'post1':result[0],'post2':result[1],'value':'RSA'})
+        elif request.method == 'POST' and request.POST['sub']=='run_crypt_kuz':
+            form1 = kuz_encode()
+            form2 = kuz_decode()
+            result = func_crypt(request.POST['text'])
+            # form = simulator_form(request.POST)
+            context={
+                'form1': form1,
+                 'form2': form2,
+                 'post1':result,
+                 'post2':'',
+                 'value':'Кузнечик'
             }
-            form = simulator_form(request.POST)
-            post=ciphers[name[0]]
-            return render(request,"project/cipher.html",{'form': form,'post':post,'value':name[0]})
-        else:
-            form = simulator_form()
-            return render(request,"project/cipher.html",{'ciphers':ciphers[name],'form': form,'value':name[0]})
+            return render(request,"project/cipher.html",context=context)
+        elif request.method == 'POST' and request.POST['sub']=='run_crypt_MD5':
+            form = hash_form()
+            result = MD5_crypt(request.POST['hash'])
+            context={
+                'form':form,
+                'result':result,
+                'value':'MD5',
+                'ciphers':'MD5'
+            }
+            return render(request,"project/cipher.html",context=context)
+        elif request.method == 'POST' and request.POST['sub']=='run_crypt_SHA256':
+            form = hash_form()
+            result = SHA256_crypt(request.POST['hash'])
+            print(value['SHA256'][0])
+            context={
+                'form':form,
+                'result':result,
+                'value':'SHA256',
+                'ciphers':'SHA256'
+            }
+            return render(request,"project/cipher.html",context=context)
 
 
 
