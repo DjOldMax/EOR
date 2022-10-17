@@ -17,7 +17,7 @@ class kuz_encode(forms.Form):
 
 class kuz_decode(forms.Form):
     crypto = forms.CharField(max_length=256, label='Поле ввода:',required=False)
-    keys = forms.CharField(max_length=256, label='Поле ввода ключей:',required=False)
+    keys = forms.CharField(max_length=1000, label='Поле ввода ключей:',required=False)
 
 
 

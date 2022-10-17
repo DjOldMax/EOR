@@ -54,20 +54,23 @@
             <form class='form' action="{% url 'cipher' %}" method="post">
                 {% csrf_token %}
                 {{ form1.as_p }}
-                <button class='btn' type="submit" name="sub" value="run_сrypt_kuz">Запуск</button>
+                <button class='btn' type="submit" name="sub" value="Crypt_KUZ">Запуск</button>
             </form>
             <p></p>
             <p style="color: white;" > <strong>Результат шифрования:</strong> </p>
             <div style=" padding: 20px;" class="result">
                 <textarea style="width: 100%;" disabled>{{ post1 }}</textarea>
+                <p style="color: black;" > <strong>Ключи:</strong> </p>
+                <textarea style="width: 100%;" disabled>{{keys}}</textarea>
         <!-- <p style="color: black;" >{{ post }}</p>   -->
             </div>
+            
         </div>
         <div class="column" >
             <form class='form' action="{% url 'cipher' %}" method="post">
                 {% csrf_token %}
                 {{ form2.as_p }}
-                <button class='btn' type="submit" name="sub" value="run_decrypt_kuz">Запуск</button>
+                <button class='btn' type="submit" name="sub" value="Decrypt_KUZ">Запуск</button>
             </form>
             <p></p>
             <p style="color: white;" > <strong>Результат дешифровки:</strong> </p>
@@ -75,6 +78,7 @@
                 <textarea style="width: 100%;" disabled>{{ post2 }}</textarea>
         <!-- <p style="color: black;" >{{ post }}</p>   -->
             </div>
+            
         </div>
         {% elif ciphers == 'MD5' %}
             <form class='form' action="{% url 'cipher' %}" method="post">

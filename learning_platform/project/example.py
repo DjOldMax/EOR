@@ -218,9 +218,9 @@ def decrypt(text, K):
         textDecrypt.append(textDecrypted)
     return(hexToUtf8(''.join(textDecrypt)))
 
-def func_crypt(textInput):
+def func_crypt(textInput,textPswrd):
     # textInput = "Hello, мир" # Ввод исходного текста
-    password = "strongPassword" # Ввод пароля
+    password = textPswrd # Ввод пароля
 
     # Получение ключей для шифрования и расшифрования
     K = getKeys(password)
@@ -230,8 +230,9 @@ def func_crypt(textInput):
 
     # Расшифрование
     textDecrypt = decrypt(textEncrypt, K)
-    # print(K)
-    return textEncrypt
+    print(type(K))
+    print(K)
+    return textEncrypt,','.join(K)
 
 # print(func_crypt('Hello, мир',"strongPassword"))
 

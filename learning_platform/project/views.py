@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.http import StreamingHttpResponse
 from .models import *
 from .forms import *
@@ -71,6 +71,8 @@ value={
     'MD5':[],
     'SHA256':[]
 }
+
+
 def post(request):
     try:
         # if request.method == 'POST' and request.POST['cipher']=='SHA256':
@@ -89,6 +91,7 @@ def post(request):
         elif request.method == 'POST' and request.POST['cipher']=='Кузнечик':
             value['Кузнечик'].clear()
             value['Кузнечик'].append(request.POST['cipher'])
+            print(value)
             form1 = kuz_encode()
             form2 = kuz_decode()
             return render(request,"project/cipher.html",{'ciphers':'Кузнечик','form1': form1, 'form2': form2, 'value':value['Кузнечик'][0]})
@@ -116,21 +119,42 @@ def post(request):
             # form = simulator_form(request.POST)
             result[0]=RSA_crypt(request.POST['crypt'])
             return render(request,"project/cipher.html",{'ciphers':'RSA','form1': form1, 'form2': form2,'post1':result[0],'post2':result[1],'value':'RSA'})
-        elif request.method == 'POST' and request.POST['sub']=='run_crypt_kuz':
-            form1 = kuz_encode()
-            form2 = kuz_decode()
-            result = func_crypt(request.POST['text'])
+        elif (request.method == 'POST') and (request.POST['sub']=='Crypt_KUZ'):
+            form1 = kuz_encode(request.POST)
+            form2 = kuz_decode(request.POST)
+            post1 = func_crypt(request.POST['text'],request.POST['pswrd'])
+            # post2 = func_encrypt(request.POST['crypto'],request.POST['keys'].split(','))
             # form = simulator_form(request.POST)
+            print(request.POST['sub'])
             context={
                 'form1': form1,
                  'form2': form2,
-                 'post1':result,
+                 'post1':post1[0],
+                 'keys':post1[1],
                  'post2':'',
-                 'value':'Кузнечик'
+                 'value':'Кузнечик',
+                 'ciphers':'Кузнечик'
             }
             return render(request,"project/cipher.html",context=context)
-        elif request.method == 'POST' and request.POST['sub']=='run_crypt_MD5':
-            form = hash_form()
+        elif request.method == 'POST' and request.POST['sub']=='Decrypt_KUZ':
+            print(len(request.POST['keys'].split(',')))
+            print(request.POST['keys'].split(','))
+            form1 = kuz_encode(request.POST)
+            form2 = kuz_decode(request.POST)
+            # post1 = func_crypt(request.POST['text'],request.POST['pswrd'])
+            post2 = func_encrypt(request.POST['crypto'],request.POST['keys'].split(','))
+            # form = simulator_form(request.POST)
+            print(request.POST['sub'])
+            context={
+                'form1': form1,
+                 'form2': form2,
+                 'post2':post2,
+                 'value':'Кузнечик',
+                 'ciphers':'Кузнечик'
+            }
+            return render(request,"project/cipher.html",context=context)
+        elif request.POST['sub']=='run_crypt_MD5':
+            form = hash_form(request.POST)
             result = MD5_crypt(request.POST['hash'])
             context={
                 'form':form,
@@ -140,9 +164,8 @@ def post(request):
             }
             return render(request,"project/cipher.html",context=context)
         elif request.method == 'POST' and request.POST['sub']=='run_crypt_SHA256':
-            form = hash_form()
+            form = hash_form(request.POST)
             result = SHA256_crypt(request.POST['hash'])
-            print(value['SHA256'][0])
             context={
                 'form':form,
                 'result':result,
@@ -150,6 +173,8 @@ def post(request):
                 'ciphers':'SHA256'
             }
             return render(request,"project/cipher.html",context=context)
+        else:
+            return HttpResponse('ошибка')
 
 
 
