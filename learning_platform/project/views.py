@@ -72,7 +72,10 @@ value={
     'SHA256':[]
 }
 
-
+res_dict={
+    'privkey':None,
+    'res_encodeRSA':None
+}
 def post(request):
     try:
         # if request.method == 'POST' and request.POST['cipher']=='SHA256':
@@ -112,13 +115,33 @@ def post(request):
         #         'SHA256':SHA256_decrypt(request.POST['decrypt']),
         #         'RSA':RSA_decrypt(request.POST['decrypt'],request.POST['privkey']),
         #         'Кузнечик':func_crypt(request.POST['decrypt'])
-        #             }    
+        #
+        global res_dict               
         if request.method == 'POST' and request.POST['sub']=='run_сrypt_RSA':
             form1 = simulator_form(request.POST)
             form2 = simulator_form_(request.POST)
             # form = simulator_form(request.POST)
             result[0]=RSA_crypt(request.POST['crypt'])
+            res_dict['res_encodeRSA'] = result[0][0]
+            res_dict['privkey'] = result[0][1]
             return render(request,"project/cipher.html",{'ciphers':'RSA','form1': form1, 'form2': form2,'post1':result[0],'post2':result[1],'value':'RSA'})
+        elif request.method == 'POST' and request.POST['sub']=='run_decrypt_RSA':
+            form1 = simulator_form(request.POST)
+            form2 = simulator_form_(request.POST)
+            # print(tuple(request.POST['privkey'].split(',')))
+            # res = request.POST['decrypt'][2:-1].encode('utf-8')
+            # print(res)
+            # print(type(res))
+            # print(type(request.POST['decrypt']))
+            # print(RSA_decrypt(res,tuple(request.POST['privkey'].split(','))))
+            value = res_dict['res_encodeRSA']
+            privkey = res_dict['privkey']
+            print(res_dict['res_encodeRSA'])
+            print(type(res_dict['res_encodeRSA']))
+            print(res_dict['privkey'])
+            print(type(res_dict['privkey']))
+            res = RSA_decrypt(value, privkey)
+            return render(request,"project/cipher.html",{'ciphers':'RSA','form1': form1, 'form2': form2,'post1':'','post2':res,'value':'RSA'})
         elif (request.method == 'POST') and (request.POST['sub']=='Crypt_KUZ'):
             form1 = kuz_encode(request.POST)
             form2 = kuz_decode(request.POST)
