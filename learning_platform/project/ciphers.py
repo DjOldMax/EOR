@@ -21,12 +21,15 @@ def SHA256_decrypt(value):
 
 def RSA_crypt(value):
     (pubkey, privkey) = rsa.newkeys(512)
-    print(privkey)
-    print(type(privkey))
     crypto = rsa.encrypt(value.encode('utf8'), pubkey)
-    info=[pubkey, privkey, crypto]
-    return info
+    info=crypto
+    return info,privkey
 
 def RSA_decrypt(value,privkey):
     decrypto = rsa.decrypt(value, privkey)
     return decrypto
+
+# res = RSA_crypt('hello')
+# print(RSA_crypt('hello'))
+# res_=RSA_decrypt(res[0], res[1])
+# print(res_)
