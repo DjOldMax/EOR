@@ -77,6 +77,7 @@ res_dict={
     'res_encodeRSA':None
 }
 def post(request):
+    global value
     try:
         # if request.method == 'POST' and request.POST['cipher']=='SHA256':
         #     name.clear()
@@ -98,7 +99,7 @@ def post(request):
             form1 = kuz_encode()
             form2 = kuz_decode()
             return render(request,"project/cipher.html",{'ciphers':'Кузнечик','form1': form1, 'form2': form2, 'value':value['Кузнечик'][0]})
-        elif request.method == 'POST' and request.POST['cipher']=='MD5':
+        elif request.method == 'POST' or request.POST['cipher']=='MD5':
             value['MD5'].clear()
             value['MD5'].append(request.POST['cipher'])
             form = hash_form()
@@ -134,13 +135,13 @@ def post(request):
             # print(type(res))
             # print(type(request.POST['decrypt']))
             # print(RSA_decrypt(res,tuple(request.POST['privkey'].split(','))))
-            value = res_dict['res_encodeRSA']
+            val = res_dict['res_encodeRSA']
             privkey = res_dict['privkey']
             print(res_dict['res_encodeRSA'])
             print(type(res_dict['res_encodeRSA']))
             print(res_dict['privkey'])
             print(type(res_dict['privkey']))
-            res = RSA_decrypt(value, privkey)
+            res = RSA_decrypt(val, privkey)
             return render(request,"project/cipher.html",{'ciphers':'RSA','form1': form1, 'form2': form2,'post1':'','post2':res,'value':'RSA'})
         elif (request.method == 'POST') and (request.POST['sub']=='Crypt_KUZ'):
             form1 = kuz_encode(request.POST)
